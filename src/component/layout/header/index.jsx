@@ -1,4 +1,4 @@
-import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined} from '@ant-design/icons';
+import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined} from '@ant-design/icons';
 import { Drawer } from 'antd';
 import { useState } from 'react';
 import { IMAGES } from '../../../asset/images';
@@ -18,29 +18,29 @@ export default function Headers (){
       <div className="container flex justify-content-between">
         <div className="header-top-left flex ">
           <div className="dropdown-ins flex">
-            <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><span>3.1M Followers</span> </a>
+            <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3.1M Followers <CaretDownOutlined /></strong> </a>
             <ul className="menu-top-header-left">
               <li>
                 <a href="https://www.facebook.com/" className="facebook">
-                  <FacebookOutlined />
+                  <span className="icon-ins"><FacebookOutlined /></span>
                   <span className="label">Facebook</span>
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/" className="facebook">
-                  <TwitterOutlined />
+                  <span className="icon-ins"><TwitterOutlined /></span>
                   <span className="label">Twitter</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/" className="facebook">
-                  <InstagramOutlined />
+                <span className="icon-ins"><InstagramOutlined /></span>
                   <span className="label">Instagram</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/" className="facebook">
-                  <LinkedinOutlined />
+                <span className="icon-ins"><LinkedinOutlined /></span>
                   <span className="label">Linkedin</span>
                 </a>
               </li>
@@ -54,9 +54,9 @@ export default function Headers (){
         <div className="header-top-right">
           <ul className="menu-top-header-right flex">
             <li><a href="/#">Order Tracking</a></li>
-            <li className="menu-top-language-currency">
-              <a href="/#">English <span><DownOutlined /></span></a>
-              <ul className="menu-language-currency">
+            <li className="menu-top-language-currency item-language">
+              <a href="/#" className="btn-language">English <span><DownOutlined /></span></a>
+              <ul className="menu-language-currency language">
                 <li>
                   <a href="/#" className="label">English</a>
                 </li>
@@ -68,9 +68,9 @@ export default function Headers (){
                 </li>
               </ul>
             </li>
-            <li className="menu-top-language-currency">
-              <a href="/#">USD <span><DownOutlined /></span></a>
-              <ul className="menu-language-currency">
+            <li className="menu-top-language-currency item-currency">
+              <a href="/#" className="btn-currency">USD <span><DownOutlined /></span></a>
+              <ul className="menu-language-currency currency">
                 <li>
                   <a href="/#" className="label">USD</a>
                 </li>
@@ -86,18 +86,18 @@ export default function Headers (){
         </div>
       </div>
     </div>
-    <nav className="header-nav flex align-items-center">
-        <div className="container flex justify-content-between ">        
-          <a href="/#" className="header-logo flex">
+    <nav className="header-nav flex ">
+        <div className="container flex justify-content-between align-items-center">        
+          <a href="/#" className="header-logo flex ">
             <button className="btn-icon" type="primary" onClick={showDrawer}>
               <MenuOutlined />
             </button>
               <img src={IMAGES.logo} alt="logo" />
           </a>
-          <ul className="header-menu flex justify-content-center">
+          <ul className="header-menu flex justify-content-center align-items-center">
               <li className="menu-header-item">
-                <a href="/#">HOME <span><DownOutlined /></span></a>
-                <ul className="main-menu-home">
+                <a className="header-item item-home" href="/#">HOME <span><DownOutlined /></span></a>
+                <ul className="main-menu-home ">
                   <li>
                     <a href="/#" className="menu-main-item">Home 1</a>
                   </li>
@@ -119,8 +119,8 @@ export default function Headers (){
                 </ul>
               </li>
               <li className="menu-header-item">
-              <a href="/#">SHOP <span><DownOutlined /></span></a>
-                <ul className="main-menu-home">
+              <a className="header-item" href="/#">SHOP <span><DownOutlined /></span></a>
+                <ul className="main-menu-shop">
                   <li>
                     <a href="/#" className="menu-main-item">Shop List</a>
                     <ul className="sub-menu-list">
@@ -228,19 +228,19 @@ export default function Headers (){
                 </ul>
               </li>
               <li className="menu-header-item">
-                  <a href="/#">WOMEN</a>
+                  <a className="header-item" href="/#">WOMEN</a>
               </li>
               <li className="menu-header-item">
-                  <a href="/#">MEN</a>
+                  <a className="header-item" href="/#">MEN</a>
               </li>
               <li className="menu-header-item">
-                  <a href="/#">OUTERWEAR</a>
+                  <a className="header-item" href="/#">OUTERWEAR</a>
               </li>
               <li className="menu-header-item">
-                  <a href="/#">BLOCK</a>
+                  <a className="header-item" href="/#">BLOCK</a>
               </li>
               <li className="menu-header-item">
-                  <a href="/#">CONTACT</a>
+                  <a className="header-item" href="/#">CONTACT</a>
               </li>
           </ul>
           <ul className="social-list flex justify-content-around">

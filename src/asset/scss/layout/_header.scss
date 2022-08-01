@@ -12,7 +12,6 @@
       justify-content: flex-start;
     }
     .header-top-right{
-      @include pxRem(margin-right, 10);
       align-items: center;
     }
   }
@@ -21,8 +20,10 @@
     color: map-get($colors, color-text);
     background-color: map-get($colors, color-background );
     @include pxRem(height, 84);  
+    align-items: center;
     .header-logo{
-      @include pxRem(width, 10%);
+      @include pxRem(width, 121);
+      @include pxRem(height, 27);
       @include pxRem(margin-left, 15);
       .btn-icon{
         background-color: map-get($colors, color-background );
@@ -35,7 +36,7 @@
     .header-menu{
       text-transform: uppercase;
       text-align: left;
-      a{
+      .header-item{
         @include pxRem(margin-left, 15);
         color: map-get($colors, color-text);
       }
@@ -48,6 +49,7 @@
         @include pxRem(margin-left, 15);
         color: map-get($colors, color-text);
         position: relative;
+        @include pxRem(font-size, 20);
       }
       .add-product{
         position: absolute;
@@ -55,7 +57,7 @@
         color: map-get($colors, color-background);
         border-radius: 50%;
         @include pxRem(padding, 0 4);
-        @include pxRem(font-size, 9)
+        @include pxRem(font-size, 9);
       }
       .heart{
         @include pxRem(margin, -2 -5);
@@ -65,7 +67,7 @@
       }
       .item-card{
         @include pxRem(margin-left, 15);
-        @include pxRem(font-size, 12);
+        @include pxRem(font-size, 14);
       }
     }
   }
@@ -84,12 +86,18 @@
 }
 .dropdown-ins{
   @include pxRem(padding, 0 12);
+  position: relative;
   a{
     color: map-get($colors, color-text );
     .dropdown-ins-icon{
       font-weight: 300;
       @include pxRem(font-size, 16);
       @include pxRem(margin-right, 6);
+    }
+  }
+  &:hover{
+    .menu-top-header-left{
+      visibility: visible;
     }
   }
 }
@@ -101,6 +109,7 @@
 }
 .menu-top-header-right{
   align-items: center;
+  position: relative;
   li{
     @include pxRem(padding-left, 20);
     a{
@@ -110,15 +119,94 @@
       @include pxRem(font-size, 9);
       @include pxRem(padding-left, 2);
     }
-    
+  }
+  .item-language:hover{
+    .language{
+      visibility: visible;
+    }
+  }
+  .item-currency:hover{
+    .currency{
+      visibility: visible;
+    }
   }
 }
 .menu-top-header-left{
-  display: none;
+  visibility: hidden;
+  position: absolute; 
+  @include pxRem(font-size, 16);
+  @include pxRem(width, 165%);
+  background-color: map-get($colors, color-background );
+  @include pxRem(border, 1 solid map-get($colors, color-border));
+  @include pxRem(top, 34);
+  @include pxRem(padding, 15);
+  li{
+    @include pxRem(padding, 5 0);
+    .icon-ins{
+      @include pxRem(margin-right, 14);
+    }
+    .label{
+      @include pxRem(font-size, 14);
+    }
+    p{
+      @include pxRem(margin-top, 12);
+      @include pxRem(font-size, 13);
+      opacity: 0.4;
+    }
+  } 
 }
 .menu-language-currency{
-  display: none;
+  position: absolute; 
+  @include pxRem(min-width, 130);
+  @include pxRem(padding, 10 0);
+  @include pxRem(top, 34);
+  background-color: map-get($colors, color-background );
+  z-index: 3;
+  @include pxRem(border, 1 solid map-get($colors, color-border));
+  li{
+    @include pxRem(padding, 4 15 );
+  }
+  &.language{
+    visibility: hidden;
+    @include pxRem(right, 44);
+  }
+  &.currency{
+    visibility: hidden;
+    @include pxRem(right, -12);
+  }
 }
-.main-menu-home{
-  display: none;
+.menu-header-item{
+  position: relative; 
+  .main-menu-home{
+    position: absolute; 
+    visibility: hidden;
+    @include pxRem(min-width, 240);
+    @include pxRem(padding, 18 0);
+    @include pxRem(top, 53);
+    @include pxRem(left, -15);
+    background-color: map-get($colors, color-background );
+    z-index: 3;
+    @include pxRem(border, 1 solid map-get($colors, color-border));
+    a{
+      align-items: center;
+      display: block;
+      @include pxRem(font-size, 15);
+      @include pxRem(padding, 4 30);
+      @include pxRem(margin-left, 0);
+      text-transform: capitalize;
+      &:hover{
+        color: map-get($colors, color-text );
+      }
+    }
+  }
+  .item-home:hover{
+    .main-menu-home{
+      visibility: visible;
+    }
+  }
+  .main-menu-shop{
+    visibility: hidden;
+  }
+  
 }
+
