@@ -1,0 +1,36 @@
+.banner-season-list{
+  position: relative;
+  @include pxRem(width, 101%);
+  li{
+    @include pxRem(padding, 15);
+    position: relative;
+    top:0;
+    left:0;
+    &:first-child{
+    @include pxRem(padding,15 15 15 0 );
+    }
+    &:last-child{
+      @include pxRem(padding,15 0 15 15 );
+      right: 0;
+      }
+  }
+}
+.content-title-all.season-content{
+  @include pxRem(max-width, 100%);
+  &:hover{
+    color: map-get($colors, color-text );
+  }
+  .subtitle-season{
+    @include pxRem(font-size, 12);
+  }
+  .title-season{
+    font-weight: map-get($font-weight, font-normal );
+  }
+}
+
+.content-all.banner-season-content{
+  @include pxRem(padding, 30);
+}
+.section-banner-season{
+  @include pxRem(margin-top, 20);
+}

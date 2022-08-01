@@ -1,0 +1,70 @@
+.section-banner-logo{
+  @include pxRem(margin-top, 20);
+  .slick-list{
+    @include pxRem(padding, 15);
+  }
+}
+.section-banner-logo .slick-track {
+  display: flex;
+  align-items: center;
+  .slick-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include pxRem(margin-right, 20);   
+    img{
+      @include pxRem(min-width, 150 !important);
+      @include pxRem(max-height, 86 !important);
+      opacity: 0.5;
+      animation: banner-logo-unscale1 0.3s linear 1 forwards;
+      &:hover{
+        animation: banner-logo-scale1 0.3s linear 1 forwards;
+        opacity: 1;
+      }
+    }
+    h3{
+      text-align: center;
+      @include pxRem(font-size, 16);
+      font-weight: map-get($font-weight, font-regular);
+      @include pxRem(margin, 0 0 8 );
+    }
+  }
+}
+
+  @keyframes banner-logo-scale1 {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(1);
+    }
+  }
+  @keyframes banner-logo-unscale1 {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(1);
+    }
+  }
+  .logo-item{   
+    
+    .logo-img{
+      @include pxRem(min-width, 100% !important);
+      @include pxRem(max-height, 100% !important);
+      overflow: hidden;
+      border-radius: 50%; 
+      @include pxRem(margin-bottom, 10);
+    }
+  }
+.strikethrough{
+  @include pxRem(padding, 15 0);
+  .strikethrough-style{
+    display: block;
+    @include pxRem(width, 100%);
+    border-top: 1px solid #00000026;
+  }
+}
+  
+  
+  

@@ -1,0 +1,51 @@
+.section-bannerbg{
+  @include pxRem(margin-top, 38);
+  @include pxRem(height, 70%);
+  .bannerbg-content{
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: map-get($colors, color-background-gray );
+    img{
+      @include pxRem(width, 50%);
+    }
+    &:last-child{
+      flex-basis: 50%;
+    }
+  }
+}
+.bannerbg-content-text{
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  padding: 30px;
+  text-align: center;
+ 
+  h4{
+    font-weight: map-get($font-weight, font-medium );
+    @include pxRem(letter-spacing, 1);
+    @include pxRem(font-size, 12);
+    text-transform: uppercase;
+    @include pxRem(margin, 0 0 8);
+    @include pxRem(line-height, 14.4);
+  }
+  h2{
+    @include pxRem(line-height, 67.2);
+    @include pxRem(font-size, 56);
+    @include pxRem(margin, 0 0 30);
+  }
+  p{
+    @include pxRem(line-height, 24);
+    @include pxRem(margin, 0 0 26);
+  }
+  a{
+    border: 1px solid map-get($colors, color-primary );
+    @include pxRem(padding, 8 30);
+    @include pxRem(border-radius,2);
+    color: map-get($colors, color-primary);
+    @include pxRem(font-size, 15);
+    &:hover{
+      color: map-get($colors, color-background);
+      background-color: map-get($colors, color-primary);
+    }
+  }
+}

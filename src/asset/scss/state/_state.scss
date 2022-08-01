@@ -1,0 +1,44 @@
+.is-hidden {
+  display: none;
+}
+.section-title {
+  @include pxRem(font-size, 40);
+  @include pxRem(line-height, 54);
+  color: map-get($colors, txt-black);
+  font-weight: map-get($font-weight, bold);
+}
+.section-sub-title {
+  @include pxRem(font-size, 14);
+  @include pxRem(line-height, 30);
+  @include pxRem(letter-spacing, 1);
+  color: map-get($colors, primary);
+  font-weight: map-get($font-weight, verybold);
+  text-transform: uppercase;
+}
+.title-blue {
+  color: map-get($colors, primary);
+}
+.author-text {
+  @include pxRem(margin-right, 30);
+  .name {
+    @include pxRem(font-size, 18);
+    font-weight: map-get($font-weight, bold);
+    color: map-get($colors, txt-black);
+    line-height: 1.5;
+  }
+  .designation {
+    @include pxRem(font-size, 14);
+    font-weight: map-get($font-weight, normal);
+    color: map-get($colors, gray-black-text);
+    line-height: 1.75;
+  }
+}
+.section-padding {
+  @include pxRem(padding, 145 0);
+}
+
+.btn {
+  @include pxRem(line-height, 46);
+  @include pxRem(padding, 25 47);
+  font-weight: map-get($font-weight, bold);
+}

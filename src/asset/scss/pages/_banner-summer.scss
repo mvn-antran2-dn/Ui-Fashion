@@ -1,0 +1,35 @@
+.section-banner-summer{
+  margin-top: 10px;
+  .banner-summer-img{
+    @include pxRem(padding, 15 15 15 0);
+    position: relative;
+  }
+  .season-sale{
+    @include pxRem(padding, 15 0 15 15);
+    position: relative;
+  }
+}
+.summer-img-text.content-all{
+  position: absolute;
+  .summer-text-subtitle{
+    @include pxRem(font-size, 12);
+  }
+  .btn-shopnow-all.summer-btn:hover{
+    color: map-get($colors, color-background );
+  }
+}
+.sale-img-text .content-title-all{
+  text-align: center;
+  @include pxRem(max-width, 100%);
+  color: map-get($colors, color-background );
+  .sale-text-subtitle{
+    @include pxRem(font-size, 12);
+    color: map-get($colors, color-background );
+  }
+  .sale-text-title{
+    color: map-get($colors, color-background );
+  }
+  .sale-btn{
+    color: map-get($colors, color-background );
+  }
+}

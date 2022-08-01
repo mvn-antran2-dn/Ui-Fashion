@@ -1,0 +1,240 @@
+.product1{
+  flex-direction: row-reverse;
+  .product1-banner{
+    @include pxRem(width, 100%);
+    @include pxRem(height, 100%);
+    position: relative;
+    z-index: 1;
+  }
+  .product1-list{
+    @include pxRem(width,100%);
+    @include pxRem(height,100%);
+  }
+}
+.product1-banner-title{
+  @include pxRem(max-width, 100%);
+  @include pxRem(padding-left, 15);
+  img{
+    @include pxRem(width, 100%);
+  }
+}
+.content-all{
+  @include pxRem(width, 100%);
+  @include pxRem(height, 100%);
+  position: absolute;
+  z-index: 2;
+  @include pxRem(padding, 60 46);
+  top: 0;
+  left:0;
+  .content-title-all{
+    @include pxRem(max-width, 60%);
+    .subtitle-all{
+      @include pxRem(font-size, 10);
+      font-weight: map-get($font-weight, font-medium );
+      text-transform: uppercase;
+      @include pxRem(letter-spacing, 1);
+      @include pxRem(margin-bottom, 10);
+    }
+    .title-all{
+      @include pxRem(font-size, 34);
+      @include pxRem(margin-bottom, 15);
+    }
+    .text-all{
+      opacity: 0.6;
+      @include pxRem(font-size, 16);
+      @include pxRem(margin-bottom, 36);
+    }
+    .btn-shopnow-all{
+      @include pxRem(font-size, 16);
+      font-weight: map-get($font-weight, font-medium );
+      
+    }
+    &:hover{
+      color: map-get($colors, color-text );
+    }
+  }
+  &:hover{
+    color: map-get($colors, color-text );
+  }
+}
+.product1-item{
+  @include pxRem(margin,0 15);
+  position: relative;
+  z-index: 3;
+  .product1-img{
+    overflow: hidden;
+    @include pxRem(margin-bottom, 20);
+    // @include pxRem(max-width, 50%);
+    .product1-sale{
+      position: absolute;
+      @include pxRem(top, 10);
+      @include pxRem(left, 25);
+      z-index: 3;
+      text-align: center;
+      @include pxRem(padding, 6 10);
+      background-color: map-get($colors, color-background );
+      color: map-get($colors, color-success);
+      @include pxRem(border-radius, 2);
+      @include pxRem(height, 21);
+      white-space: nowrap;
+      vertical-align: baseline;
+      font-weight: map-get($font-weight, font-bold);
+      @include pxRem(font-size, 12);
+      line-height: 1;
+    }
+    .img-total-action{
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      @include pxRem(top, 10);
+      @include pxRem(right, 11);
+      width: auto;
+      height: auto;
+      z-index: -9;
+      animation: unhover-action-img 0.3s linear 1 forwards;
+    }
+    .btn-to-heart{
+      animation: unhover-action 0.3s linear 1 forwards;
+    }
+    .btn-to-fullscreen{
+      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+    }
+    .btn-to-retweet{
+      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+    }
+    .btn-to-shopping{
+      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+    } 
+  }
+  &:hover{
+  .img-total-action{
+    animation: hover-action-img 0.3s ease-in 1 forwards;
+    .btn-to-heart{
+      animation: hover-action 0.3s linear 1 forwards;
+    }
+    .btn-to-fullscreen{
+      animation: hover-action 0.3s linear 0.2s 1 forwards;
+    }
+    .btn-to-retweet{
+      animation: hover-action 0.3s linear 0.2s 1 forwards;
+    }
+    .btn-to-shopping{
+      animation: hover-action 0.3s linear 0.2s 1 forwards;
+    } 
+  }   
+}
+  &:first-child{
+    @include pxRem(margin-left, 0);
+  }
+  &:last-child{
+    @include pxRem(margin-right, 0);
+  }
+}
+@keyframes hover-action {
+  from{
+    transform: translateX(20px);
+    z-index: -9;
+  }
+  to{
+      transform: translateX(5px);
+      z-index: 9;
+    } 
+}
+@keyframes unhover-action {
+  from{
+    transform: translateX(5px);
+    z-index: 9;
+  }
+  to{
+      transform: translateX(20px);
+      z-index: -9;
+    } 
+}
+@keyframes hover-action-img {
+  from{
+    z-index: -9;
+  }
+  to{
+      z-index: 9;
+    } 
+}
+@keyframes unhover-action-img {
+  from{
+    z-index: 9;
+  }
+  to{
+      z-index: -9;
+    } 
+}
+.btn-to-action{
+  border-radius: 50%;      
+  background-color: map-get($colors, color-background );
+  @include pxRem(margin,8 0 0);
+  @include pxRem(padding, 5 9);
+  border: none;
+  @include pxRem(font-size, 14);
+  z-index: 1;
+  font-weight: map-get($colors, font-regular );
+  &:hover{
+    color: map-get($colors, color-background );
+    background-color: map-get($colors, color-primary );
+  }
+  &:first-child{
+    @include pxRem(margin-top, 0);
+  }
+}
+.product1-info{
+  @include pxRem(font-size, 15);
+  .product1-name:hover{
+      color: map-get($colors, color-text );
+  }
+  .product1-price{
+    font-weight: map-get($font-weight, font-regular );
+    span{
+      opacity: 0.3;
+      @include pxRem(margin-right, 3);
+      @include pxRem(font-size, 94%);
+      font-weight: map-get($font-weight, font-normal );
+      text-decoration-line: line-through;
+    }
+  }
+  .product1-review{
+    font-weight: map-get($font-weight, font-medium );
+    @include pxRem(font-size, 13);
+    span{
+      color: map-get($colors, color-start );
+      @include pxRem(margin-right, 8);
+      @include pxRem(font-size, 14)
+    }
+  }
+  .product1-amount{
+    @include pxRem(margin-top, 12);
+  }
+
+}
+.product1-amount-bar{
+  position: relative;
+  display: block;
+  @include pxRem(height, 5);
+  @include pxRem(width, 100%);
+  background-color: map-get($colors, color-review );
+  @include pxRem(border-radius,7);
+  overflow: hidden;
+  span{
+    position: absolute;
+    display: block;
+    background-color: map-get($colors, color-primary );
+    @include pxRem(width, 59%);
+    @include pxRem(height, 100%);
+  }
+}
+.product1-amount-sold{
+  justify-content: space-between;
+  align-items: center;
+  @include pxRem(margin-top, 7);
+  @include pxRem(font-size, 12);
+  color: map-get($colors, bs-secondary);
+  strong{
+    color: map-get($colors, color-primary);
+  }
+}

@@ -1,0 +1,124 @@
+.page-header{
+  @include pxRem(height, 124);
+  .header-top{
+    @include pxRem(height, 40);
+    @include pxRem(font-size, 13);
+    border-bottom: 1px solid map-get($colors, bs-gray-500);
+    color: map-get($colors , color-text );  
+    align-items: center; 
+    .header-top-left{ 
+      align-items: center;
+      display: flex;      
+      justify-content: flex-start;
+    }
+    .header-top-right{
+      @include pxRem(margin-right, 10);
+      align-items: center;
+    }
+  }
+  .header-nav{
+    @include pxRem(font-size, 15);
+    color: map-get($colors, color-text);
+    background-color: map-get($colors, color-background );
+    @include pxRem(height, 84);  
+    .header-logo{
+      @include pxRem(width, 10%);
+      @include pxRem(margin-left, 15);
+      .btn-icon{
+        background-color: map-get($colors, color-background );
+        text-align: center;
+        border: none;
+        @include pxRem(margin-right, 20);
+        color: map-get($colors, color-text );
+      }
+    }
+    .header-menu{
+      text-transform: uppercase;
+      text-align: left;
+      a{
+        @include pxRem(margin-left, 15);
+        color: map-get($colors, color-text);
+      }
+      span{
+        @include pxRem(font-size, 9);
+      }
+    }
+    .social-list{
+      a{
+        @include pxRem(margin-left, 15);
+        color: map-get($colors, color-text);
+        position: relative;
+      }
+      .add-product{
+        position: absolute;
+        background-color: map-get($colors, color-primary );
+        color: map-get($colors, color-background);
+        border-radius: 50%;
+        @include pxRem(padding, 0 4);
+        @include pxRem(font-size, 9)
+      }
+      .heart{
+        @include pxRem(margin, -2 -5);
+      }
+      .shopping{
+        @include pxRem(margin, -2 -7);
+      }
+      .item-card{
+        @include pxRem(margin-left, 15);
+        @include pxRem(font-size, 12);
+      }
+    }
+  }
+  .header-bottom{
+    h4{
+      background-color: map-get($colors, color-primary );
+      color: map-get($colors, color-background );
+      text-align: center;
+      @include pxRem(font-size, 12);
+      @include pxRem(letter-spacing, 0.25);
+      @include pxRem(padding, 10 0);
+      font-weight: map-get($font-weight, font-normal );
+      text-transform:capitalize;
+    }
+  }
+}
+.dropdown-ins{
+  @include pxRem(padding, 0 12);
+  a{
+    color: map-get($colors, color-text );
+    .dropdown-ins-icon{
+      font-weight: 300;
+      @include pxRem(font-size, 16);
+      @include pxRem(margin-right, 6);
+    }
+  }
+}
+.header-right-title{
+  @include pxRem(margin-left, 30);
+  span{
+    color: map-get( $colors, color-primary );
+  }
+}
+.menu-top-header-right{
+  align-items: center;
+  li{
+    @include pxRem(padding-left, 20);
+    a{
+      color: map-get($colors, color-text );
+    }
+    span{
+      @include pxRem(font-size, 9);
+      @include pxRem(padding-left, 2);
+    }
+    
+  }
+}
+.menu-top-header-left{
+  display: none;
+}
+.menu-language-currency{
+  display: none;
+}
+.main-menu-home{
+  display: none;
+}

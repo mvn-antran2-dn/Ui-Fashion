@@ -1,0 +1,77 @@
+.section-categories{
+@include pxRem(margin-top, 35);
+ @include pxRem(height, 293); 
+ .categories-title{
+  @include pxRem(line-height, 25.6);
+  align-items: flex-end;
+  @include pxRem(margin, 0 0 40);
+  font-weight: map-get($font-weight, font-regular );
+  h4{
+    @include pxRem(margin, 0 15 0 0);
+    @include pxRem(font-size, 22);  
+    @include pxRem(line-height, 26.45);
+  }
+  p{
+    @include pxRem(font-size, 14);
+    @include pxRem(line-height, 22.4);
+    color: map-get($colors, bs-secondary);
+  }
+  strong{
+    color: map-get($colors, color-form-placeholder );
+  }
+ }
+}
+.slick-track {
+  display: flex;
+  align-items: center;
+  .slick-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include pxRem(margin-right, 20);
+    
+    img{
+      @include pxRem(min-width, 185 !important);
+      @include pxRem(max-height, 185 !important);
+      border-radius: 50%; 
+      animation: categories-unscale 0.3s ;
+      &:hover{
+        animation: categories-scale 0.3s linear 1 forwards;
+      }
+    }
+    h3{
+      text-align: center;
+      @include pxRem(font-size, 16);
+      font-weight: map-get($font-weight, font-regular);
+      @include pxRem(margin, 0 0 8 );
+      }
+  }
+}
+@keyframes categories-scale {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.08);
+  }
+}
+@keyframes categories-unscale {
+  from{
+    transform: scale(1.08);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.categories-item{
+  @include pxRem(height, 218.2); 
+  
+  .categories-img{
+    @include pxRem(min-width, 185 !important);
+    @include pxRem(max-height, 185 !important);
+    overflow: hidden;
+    border-radius: 50%; 
+    @include pxRem(margin-bottom, 10);
+  }
+}
+
