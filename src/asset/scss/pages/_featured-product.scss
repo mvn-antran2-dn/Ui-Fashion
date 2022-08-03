@@ -1,6 +1,7 @@
 .section-featured-product{
   @include pxRem(margin-top, 40);
   @include pxRem(margin-bottom, 30);
+  @include pxRem(padding, 15);
   .featured-product{
     h3{
       flex-basis: 35%;
@@ -14,6 +15,7 @@
       flex-basis: 60%;
       @include pxRem(font-size, 17);
       font-weight: map-get($font-weight, font-bland);
+      color: map-get($colors, color-form-placeholder);
     }
   }
 }

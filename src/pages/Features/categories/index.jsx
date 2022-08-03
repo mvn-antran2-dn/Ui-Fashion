@@ -59,14 +59,12 @@ export default function Categories () {
                 <img className="categories-item-img"  src={categories.src} alt="categories" />
               </div>
               <div className="categories-title">
-                <a href="/#"><h3>{categories.text}</h3></a>
+              <h3>{categories.text}</h3>
               </div>       
             </div>            
           ))}
         </Slider>
       </div>
-      
-
     </div>
   </section>
   )

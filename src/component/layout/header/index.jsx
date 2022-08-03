@@ -1,8 +1,71 @@
-import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined} from '@ant-design/icons';
-import { Drawer } from 'antd';
+import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined, } from '@ant-design/icons';
+import { Drawer, Menu } from 'antd';
 import { useState } from 'react';
 import { IMAGES } from '../../../asset/images';
 
+function getItem(label, key, children, type) {
+  return {
+    key,
+    children,
+    label,
+    type,
+  };
+}
+
+const items = [
+  getItem('Home', 'Home', [
+    getItem('Home 1', 'g1', null, ),
+    getItem('Home 2', 'g2', null,),
+    getItem('Home 3', 'g3', null, ),
+    getItem('Home 4', 'g4', null,),
+    getItem('Home 5', 'g5', null, ),
+    getItem('Home 6', 'g6', null,),
+  ]),  
+  getItem('Shop', 'Shop', [
+    getItem('Shop List ', 's1', null, [getItem('Shop Default', '7'), getItem('Shop Right Sidebar', '4'), getItem('Filter Area', '4'), getItem('List Left Sidebar', '4'),getItem('Load More Button', '4'),getItem('Infinite Scroliing', '4')],'group'),
+    getItem('Product Detail ', 's2', null,[getItem('Product Variable', '7'), getItem('Product Default', '4'), getItem('Product Grouped', '4'), getItem('Product External', '4'),getItem('Product Downloadeble', '4'),getItem('Product With Video', '4'),getItem('Whitout Recently Viewed', '4')],'group'),
+    getItem('Shop Pages', 's3', null,[getItem('Cart', '7'), getItem('Checkout', '4'), getItem('My account', '4'), getItem('WishList', '4'),getItem('Order Tracking', '4'),getItem('Best Selling Product', '4'),getItem('Terms and Conditions', '4')], 'group'),
+    getItem('Shop Layouts', 's4', null,[getItem('Two Column', '7'), getItem('Three Column', '4'), getItem('Three Column Wide', '4'), getItem('Four Column', '4'),getItem('Four Column WIde', '4'),],'group'),
+  ]), 
+  getItem('Women', 'Women'),
+  getItem('Men', 'Men'),
+  getItem('Outerwear', 'Outerwear'),
+  getItem('Blog', 'Blog'),
+   getItem('Contact', 'Contact'),
+];
+const items1 = [
+  getItem('Men', 'Men', [
+    getItem('Men 1', 'm1', null, ),
+    getItem('Men 2', 'm2', null,),
+    getItem('Men 3', 'm3', null, ),
+    getItem('Men 4', 'm4', null,),
+    getItem('Men 5', 'm5', null, ),
+    getItem('Men 6', 'm6', null,),
+  ]),  
+  getItem('Women', 'Women', [
+    getItem('Women 1', 'w1', null, ),
+    getItem('Women 2', 'w2', null,),
+    getItem('Women 3', 'w3', null, ),
+    getItem('Women 4', 'w4', null,),
+    getItem('Women 5', 'w5', null, ),
+    getItem('Women 6', 'w6', null,),
+  ]),  
+  getItem('Kids', 'Kids'),
+  getItem('Baby', 'Baby'),
+  getItem('Shoes', 'Shoes'),
+  getItem('Bags', 'Bags'),
+  getItem('Accessories', 'Accessories'),
+  getItem('Watches', 'Watches'),
+  getItem('Carou Chouser', 'Carou Chouser'),
+  getItem('Outerwear', 'Outerwear'),
+  getItem('Wallets', 'Wallets'),
+  getItem('Belts', 'Belts'),
+  getItem('Best Seller', 'Best Seller'),
+  getItem('Fearture Product', 'Fearture Product'),
+  getItem('New Aviral', 'New Aviral'),
+  getItem('Reading to wear', 'Reading to wear'),
+  getItem('All for men', 'All for men'),
+];
 export default function Headers (){
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
@@ -11,6 +74,9 @@ export default function Headers (){
 
   const onClose = () => {
     setVisible(false);
+  };
+  const onClick = (e) => {
+    console.log('click ', e);
   };
   return (
   <header className="page-header">
@@ -95,8 +161,8 @@ export default function Headers (){
               <img src={IMAGES.logo} alt="logo" />
           </a>
           <ul className="header-menu flex justify-content-center align-items-center">
-              <li className="menu-header-item">
-                <a className="header-item item-home" href="/#">HOME <span><DownOutlined /></span></a>
+              <li className="menu-header-item  item-home">
+                <a className="header-item" href="/#">HOME <span><DownOutlined /></span></a>
                 <ul className="main-menu-home ">
                   <li>
                     <a href="/#" className="menu-main-item">Home 1</a>
@@ -118,110 +184,110 @@ export default function Headers (){
                   </li>
                 </ul>
               </li>
-              <li className="menu-header-item">
-              <a className="header-item" href="/#">SHOP <span><DownOutlined /></span></a>
-                <ul className="main-menu-shop">
+              <li className="menu-header-item  item-shop">
+                <a className="header-item" href="/#">SHOP <span><DownOutlined /></span></a>
+                <ul className="main-menu-shop flex container justify-content-around">
                   <li>
-                    <a href="/#" className="menu-main-item">Shop List</a>
-                    <ul className="sub-menu-list">
+                    <a href="/#" className="menu-main-item-shop">Shop List</a>
+                    <ul className="sub-menu-list ">
                       <li>
                         <a href="/#" className="sub-menu-item">Shop Default</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Right Sidebar</a>
+                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Wide</a>
+                        <a href="/#" className="sub-menu-item">Shop Wide</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Area</a>
+                        <a href="/#" className="sub-menu-item">Shop Area</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">List Left Sidebar</a>
+                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Load More Button</a>
+                        <a href="/#" className="sub-menu-item">Load More Button</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Infinite Scrolling</a>
+                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                  <a href="/#" className="menu-main-item">Product Detail</a>
+                  <a href="/#" className="menu-main-item-shop">Product Detail</a>
                     <ul className="sub-menu-list">
                       <li>
                         <a href="/#" className="sub-menu-item">Shop Default</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Right Sidebar</a>
+                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Wide</a>
+                        <a href="/#" className="sub-menu-item">Shop Wide</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Area</a>
+                        <a href="/#" className="sub-menu-item">Shop Area</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">List Left Sidebar</a>
+                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Load More Button</a>
+                        <a href="/#" className="sub-menu-item">Load More Button</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Infinite Scrolling</a>
+                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                  <a href="/#" className="menu-main-item">Shop Pages</a>
+                  <a href="/#" className="menu-main-item-shop">Shop Pages</a>
                     <ul className="sub-menu-list">
                       <li>
                         <a href="/#" className="sub-menu-item">Shop Default</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Right Sidebar</a>
+                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Wide</a>
+                        <a href="/#" className="sub-menu-item">Shop Wide</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Area</a>
+                        <a href="/#" className="sub-menu-item">Shop Area</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">List Left Sidebar</a>
+                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Load More Button</a>
+                        <a href="/#" className="sub-menu-item">Load More Button</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Infinite Scrolling</a>
+                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                  <a href="/#" className="menu-main-item">Shop Layouts</a>
+                  <a href="/#" className="menu-main-item-shop">Shop Layouts</a>
                     <ul className="sub-menu-list">
                       <li>
                         <a href="/#" className="sub-menu-item">Shop Default</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Right Sidebar</a>
+                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Wide</a>
+                        <a href="/#" className="sub-menu-item">Shop Wide</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Shop Area</a>
+                        <a href="/#" className="sub-menu-item">Shop Area</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">List Left Sidebar</a>
+                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Load More Button</a>
+                        <a href="/#" className="sub-menu-item">Load More Button</a>
                       </li>
                       <li>
-                        <a href="/#" className="menu-main-item">Infinite Scrolling</a>
+                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
                       </li>
                     </ul>
                   </li>
@@ -253,16 +319,44 @@ export default function Headers (){
               <li className="social-item">
                   <a href="/#"><HeartOutlined /><span className="add-product heart">0</span></a>
               </li>
-              <li className="social-item">
-                <span className="item-card">$0.00</span>
-                <a href="/#"><ShoppingOutlined /> <span className="add-product shopping">0</span></a>
+              <li className="social-item item-card">
+                <span className="item-card ">$0.00</span>
+                <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+                <div className="card-icon  ">
+                  <div className="card-item flex">
+                    <img src={IMAGES.card_icon} alt="card-icon" />
+                    <p>No product in the card.</p>
+                  </div>
+                </div>
               </li>
           </ul>
         </div>
-        <Drawer title="Basic Drawer" placement="left" onClose={onClose} visible={visible}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <Drawer title="Clotya" placement="left" onClose={onClose} visible={visible} >
+          <div className="menu-drawwer-top">
+            <h3>Main Menu</h3>
+            <Menu
+            onClick={onClick}
+            style={{
+              width: 305,
+            }}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['home']}
+            mode="inline"
+            items={items}/>
+          </div> 
+          <div className="menu-drawwer-top">
+            <h3 className="header-menu-drawwer">Categories</h3>
+            <Menu
+            onClick={onClick}
+            style={{
+              width: 305,
+            }}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['men']}
+            mode="inline"
+            items={items1}/>
+          </div>
+        <p className="text-drawwer">Copyright 2022 © Clotya WordPress Theme. All right reserved. Powered by KLBTheme.</p>
       </Drawer>
     </nav>
     <div className="header-bottom">

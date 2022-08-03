@@ -34,6 +34,9 @@
     @include pxRem(border-radius, 2);
     @include pxRem(border, 1 solid map-get($colors, color-border));
   }
+  input{
+    color: map-get($colors, color-text );
+  }
   .btn-sub{
     @include pxRem(font-size, 15);
     font-weight: map-get($font-weight, font-regular);
@@ -41,7 +44,10 @@
     @include pxRem(border-radius, 2);
     @include pxRem(margin-left, -1);
     background-color: map-get($colors, color-text );
-    @include pxRem(border, 1 solid map-get($colors, rgba(255,255,255,0.5)));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    &:hover{
+      background-color: #444444;
+    }
   }
   .text-bottom{
     @include pxRem(font-size, 12);

@@ -64,11 +64,10 @@
   .product1-img{
     overflow: hidden;
     @include pxRem(margin-bottom, 20);
-    // @include pxRem(max-width, 50%);
     .product1-sale{
       position: absolute;
       @include pxRem(top, 10);
-      @include pxRem(left, 25);
+      @include pxRem(left, 10);
       z-index: 3;
       text-align: center;
       @include pxRem(padding, 6 10);
@@ -100,10 +99,10 @@
       animation: unhover-action 0.3s linear 0.2s 1 forwards;
     }
     .btn-to-retweet{
-      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+      animation: unhover-action 0.3s linear 0.25s 1 forwards;
     }
     .btn-to-shopping{
-      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+      animation: unhover-action 0.3s linear 0.3s 1 forwards;
     } 
   }
   &:hover{
@@ -201,6 +200,7 @@
   .product1-review{
     font-weight: map-get($font-weight, font-medium );
     @include pxRem(font-size, 13);
+    color: map-get($colors, color-text );
     span{
       color: map-get($colors, color-start );
       @include pxRem(margin-right, 8);

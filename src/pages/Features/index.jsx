@@ -10,6 +10,8 @@ import Discount from "./discount";
 import FeaturedProduct from "./featured-product";
 import LastDeal from "./last-deal";
 import Product1 from "./product-01";
+import Product2 from "./product-02";
+import Product3 from "./product-03";
 
 export default function Main(){
   const DayCount1 = 17 * 24 * 60 * 60 * 1000;
@@ -27,8 +29,10 @@ export default function Main(){
     <BannerCountdown targetDate= {Dealine1}/>
     <BannerSeason />
     <FeaturedProduct />
+    <Product2 />
     <Deal targetDate= {Dealine2}/>
     <FeaturedProduct />
+    <Product3 />
     <BannerSummer />
     <LastDeal />
     <Discount targetDate= {Dealine2}/>

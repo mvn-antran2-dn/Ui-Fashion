@@ -4,11 +4,11 @@ $grid-columns: 12;
   @for $i from 1 through $grid-columns {
     @if $size != "" {
       .col-#{$size}-#{$i} {
-        width: calc($i / $grid-columns);
+        width: calc($i , $grid-columns);
       }
     } @else {
       .col-#{$i} {
-        width: calc($i / $grid-columns);
+        width: calc($i , $grid-columns);
       }
     }
   }

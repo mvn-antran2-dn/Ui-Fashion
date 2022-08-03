@@ -1,0 +1,70 @@
+.product2-img-text{
+  top: 15%;
+  .content-title-all{   
+    .subtitle-all{
+      @include pxRem(font-size, 12);
+      color: map-get($colors, color-background );
+    }
+    .title-all{
+      color: map-get($colors, color-background );
+    }
+    .text-all{
+      opacity: 0.6;
+      color: map-get($colors, color-background );
+    }
+    .btn-shopnow-all{
+      color: map-get($colors, color-background );     
+    }
+    &:hover{
+      color: map-get($colors, color-text );
+    }
+  }
+  &:hover{
+    color: map-get($colors, color-text );
+  }
+}
+.product1-img{
+  .product-img-default1-1 {
+    @include pxRem(width, 290);
+    @include pxRem(height, 435);
+    display: flex;
+    background-size: 100%;
+    .product1-img-default1-1,.product1-img-default1-2,.product1-img-default1-3,.product1-img-default1-4{
+      width: 25%;
+    }
+  }
+  .product-img-default1-2 {
+    @include pxRem(margin-top, 6);
+    @include pxRem(width, 290);
+    @include pxRem(height, 4);
+    display: flex;
+    background-size: 100%;
+    justify-content: space-between;
+    .product1-img-default1-5,.product1-img-default1-6,.product1-img-default1-7,.product1-img-default1-8{
+      background-color: #00000026;
+      width: 24%;
+    }
+  }
+  .active {
+    background-color: #0000004d !important;
+  }
+}
+.slick-slider .slick-next {
+  right: -60px;
+  opacity: 1;
+  &::before{
+    content: '>';
+    color: map-get($colors, color-text-desc );
+    font-size: 40px;
+  }
+  
+}
+.slick-slider .slick-prev {
+  left: -60px;
+  opacity: 1;
+  &::before{
+    content: '<';
+    color: map-get($colors, color-text-desc );
+    font-size: 40px;
+  }
+}

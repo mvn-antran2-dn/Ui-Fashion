@@ -40,7 +40,7 @@ export default function Product1 () {
               <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
-                <span>1 review</span> 
+                1 review   
               </div>
               <div className="product1-amount">
                 <div className="product1-amount-bar">
