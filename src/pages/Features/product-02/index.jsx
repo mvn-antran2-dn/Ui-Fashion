@@ -8,7 +8,7 @@ export default function Product2 () {
   <section className="section-product1">
     <div className="container flex product1">
       <div className="product1-banner">
-        <a href="/#" className="product1-banner-title">
+        <div className="product1-banner-title">
           <img src={IMAGES.product2_9} alt="product1_3" />
           <div className="product2-img-text content-all">
             <div className="content-title-all">
@@ -18,7 +18,7 @@ export default function Product2 () {
               <a href="/#" className="btn-shopnow-all">Shop Collection <ArrowRightOutlined /></a>
             </div>
           </div>
-        </a>
+        </div>
       </div>
       <ul className="product1-list flex">
         <li className="product1-item ">

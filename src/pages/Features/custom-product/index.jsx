@@ -12,6 +12,7 @@ export default function CustomProduct ({prd1, prd2, prd3, prd4}) {
     let divParentProduct = useRef();
   useEffect(() => {
     let divParent = divParentProduct.current;
+    divParent.style.backgroundImage = ` url("${prd1}")`;
     product1_1.current.addEventListener("mouseenter", () => {
       divParent.style.backgroundImage = `url("${prd1}")`;
       

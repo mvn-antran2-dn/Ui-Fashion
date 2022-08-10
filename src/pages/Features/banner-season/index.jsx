@@ -8,7 +8,7 @@ export default function BannerSeason () {
     <div className="container">
       <ul className="banner-season-list flex justify-content-around">
         <li>
-          <a className="banner-season-item flex" href="/#">
+          <div className="banner-season-item flex" >
             <img src={IMAGES.banner2_1} alt="banner-season" />
             <div className="banner-season-content content-all one">
               <div className="content-title-all season-content">
@@ -18,10 +18,10 @@ export default function BannerSeason () {
                 <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
               </div>     
             </div>
-          </a>
+          </div>
         </li>
         <li>
-          <a className="banner-season-item flex" href="/#">
+          <div className="banner-season-item flex">
             <img src={IMAGES.banner2_2} alt="banner-season" />
             <div className="banner-season-content content-all ">
               <div className="content-title-all season-content two">
@@ -31,10 +31,10 @@ export default function BannerSeason () {
                 <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
               </div>
             </div>
-          </a>
+          </div>
         </li>
         <li>
-          <a className="banner-season-item flex" href="/#">
+          <div className="banner-season-item flex">
             <img src={IMAGES.banner2_3} alt="banner-season" />
             <div className="banner-season-content content-all tree">
               <div className="content-title-all season-content tree">
@@ -44,7 +44,7 @@ export default function BannerSeason () {
                 <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
               </div>
             </div>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
