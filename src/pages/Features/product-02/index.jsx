@@ -22,7 +22,7 @@ export default function Product2 () {
       </div>
       <ul className="product1-list flex">
         <li className="product1-item ">
-          <div className="product1-img">
+          <div className="product1-img product2-img">
               <CustomProduct
               prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/pocketmen1-500x750.jpeg"
               prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/pocketmen2-500x750.jpeg"
@@ -39,7 +39,7 @@ export default function Product2 () {
                 <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
             </div>
           </div>
-          <div className="product1-info">
+          <div className="product1-info product2-info">
             <div className="product1-review">               
               <span><StarFilled /> </span> 
               1 review   
@@ -49,7 +49,7 @@ export default function Product2 () {
           </div>
         </li>
         <li className="product1-item ">
-          <div className="product1-img">
+          <div className="product1-img product2-img">
               <CustomProduct
               prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/knotted1-500x750.jpeg"
               prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/knotted2-500x750.jpeg"
@@ -66,7 +66,7 @@ export default function Product2 () {
                 <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
             </div>
           </div>
-          <div className="product1-info">
+          <div className="product1-info product2-info">
             <div className="product1-review">               
               <span><StarFilled /> </span> 
               1 review   

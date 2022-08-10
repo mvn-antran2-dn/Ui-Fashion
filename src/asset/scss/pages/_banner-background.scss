@@ -1,5 +1,5 @@
 .section-bannerbg{
-  @include pxRem(margin-top, 38);
+  @include pxRem(margin-top, 66);
   @include pxRem(height, 70%);
   .bannerbg-content{
     flex-direction: row-reverse;
@@ -16,10 +16,11 @@
 .bannerbg-content-text{
   align-items: center;
   justify-content: center;
-  line-height: 24px;
-  padding: 30px;
+  @include pxRem(line-height, 24);
   text-align: center;
- 
+  .content-bg{
+    @include pxRem(padding, 30);
+  }
   h4{
     font-weight: map-get($font-weight, font-medium );
     @include pxRem(letter-spacing, 1);
@@ -32,10 +33,14 @@
     @include pxRem(line-height, 67.2);
     @include pxRem(font-size, 56);
     @include pxRem(margin, 0 0 30);
+    font-weight: map-get($font-weight, font-regular );
   }
   p{
     @include pxRem(line-height, 24);
-    @include pxRem(margin, 0 0 26);
+    @include pxRem(margin, 0 80 30);
+    @include pxRem(font-size, 16);
+    @include pxRem(max-width, 540);
+    opacity: 0.6;
   }
   a{
     border: 1px solid map-get($colors, color-primary );
@@ -49,3 +54,64 @@
     }
   }
 }
+
+@media only screen and (max-width: 1023px){
+  .section-bannerbg{
+    @include pxRem(margin-top, 0);
+  }
+  .bannerbg-content-text{
+    h2{
+      @include pxRem(font-size, 40);
+    }
+    p{
+      @include pxRem(margin, 0 0 30);
+      @include pxRem(font-size, 14);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .section-bannerbg{
+    @include pxRem(margin-top, 0);
+  }
+  .bannerbg-content img{
+    @include pxRem(height, 380);
+    object-fit: cover;
+  }
+  .bannerbg-content-text{
+    h2{
+      line-height: 1.2;
+    }
+    p{
+      @include pxRem(margin, 0 0 30);
+      @include pxRem(font-size, 14);
+    }
+  }
+}
+
+@media only screen and (max-width: 479px){
+  .section-bannerbg{
+    @include pxRem(margin-top, 18);
+    .bannerbg-content{
+      flex-direction: column;
+      img{
+        @include pxRem(width, 100%);
+      }
+    }
+  }
+  .bannerbg-content img{
+    @include pxRem(height, 390);   
+    object-fit: cover;
+  }
+  .bannerbg-content-text{
+    h2{
+      line-height: 1.2;
+    }
+    p{
+      @include pxRem(margin, 0 0 30);
+      @include pxRem(font-size, 14);
+    }
+  }
+}
+
+

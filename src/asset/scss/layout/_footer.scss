@@ -86,6 +86,7 @@
 }
 .footer-logo{
   flex-basis: 30%;
+  @include pxRem(margin-left, 0);
   img{
     @include pxRem(max-width, 40%);
     height: auto;    
@@ -126,3 +127,109 @@
   }
 }
 
+@media only screen and (max-width: 1023px)   {
+  .page-footer{
+    @include pxRem(margin-top, 60);
+    .footer-form{
+      @include pxRem(padding, 40 0);
+    }
+    .footer-top{
+      @include pxRem(padding, 40 0);
+    }
+  }
+  .footer-subcrite-address{
+    flex-direction: column;
+    @include pxRem(padding, 0 150);
+  }
+  .form-subscribe{
+    @include pxRem(max-width, 100%);
+    h3{
+      @include pxRem(font-size, 24);
+      @include pxRem(max-width, 100%);
+    }
+    .title-text{
+      @include pxRem(font-size, 14);
+    }
+    .form-text{
+      @include pxRem(max-width, 23%);
+    }
+    .btn-sub{
+      @include pxRem(padding, 11 30);
+    }
+    .text-bottom{
+      display: inline;
+    }
+  }
+  .address{
+    @include pxRem(margin-top, 30);
+    @include pxRem(padding, 0 115);
+    max-width: 100%;
+    h2{
+    @include pxRem(font-size, 24);
+    @include pxRem(max-width, 100%);
+    }
+    .title-text{
+      @include pxRem(font-size, 14);
+    }
+  }
+  .footer-logo{
+    @include pxRem(margin-left, 0);
+    img{
+      @include pxRem(max-width, 50%);
+    }
+    p{
+      @include pxRem(max-width, 100%);
+    }
+  }
+  .footer-bottom{
+    @include pxRem(padding, 30 0);
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px)   {
+  .page-footer{
+    @include pxRem(margin-top, 30);
+  }
+  .footer-subcrite-address{
+    flex-direction: column;
+    @include pxRem(padding, 0 35);
+  }
+  .footer-top{
+    flex-direction: column;
+    .footer-logo{
+      width: 45%;
+    }
+  }
+  .footer-bottom{
+    @include pxRem(padding, 30 0);
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 479px)   {
+  .footer-subcrite-address{
+    @include pxRem(padding, 0 24);
+  }
+  .form-subscribe{
+    h3{
+      font-weight: map-get($font-weight, font-medium );
+    }
+    .form-text{
+      @include pxRem(max-width, 70%);
+    }
+    .btn-sub{
+      @include pxRem(padding, 11 30);
+    }
+    .text-bottom{
+      display: inline;
+    }
+  }
+  .address{
+    @include pxRem(padding, 0 0);
+    max-width: 100%;
+  }
+}

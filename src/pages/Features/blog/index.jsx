@@ -9,9 +9,9 @@ export default function Blog(){
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Quis ipsum suspendisse ultrices gravida. Risus commodo viverra vel facilisis.</p>
       </div>
-      <ul className="blog-list flex justify-content-around">
+      <ul className="blog-list flex justify-content-between">
         <li> 
-          <div className="blog-item ">
+          <div className="blog-item left">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog1} alt="blog 1" />
             </a>
@@ -35,7 +35,7 @@ export default function Blog(){
           </div>
         </li>
         <li>
-          <div className="blog-item ">
+          <div className="blog-item right">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog3} alt="blog 3" />
             </a>

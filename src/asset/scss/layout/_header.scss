@@ -1,9 +1,9 @@
 .page-header{
-  @include pxRem(height, 124);
+  @include pxRem(height, 95);
   .header-top{
     @include pxRem(height, 40);
     @include pxRem(font-size, 13);
-    border-bottom: 1px solid map-get($colors, bs-gray-500);
+    border-bottom: 1px solid map-get($colors, color-border);
     color: map-get($colors , color-text );  
     align-items: center; 
     .header-top-left{ 
@@ -26,7 +26,7 @@
         @include pxRem(margin-left, 15);
         color: map-get($colors, color-text);
         position: relative;
-        @include pxRem(font-size, 20);
+        @include pxRem(font-size, 21);
       }
       .add-product{
         position: absolute;
@@ -64,19 +64,18 @@
 .header-logo{
   @include pxRem(width, 121);
   @include pxRem(height, 32);
-  @include pxRem(margin-left, 15);
+  align-items: center;
   .btn-icon{
     background-color: map-get($colors, color-background );
     text-align: center;
     border: none;
-    @include pxRem(margin-right, 20);
+    @include pxRem(margin-right, 10%);
     color: map-get($colors, color-text );
     @include pxRem(font-size, 21);
   }
 }
 
 .dropdown-ins{
-  @include pxRem(padding, 0 12);
   position: relative;
   a{
     color: map-get($colors, color-text );
@@ -94,7 +93,7 @@
 }
 .header-right-title{
   @include pxRem(margin-left, 30);
-  span{
+  strong{
     color: map-get( $colors, color-primary );
   }
 }
@@ -183,11 +182,10 @@
 
   }
   .menu-header-item{
-    @include pxRem(height, 84);
-    @include pxRem(margin-top, 13%);
+    @include pxRem(margin-left, 30);
     .header-item{
-      @include pxRem(margin-left, 15);
       color: map-get($colors, color-text);
+      font-weight: map-get($font-weight, font-medium);
     }
     span{
       @include pxRem(font-size, 9);
@@ -321,4 +319,125 @@
     font-weight: map-get($font-weight, font-verybold);
   }
 }
+.header-menu-icon-hidden{
+  background-color: map-get($colors, color-background);
+  position: fixed;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #8a8b8e;
+  @include pxRem(border,1 solid map-get($colors, color-border));
+  @include pxRem(padding, 10 20);
+  .menu-icon-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    a{
+      @include pxRem(font-size, 22);
+      color: #8a8b8e;
+    }
+    .icon-item-text{
+       text-transform: uppercase;
+       @include pxRem(font-size, 9);
+       font-weight: map-get($font-weight, font-medium);
+    }
+  }
+}
+
+
+//////end-basic 
+@media only screen and (max-width: 1023px){
+  .container{
+    @include pxRem(max-width, 1024);
+    @include pxRem(width, 1024);
+    @include pxRem(padding,15);
+  }
+  .container-elementor{
+    @include pxRem(width, 1024);
+    @include pxRem(max-width, 1024);
+    @include pxRem(padding,15);
+  }
+  .page-header{
+    .header-top{
+      display: none;
+    }
+    .header-nav{
+      @include pxRem(height, 56);
+      
+    }
+  }
+  .header-nav-menu{
+    background-color: map-get($colors, color-background );
+    z-index: 10;
+    position: fixed;
+  }
+  .header-menu{
+    display: none;
+    }
+    .social-list{
+      visibility: hidden;
+      .item-card{
+      visibility: visible;
+    }
+  }
+  .header-logo{
+    @include pxRem(width, 112);
+    @include pxRem(height, 25);
+    .btn-icon{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(margin-right, 400%);
+    }
+  }
+  .header-menu-icon-hidden{
+    visibility: visible;
+  }
+}
+///////
+@media only screen and (max-width: 767px) {
+  .container{
+    @include pxRem(max-width, 768);
+    @include pxRem(width, 768);
+    @include pxRem(padding,15);
+  }
+  .container-elementor{
+    @include pxRem(width, 768);
+    @include pxRem(max-width, 768);
+    @include pxRem(padding,15);
+  }
+  .header-logo{
+    @include pxRem(width, 112);
+    @include pxRem(height, 25);
+    .btn-icon{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(margin-right, 260%);
+    }
+  }
+}
+
+///////
+@media only screen and (max-width: 479px) {
+  .container{
+    @include pxRem(max-width, 480);
+    @include pxRem(width, 480);
+    @include pxRem(padding,15);
+  }
+  .container-elementor{
+    @include pxRem(width, 480);
+    @include pxRem(max-width, 480);
+    @include pxRem(padding,15);
+  }
+  .header-logo{
+    @include pxRem(width, 112);
+    @include pxRem(height, 25);
+    .btn-icon{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(margin-right, 130%);
+    }
+  }
+}
+
+
 

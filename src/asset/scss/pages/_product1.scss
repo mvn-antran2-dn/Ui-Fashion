@@ -15,7 +15,7 @@
   @include pxRem(max-width, 100%);
   @include pxRem(padding-left, 15);
   img{
-    @include pxRem(width, 100%);
+    @include pxRem(width, 98%);
   }
 }
 .content-all{
@@ -238,3 +238,91 @@
     color: map-get($colors, color-primary);
   }
 }
+
+@media only screen and (max-width: 1023px){
+  .product1{
+    flex-direction: column-reverse;
+    .product1-banner{
+      @include pxRem(padding-top, 15);
+      @include pxRem(width, 102%);
+      @include pxRem(margin-left, -14);
+    }
+    .product1-item{
+      @include pxRem(width,50%);
+    }
+    .product1-img{
+      .product1-img-default1-1{
+        @include pxRem(width,482);
+      }
+      .product1-img-default1-2{
+        @include pxRem(width,482);
+      }
+    }
+  }
+  .product1-info{
+    @include pxRem(padding-bottom, 15);
+    .product1-name{
+      @include pxRem(margin-bottom, 8);
+    }
+    .product1-review{
+      @include pxRem(margin, 10 0) ;
+      span{
+        color: map-get($colors, color-start );
+        @include pxRem(margin-right, 8);
+        @include pxRem(font-size, 14)
+      }
+    }
+    .product1-amount{
+      @include pxRem(margin-top, 12);
+    }
+  }
+  .content-all{    
+    .content-title-all{
+      .subtitle-all{
+        @include pxRem(font-size, 12);
+      }
+      .title-all{
+        @include pxRem(font-size, 35);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px){
+  .product1 .product1-list{
+    flex-direction: column;
+    .product1-banner{
+      @include pxRem(width, 100%);
+    }
+    .product1-item{
+      @include pxRem(width,100%);
+      margin: 0 0;
+    }
+  }
+  .product1-banner-title img{
+    @include pxRem(width, 448);
+    @include pxRem(height, 292);
+    object-fit: cover;
+  }
+  .content-all{
+    .content-title-all{
+      @include pxRem(max-width, 100%);
+      .title-all{
+        @include pxRem(font-size, 30);
+      }
+      .text-all{
+        opacity: 0.6;
+        @include pxRem(font-size, 14);
+        @include pxRem(margin-bottom, 16);
+      }
+      .btn-shopnow-all{
+        @include pxRem(font-size, 16);
+        font-weight: map-get($font-weight, font-medium );
+        
+      }
+    }
+  }
+}
+
+
+

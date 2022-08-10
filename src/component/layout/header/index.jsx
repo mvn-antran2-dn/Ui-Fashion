@@ -1,4 +1,4 @@
-import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined, } from '@ant-design/icons';
+import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined, ShopOutlined, } from '@ant-design/icons';
 import { Drawer, Menu } from 'antd';
 import { useState } from 'react';
 import { IMAGES } from '../../../asset/images';
@@ -81,7 +81,7 @@ export default function Headers (){
   return (
   <header className="page-header">
     <div className="header-top flex">
-      <div className="container flex justify-content-between">
+      <div className="container-elementor flex justify-content-between">
         <div className="header-top-left flex ">
           <div className="dropdown-ins flex">
             <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3.1M Followers <CaretDownOutlined /></strong> </a>
@@ -115,7 +115,7 @@ export default function Headers (){
               </li>
             </ul>
           </div>
-          <p className="header-right-title">Free Shipping World wide for all orders over $199.  <span> Click and Shop Now.</span></p>
+          <p className="header-right-title">Free Shipping World wide for all orders over $199.  <strong> Click and Shop Now.</strong></p>
         </div>
         <div className="header-top-right">
           <ul className="menu-top-header-right flex">
@@ -153,7 +153,7 @@ export default function Headers (){
       </div>
     </div>
     <nav className="header-nav flex ">
-        <div className="container flex justify-content-between align-items-center">        
+        <div className="container-elementor header-nav-menu flex justify-content-between align-items-center">        
           <a href="/#" className="header-logo flex ">
             <button className="btn-icon" type="primary" onClick={showDrawer}>
               <MenuOutlined />
@@ -362,6 +362,32 @@ export default function Headers (){
     <div className="header-bottom">
       <h4 >SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL DELIVERY - OFF 50%! <strong>SHOP NOW</strong> </h4>
     </div>
+    <nav className="header-menu-icon-hidden ">
+      <div className="menu-icon-hidden">
+        <ul className="menu-icon-list flex justify-content-around">
+          <li className="menu-icon-item ">
+              <a href="/#" className="icon-search"><ShopOutlined /></a>
+              <span className="icon-item-text">Store</span>
+          </li>
+          <li className="menu-icon-item ">
+              <a href="/#" className="icon-user"><SearchOutlined /></a>
+              <span className="icon-item-text">Search</span>
+          </li>
+          <li className="menu-icon-item ">
+              <a href="/#"><HeartOutlined /></a>
+              <span className="icon-item-text">Wishlist</span>
+          </li>
+          <li className="menu-icon-item">
+            <a href="/#"><UserOutlined /></a>
+            <span className="icon-item-text">Account</span>
+          </li>
+          <li className="menu-icon-item">
+            <a href="/#" onClick={showDrawer}><MenuOutlined /></a>
+            <span className="icon-item-text">Categories</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
   );
 }

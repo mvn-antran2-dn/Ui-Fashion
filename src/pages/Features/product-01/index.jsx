@@ -7,14 +7,14 @@ export default function Product1 () {
   <section className="section-product1">
     <div className="container flex product1">
       <div className="product1-banner">
-        <a href="/#" className="product1-banner-title">
+        <a href="." className="product1-banner-title">
           <img src={IMAGES.product1_3} alt="product1_3" />
           <div className="product1-img-text content-all">
             <div className="content-title-all">
               <h4 className="subtitle-all">WINTER 2022 COLLECTION</h4>
               <h3 className="title-all">Aenean id sapien sit amet urna laoreet</h3>
               <p className="text-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-              <a href="/#" className="btn-shopnow-all">Shop Collection <ArrowRightOutlined /></a>
+              <a href="." className="btn-shopnow-all">Shop Collection <ArrowRightOutlined /></a>
             </div>
           </div>
         </a>
@@ -22,7 +22,7 @@ export default function Product1 () {
       <ul className="product1-list flex">
         <li className="product1-item ">
           <div className="product1-img">
-            <a href="/#" className="product1-img-default">
+            <a href="." className="product1-img-default">
                 <img src={IMAGES.product1_1} alt="product1-1" />
             </a>
             <div className="product1-img-badge">
@@ -36,7 +36,7 @@ export default function Product1 () {
             </div>
           </div>
           <div className="product1-info">
-              <a href="/#" className="product1-name">Sleeveless Ribbed Short Dress</a>
+              <a href="." className="product1-name">Sleeveless Ribbed Short Dress</a>
               <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
@@ -55,7 +55,7 @@ export default function Product1 () {
         </li>
         <li className="product1-item ">
           <div className="product1-img">
-              <a href="/#" className="product1-img-default">
+              <a href="." className="product1-img-default">
                   <img src={IMAGES.product1_2} alt="product1-2" />
               </a>
               <div className="product1-img-badge">
@@ -69,7 +69,7 @@ export default function Product1 () {
               </div>
           </div>
           <div className="product1-info">
-              <a href="/#" className="product1-name">Basic Relax Fit Leggings</a>
+              <a href="." className="product1-name">Basic Relax Fit Leggings</a>
               <p className="product1-price"> <span>$29.90</span><strong>$24.90</strong></p>
               <div className="product1-review">
                 <span><StarFilled /> </span>

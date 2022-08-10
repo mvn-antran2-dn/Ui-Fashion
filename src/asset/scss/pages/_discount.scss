@@ -203,3 +203,48 @@
   @include pxRem(margin-bottom, 8);
   font-weight: map-get($font-weight, font-regular);
 }
+
+@media only screen and (max-width: 1023px){
+  .discount-item{
+    flex-direction: column;
+    .discount-img{
+      @include pxRem(padding, 20);
+      margin: 0;
+    }
+    .discount-info{
+      @include pxRem(padding, 20);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+    .discount .discount-list {
+      width: 97%;
+      height: 100%;
+      justify-content: space-between;
+      @include pxRem(margin, 0 10);
+    }
+}
+@media only screen and (max-width: 479px){
+  .discount .discount-list {
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    @include pxRem(margin, 0 0);
+    .discount-item{
+      max-width: 100%;
+      &:last-child{
+        @include pxRem(margin, 30 0 0 );
+      }
+    }
+  }
+  .countdown-title{
+    font-weight: map-get($font-weight, font-medium );
+  }
+  .countdown-banner .count-item{
+    font-weight: map-get($font-weight, font-medium );
+  }
+  .discount-item .discount-img .img-total-action{
+    right: 8%;
+  }
+}

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
   <footer className="page-footer ">
     <div className="footer-form">
-      <div className="container  flex justify-content-between">
+      <div className="container  flex justify-content-between footer-subcrite-address">
         <div className="form-subscribe">
           <form className="form-subscribe-content">
             <h3>Get our emails for info on new items, sales and more.</h3>
@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
     </div>
     <div className="container ">
-      <div className="footer-top flex justify-content-around">
+      <div className="footer-top flex justify-content-between">
         <div className="footer-logo  ">
           <a href="/#" className="footer-logo-img">
             <img src={IMAGES.logo} alt="logo" />

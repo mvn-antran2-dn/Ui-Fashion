@@ -1,5 +1,6 @@
 .section-banner-summer{
   margin-top: 10px;
+  @include pxRem(margin-top, 10);
   .banner-summer-img{
     @include pxRem(padding, 15 15 15 0);
     position: relative;
@@ -15,7 +16,7 @@
     @include pxRem(font-size, 12);
   }
   .btn-shopnow-all.summer-btn:hover{
-    color: map-get($colors, color-background );
+    color: map-get($colors, color-text);
   }
 }
 .sale-img-text .content-title-all{
@@ -29,7 +30,66 @@
   .sale-text-title{
     color: map-get($colors, color-background );
   }
+  .sale-text-all:hover{
+    color: map-get($colors, color-background);
+    opacity: 0.6;
+  }
   .sale-btn{
     color: map-get($colors, color-background );
+  }
+}
+
+@media only screen and (max-width: 1023px){
+  .section-banner-summer{
+    @include pxRem(margin-bottom, 0);
+  }
+  .banner-summer{
+    flex-direction: column;
+  }
+  .section-banner-summer{  
+    .banner-summer-img{
+      @include pxRem(padding, 15 0 15 0);
+      img{       
+        width: 100%;
+      }
+    }
+    .season-sale{
+      img{       
+        width: 100%;
+      }
+      .sale-img-text.content-all{
+        @include pxRem(padding, 40% 20%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-banner-summer .season-sale {
+    @include pxRem(padding, 15);
+  }
+}
+@media only screen and (max-width: 479px) {
+  .banner-summer-img{
+    @include pxRem(height,327);
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+    .summer-img-text.content-all{
+      width: 70%;
+      line-height: 1.2;
+    }
+  }
+  .section-banner-summer .season-sale{
+    @include pxRem(height,256);
+    padding: 0;
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .section-banner-summer .season-sale .sale-img-text.content-all{
+    @include pxRem(padding, 60 46);
   }
 }

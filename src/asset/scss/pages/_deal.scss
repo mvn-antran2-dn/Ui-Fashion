@@ -97,3 +97,54 @@
   
 }
 
+@media only screen and (max-width: 1023px){
+  .deal-total{
+    background-image: none;
+    background-color: #f4f2f0;
+    .deal-content{ 
+      margin-left: auto;
+      @include pxRem(width, 45%);
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  .deal-total{
+    height: auto;
+    .deal-content{ 
+      @include pxRem(width, 100%);
+    }
+  }
+}
+@media only screen and (max-width: 479px){
+  .content-title-all.deal-content-small {
+    .deal-subtitle{
+      @include pxRem(margin-bottom, 8);
+    }
+    .deal-title {
+      @include pxRem(font-size, 30);
+      font-weight: map-get($font-weight, font-medium );
+      line-height: 1.2;
+      @include pxRem(margin-bottom, 8);
+    }
+    .deal-text{
+    @include pxRem(margin, 0 0 16);
+    }
+  }
+  .deal-content.content-all{
+    @include pxRem(padding, 60 23);
+  }
+  .countdown-total{
+    @include pxRem(margin-top, 0);
+    .count-item{
+      @include pxRem(font-size, 20);
+    }
+  }
+  .btn-shopnow{
+    width: 100%;
+    @include pxRem(margin-top, 20);
+    text-align: center;
+  }
+}
+

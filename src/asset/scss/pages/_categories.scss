@@ -29,7 +29,6 @@
     justify-content: space-around;
     align-items: center;
     @include pxRem(margin-right, 20);
-    
     img{
       @include pxRem(min-width, 185 !important);
       @include pxRem(max-height, 185 !important);
@@ -42,7 +41,7 @@
     h3{
       text-align: center;
       @include pxRem(font-size, 16);
-      font-weight: map-get($font-weight, font-regular);
+      font-weight: map-get($font-weight, font-medium);
       @include pxRem(margin, 0 0 8 );
       }
   }
@@ -64,14 +63,87 @@
   }
 }
 .categories-item{
-  @include pxRem(height, 218.2); 
-  
+  @include pxRem(height, 218.2);   
   .categories-img{
     @include pxRem(min-width, 185 !important);
     @include pxRem(max-height, 185 !important);
     overflow: hidden;
     border-radius: 50%; 
     @include pxRem(margin-bottom, 10);
+  }
+}
+
+
+
+@media only screen and (max-width: 1023px){
+  .section-categories{
+    height: auto;
+    .slick-track {
+      .slick-slide {
+        @include pxRem(margin-right, 0); 
+        @include pxRem(min-width, 256 !important);   
+        img{
+          @include pxRem(min-width, 226 !important);
+          @include pxRem(max-height,226 !important);
+          }
+        }
+      }
+    }
+    .categories-item{
+      @include pxRem(height, 263);      
+      .categories-img{
+        @include pxRem(min-width, 226 !important);
+        @include pxRem(max-height, 226 !important);
+      }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-categories{
+    height: auto;
+    .slick-track {
+      .slick-slide {
+        @include pxRem(margin-right, 0); 
+        @include pxRem(min-width, 185 !important);   
+        img{
+          @include pxRem(min-width, 162 !important);
+          @include pxRem(max-height,162 !important);
+        }
+      }
+    }
+  }
+  .categories-item{
+    @include pxRem(height, 208);      
+    .categories-img{
+      @include pxRem(min-width, 162 !important);
+      @include pxRem(max-height, 162 !important);
+    }
+  }
+}
+@media only screen and (max-width: 479px) {
+  .section-categories{
+    height: auto;
+    .slick-track {
+      .slick-slide {
+        @include pxRem(margin-right, 0); 
+        @include pxRem(min-width, 160 !important);   
+        img{
+          @include pxRem(min-width, 130 !important);
+          @include pxRem(max-height,130 !important);
+        }
+      }
+    }
+    .categories-title{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .categories-item{
+    @include pxRem(height, 170);      
+    .categories-img{
+      @include pxRem(min-width, 130 !important);
+      @include pxRem(max-height, 130 !important);
+    }
   }
 }
 

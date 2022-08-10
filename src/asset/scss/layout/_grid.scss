@@ -4,24 +4,29 @@ $grid-columns: 12;
   @for $i from 1 through $grid-columns {
     @if $size != "" {
       .col-#{$size}-#{$i} {
-        width: calc($i , $grid-columns);
+        width: calc($i / $grid-columns);
       }
     } @else {
       .col-#{$i} {
-        width: calc($i , $grid-columns);
+        width: calc($i / $grid-columns);
       }
     }
   }
 }
 // End mixins for build grid
-$grid-gutter: 10px;
-$container-width: 1240px;
-.container {
-  padding-left: $grid-gutter;
-  padding-right: $grid-gutter;
+$grid-gutter: 15px;
+$container-elementor-width: 1319px;
+$container-width: 1290px;
+.container-elementor {
+  margin: 0 auto;
+  max-width: $container-elementor-width;
+  width: $container-elementor-width;
+}
+.container{
   margin: 0 auto;
   max-width: $container-width;
   width: $container-width;
+  padding: $grid-gutter;
 }
 .row {
   display: flex;

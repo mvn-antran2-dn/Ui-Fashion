@@ -44,7 +44,7 @@ export default function CustomProduct ({prd1, prd2, prd3, prd4}) {
   });
   return (
     <>
-    <div className="product-img-default1-1" ref={divParentProduct}>
+    <div className="product-img-default1-1 " ref={divParentProduct}>
       <div className="product1-img-default1-1" ref={product1_1} ></div>
       <div className="product1-img-default1-2" ref={product1_2} ></div>
       <div className="product1-img-default1-3" ref={product1_3} ></div>

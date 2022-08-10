@@ -14,9 +14,9 @@ export default function Product3 () {
     <section className="section-product1">
       <div className="container flex product1">
         <ul className="product1-list flex">
-          <Slider className="product1-list flex" {...settings_product}>
+          <Slider className="product1-list flex product3-list" {...settings_product}>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
               <CustomProduct 
                prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/pants1-500x750.jpeg"
                prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/pants2-500x750.jpeg"
@@ -33,17 +33,17 @@ export default function Product3 () {
                   <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
               </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 2 review 
               </div> 
-              <a href="/#" className="product1-name">Basic Colored Sweatpants With Elastic Hems</a>
+              <a href="/#" className="product1-name">Basic Colored Sweatpants With </a>
               <p className="product1-price"> <span>$25.90</span><strong>$19.90</strong></p>  
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                  prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/basic1-500x750.jpeg"
                  prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/basic2-500x750.jpeg"
@@ -57,7 +57,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -67,7 +67,7 @@ export default function Product3 () {
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                 prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/leggings1-500x750.jpeg"
                 prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/leggings2-500x750.jpeg"
@@ -84,7 +84,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -94,7 +94,7 @@ export default function Product3 () {
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                  prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/overshirt1-500x750.jpg"
                  prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/overshirt2-500x750.jpg"
@@ -111,7 +111,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -121,7 +121,7 @@ export default function Product3 () {
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                 prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/printedh1-500x750.jpg"
                 prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/printedh2-500x750.jpg"
@@ -135,7 +135,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -145,7 +145,7 @@ export default function Product3 () {
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                 prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/cup1-500x750.jpeg"
                 prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/cup2-500x750.jpeg"
@@ -162,7 +162,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -172,7 +172,7 @@ export default function Product3 () {
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                 prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/dressblack1-1-500x750.jpeg"
                 prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/dressblack2-500x750.jpeg"
@@ -189,17 +189,17 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
               </div> 
-              <a href="/#" className="product1-name">Sleeveless Ribbed Short Dress Black</a>
+              <a href="/#" className="product1-name">Sleeveless Ribbed Short Dress</a>
               <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>  
             </div>
           </li>
           <li className="product1-item ">
-            <div className="product1-img">
+            <div className="product1-img product3-img">
             <CustomProduct 
                  prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/slogan1-500x750.jpg"
                  prd2="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/slogan2-500x750.jpg"
@@ -216,7 +216,7 @@ export default function Product3 () {
                     <button className="btn-to-action btn-to-shopping"><ShoppingOutlined /></button>
                 </div>
             </div>
-            <div className="product1-info">
+            <div className="product1-info product3-info">
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   

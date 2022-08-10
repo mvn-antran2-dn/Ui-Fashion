@@ -65,6 +65,44 @@
     border-top: 1px solid #00000026;
   }
 }
+
+@media only screen and (max-width: 1023px){
+  .section-banner-logo .slick-track {
+    .slick-slide {
+      @include pxRem(margin-right, 60);  
+      @include pxRem(min-width, 271 !important); 
+      img{
+        @include pxRem(min-width, 271 !important);
+        @include pxRem(max-height, 155 !important);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  .section-banner-logo .slick-track {
+    .slick-slide {
+      @include pxRem(margin-right, 60);  
+      @include pxRem(min-width, 193 !important); 
+      img{
+        @include pxRem(min-width, 193 !important);
+        @include pxRem(max-height, 110 !important);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 479px){
+  .section-banner-logo .slick-track .slick-slide {
+    @include pxRem(margin-right, 40);  
+    @include pxRem(min-width, 174 !important); 
+    img{
+      @include pxRem(min-width, 174 !important);
+      @include pxRem(max-height, 100 !important);
+    }
+  }
+  .section-banner-logo{
+    margin-top: 0;
+  }
+}
   
   
   

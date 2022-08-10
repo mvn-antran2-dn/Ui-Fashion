@@ -1,6 +1,6 @@
 .banner-season-list{
   position: relative;
-  @include pxRem(width, 101%);
+  @include pxRem(width, 100%);
   li{
     @include pxRem(padding, 15);
     position: relative;
@@ -34,3 +34,93 @@
 .section-banner-season{
   @include pxRem(margin-top, 20);
 }
+
+@media only screen and (max-width: 1023px){
+  .content-all.banner-season-content{
+    @include pxRem(padding, 60 40);
+  }
+  .content-all.banner-season-content.two{
+    @include pxRem(padding, 60 60);
+  }
+  .content-all.banner-season-content.tree{
+    @include pxRem(padding, 60 60);
+  }
+  .content-title-all.season-content{
+    @include pxRem(max-width, 60%);
+    .title-season{
+      @include pxRem(font-size, 34);
+      line-height: 1.2;
+    }
+  }
+  .content-title-all.season-content.tree{
+    @include pxRem(max-width, 70%);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .content-all.banner-season-content{
+    @include pxRem(padding, 60 40);
+  }
+  .content-all.banner-season-content.two, .content-all.banner-season-content.tree{
+    @include pxRem(padding, 60 60);
+  }
+  .content-title-all.season-content{
+    @include pxRem(max-width, 60%);
+    .title-season{
+      @include pxRem(font-size, 34);
+      line-height: 1.2;
+      overflow: hidden;
+      @include pxRem(height, 245);
+    }
+    .text-season, .btn-shopnow-season {
+      visibility: hidden;
+    }
+  }
+  .content-title-all.season-content.tree{
+    @include pxRem(max-width, 75%);
+  }
+  .content-title-all.season-content.two{
+    @include pxRem(max-width, 70%);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .banner-season-list{
+    flex-direction: column;
+    li{
+      @include pxRem(padding, 15 0);
+      &:first-child{
+        @include pxRem(padding, 15 0);
+      }
+      &:last-child{
+        @include pxRem(padding, 15 0);
+      }
+    }
+  }
+  .content-title-all.season-content{
+    .text-season, .btn-shopnow-season {
+      visibility: visible;
+    }
+  }
+  .banner-season-item img{
+    width: 100%;
+    @include pxRem(height, 292);
+    object-fit: cover;
+  }
+  .content-title-all.season-content{
+    .title-season{
+      height: auto;
+      @include pxRem(font-size, 30);
+    }
+  }
+  .content-all.banner-season-content.two, .content-all.banner-season-content.tree{
+    @include pxRem(padding, 60 40);
+  }
+  .content-title-all.season-content{
+    @include pxRem(max-width, 70%);
+  }
+}
+
+
+
+
