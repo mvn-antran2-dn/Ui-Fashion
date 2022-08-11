@@ -259,6 +259,9 @@
       }
     }
   }
+  .product1-banner-title img{
+    width: 99.5%;
+  }
   .product1-info{
     @include pxRem(padding-bottom, 15);
     .product1-name{

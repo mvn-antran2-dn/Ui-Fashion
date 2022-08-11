@@ -168,6 +168,7 @@
 .header-menu{
   text-transform: uppercase;
   text-align: left;
+  @include pxRem(height, 84);
   .item-home:hover{
     .main-menu-home{
       visibility: visible;
@@ -182,7 +183,9 @@
 
   }
   .menu-header-item{
-    @include pxRem(margin-left, 30);
+    @include pxRem(margin, 65 0 0 30);
+    height: 100%;
+
     .header-item{
       color: map-get($colors, color-text);
       font-weight: map-get($font-weight, font-medium);
@@ -199,7 +202,7 @@
     visibility: hidden;
     @include pxRem(min-width, 240);
     @include pxRem(padding, 18 0);
-    @include pxRem(top, 53);
+    @include pxRem(top, 51);
     @include pxRem(left, -15);
     background-color: map-get($colors, color-background );
     @include pxRem(border, 1 solid map-get($colors, color-border));
@@ -220,7 +223,7 @@
     position: absolute;
     @include pxRem(min-width, 100%);
     @include pxRem(padding, 18 0);
-    @include pxRem(top, 53);
+    @include pxRem(top, 51);
     background-color: map-get($colors, color-background );
     @include pxRem(border, 1 solid map-get($colors, color-border));
     @include pxRem(right, -780);
@@ -326,7 +329,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
   color: #8a8b8e;
   @include pxRem(border,1 solid map-get($colors, color-border));
   @include pxRem(padding, 10 20);

@@ -54,6 +54,7 @@
       }
     }
     .season-sale{
+      @include pxRem(padding, 15 0);
       img{       
         width: 100%;
       }
@@ -66,12 +67,13 @@
 
 @media only screen and (max-width: 768px) {
   .section-banner-summer .season-sale {
-    @include pxRem(padding, 15);
+    @include pxRem(padding, 0);
   }
 }
 @media only screen and (max-width: 479px) {
-  .banner-summer-img{
+  .summer-img{
     @include pxRem(height,327);
+    
     img{
       height: 100%;
       object-fit: cover;

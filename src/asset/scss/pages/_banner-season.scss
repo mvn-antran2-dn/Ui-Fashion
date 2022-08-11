@@ -46,7 +46,7 @@
     @include pxRem(padding, 60 60);
   }
   .content-title-all.season-content{
-    @include pxRem(max-width, 60%);
+    @include pxRem(max-width, 52%);
     .title-season{
       @include pxRem(font-size, 34);
       line-height: 1.2;
