@@ -10,6 +10,7 @@
       align-items: center;
       display: flex;      
       justify-content: flex-start;
+      @include pxRem(margin-right, 422);
     }
     .header-top-right{
       align-items: center;
@@ -69,7 +70,7 @@
     background-color: map-get($colors, color-background );
     text-align: center;
     border: none;
-    @include pxRem(margin-right, 10%);
+    @include pxRem(margin-right, 20%);
     color: map-get($colors, color-text );
     @include pxRem(font-size, 21);
   }
@@ -168,6 +169,7 @@
 .header-menu{
   text-transform: uppercase;
   text-align: left;
+  @include pxRem(margin, 0 141);
   @include pxRem(height, 84);
   .item-home:hover{
     .main-menu-home{
@@ -348,65 +350,68 @@
        font-weight: map-get($font-weight, font-medium);
     }
   }
+} 
+.header-menu-icon-hidden.top{
+  top: 0;
+  left: 0;
+  right: 0;
+  @include pxRem(height, 56);
+  .logo-hidden{
+    @include pxRem(width, 112);
+    @include pxRem(height, 25);
+    margin-left: 68%;
+  }
+  .btn-hidden{
+    font-weight: map-get($font-weight, font-regular );
+  }
+  .item-card{
+    @include pxRem(margin-left, 15);
+    @include pxRem(font-size, 14);
+  }
+  a{
+    @include pxRem(margin-left, 15);
+    color: map-get($colors, color-text);
+    position: relative;
+    @include pxRem(font-size, 21);
+  }
+  .btn-hidden{
+    @include pxRem(margin-left, 0);
+  }
+  .add-product{
+    position: absolute;
+    background-color: map-get($colors, color-primary );
+    color: map-get($colors, color-background);
+    border-radius: 50%;
+    @include pxRem(padding, 0 4);
+    @include pxRem(font-size, 9);
+    left: 13px;
+  }
 }
+
 
 
 //////end-basic 
 @media only screen and (max-width: 1023px){
-  .container{
-    @include pxRem(max-width, 1024);
-    @include pxRem(width, 1024);
-    @include pxRem(padding,15);
-  }
-  .container-elementor{
-    @include pxRem(width, 1024);
+  .container, .container-elementor{
     @include pxRem(max-width, 1024);
     @include pxRem(padding,15);
   }
   .page-header{
-    .header-top{
+    height: auto;
+    .header-top, .header-nav{
       display: none;
     }
-    .header-nav{
-      @include pxRem(height, 56);
-      
-    }
   }
-  .header-nav-menu{
-    background-color: map-get($colors, color-background );
-    z-index: 10;
-    position: fixed;
-  }
-  .header-menu{
-    display: none;
-    }
-    .social-list{
-      visibility: hidden;
-      .item-card{
-      visibility: visible;
-    }
-  }
-  .header-logo{
-    @include pxRem(width, 112);
-    @include pxRem(height, 25);
-    .btn-icon{
-      font-weight: map-get($font-weight, font-regular );
-      @include pxRem(margin-right, 400%);
-    }
-  }
+ .header-bottom{
+  @include pxRem(margin-top, 56);
+ }
   .header-menu-icon-hidden{
     visibility: visible;
   }
 }
 ///////
 @media only screen and (max-width: 767px) {
-  .container{
-    @include pxRem(max-width, 768);
-    @include pxRem(width, 768);
-    @include pxRem(padding,15);
-  }
-  .container-elementor{
-    @include pxRem(width, 768);
+  .container, .container-elementor{
     @include pxRem(max-width, 768);
     @include pxRem(padding,15);
   }
@@ -422,13 +427,7 @@
 
 ///////
 @media only screen and (max-width: 479px) {
-  .container{
-    @include pxRem(max-width, 480);
-    @include pxRem(width, 480);
-    @include pxRem(padding,15);
-  }
-  .container-elementor{
-    @include pxRem(width, 480);
+  .container, .container-elementor{
     @include pxRem(max-width, 480);
     @include pxRem(padding,15);
   }

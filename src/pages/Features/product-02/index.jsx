@@ -21,7 +21,7 @@ export default function Product2 () {
         </div>
       </div>
       <ul className="product1-list flex">
-        <li className="product1-item ">
+        <li className="product1-item product2-item">
           <div className="product1-img product2-img">
               <CustomProduct
               prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/pocketmen1-500x750.jpeg"

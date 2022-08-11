@@ -362,6 +362,22 @@ export default function Headers (){
     <div className="header-bottom">
       <h4 >SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL DELIVERY - OFF 50%! <strong>SHOP NOW</strong> </h4>
     </div>
+    <nav className="header-menu-icon-hidden top">
+      <div className="menu-icon-hidden ">
+        <ul className="menu-icon-list flex justify-content-between">
+          <li className="menu-icon-item">
+              <a href="/#" className="btn-hidden" onClick={showDrawer}><MenuOutlined /></a>
+            </li>
+          <li className="menu-icon-item ">
+              <a href="/#" className="logo-hidden"><img src={IMAGES.logo} alt="logo" /></a>
+          </li>
+          <li className="social-item item-card">
+            <span className="item-card ">$0.00</span>
+            <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <nav className="header-menu-icon-hidden ">
       <div className="menu-icon-hidden">
         <ul className="menu-icon-list flex justify-content-around">

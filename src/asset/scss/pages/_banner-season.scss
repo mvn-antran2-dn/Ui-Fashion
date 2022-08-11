@@ -2,18 +2,21 @@
   position: relative;
   @include pxRem(width, 100%);
   li{
-    @include pxRem(padding, 15);
+    @include pxRem(padding, 15 15 0 15);
     position: relative;
     top:0;
     left:0;
     &:first-child{
-    @include pxRem(padding,15 15 15 0 );
+    @include pxRem(padding,15 15 0 0 );
     }
     &:last-child{
-      @include pxRem(padding,15 0 15 15 );
+      @include pxRem(padding,15 0 0 15 );
       right: 0;
       }
   }
+}
+.banner-season-item{
+  height: 100%;
 }
 .content-title-all.season-content{
   @include pxRem(max-width, 100%);
@@ -58,28 +61,38 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .content-all.banner-season-content{
-    @include pxRem(padding, 60 40);
-  }
-  .content-all.banner-season-content.two, .content-all.banner-season-content.tree{
-    @include pxRem(padding, 60 60);
+  .banner-season-list{
+    flex-direction: column;
+    li{
+      @include pxRem(padding, 15 0);
+      &:first-child{
+        @include pxRem(padding, 15 0);
+      }
+      &:last-child{
+        @include pxRem(padding, 15 0);
+      }
+    }
   }
   .content-title-all.season-content{
-    @include pxRem(max-width, 60%);
-    .title-season{
-      @include pxRem(font-size, 34);
-      line-height: 1.2;
-      overflow: hidden;
-      @include pxRem(height, 245);
-    }
     .text-season, .btn-shopnow-season {
-      visibility: hidden;
+      visibility: visible;
     }
   }
-  .content-title-all.season-content.tree{
-    @include pxRem(max-width, 75%);
+  .banner-season-item img{
+    width: 100%;
+    @include pxRem(height, 292);
+    object-fit: cover;
   }
-  .content-title-all.season-content.two{
+  .content-title-all.season-content{
+    .title-season{
+      height: auto;
+      @include pxRem(font-size, 30);
+    }
+  }
+  .content-all.banner-season-content.two, .content-all.banner-season-content.tree{
+    @include pxRem(padding, 60 40);
+  }
+  .content-title-all.season-content{
     @include pxRem(max-width, 70%);
   }
 }

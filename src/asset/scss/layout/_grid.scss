@@ -20,12 +20,10 @@ $container-width: 1290px;
 .container-elementor {
   margin: 0 auto;
   max-width: $container-elementor-width;
-  width: $container-elementor-width;
 }
 .container{
   margin: 0 auto;
   max-width: $container-width;
-  width: $container-width;
   padding: $grid-gutter;
 }
 .row {

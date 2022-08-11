@@ -8,7 +8,7 @@ body {
   font-family: $font-body;
   font-weight: map-get($font-weight, font-normal);
   font-size: $font-size-base;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.03px;
 }
 p {
   line-height: 1.45;

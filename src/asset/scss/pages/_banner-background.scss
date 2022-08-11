@@ -1,12 +1,14 @@
 .section-bannerbg{
   @include pxRem(margin-top, 66);
-  @include pxRem(height, 70%);
+ 
   .bannerbg-content{
     flex-direction: row-reverse;
     align-items: center;
     background-color: map-get($colors, color-background-gray );
     img{
-      @include pxRem(width, 50%);
+      @include pxRem(width, 75%);
+      @include pxRem(height, 583);
+      object-fit: cover;
     }
     &:last-child{
       flex-basis: 50%;
@@ -73,17 +75,21 @@
 @media only screen and (max-width: 767px){
   .section-bannerbg{
     @include pxRem(margin-top, 0);
-  }
-  .bannerbg-content img{
-    @include pxRem(height, 380);
-    object-fit: cover;
+    .bannerbg-content{
+      flex-direction: column;
+      img{
+        @include pxRem(width, 100%);
+        @include pxRem(height, 621);  
+        object-fit: cover;
+      }
+    }
   }
   .bannerbg-content-text{
     h2{
       line-height: 1.2;
     }
     p{
-      @include pxRem(margin, 0 0 30);
+      @include pxRem(margin, 0 82 30);
       @include pxRem(font-size, 14);
     }
   }
@@ -91,7 +97,6 @@
 
 @media only screen and (max-width: 479px){
   .section-bannerbg{
-    @include pxRem(margin-top, 18);
     .bannerbg-content{
       flex-direction: column;
       img{

@@ -78,11 +78,14 @@
   }
   .product1-img{
     .product-img-default1-1 {
-      @include pxRem(width, 482);
+      @include pxRem(width, 100%);
     }
     .product-img-default1-2 {
-      @include pxRem(width, 482);
+      @include pxRem(width, 100%);
     }
+  }
+  .product1 .product2-item{
+    @include pxRem(width,48%);
   }
   ////product3
   .product3-img{
@@ -104,17 +107,18 @@
 
 @media only screen and (max-width: 767px){
   .product2-img{
-    @include pxRem(width, 354);
+    @include pxRem(width, 100%);
     .product-img-default1-1 {
-      @include pxRem(width, 354);
+      @include pxRem(width, 100%);
     }
     .product-img-default1-2 {
-      @include pxRem(width, 354);
+      @include pxRem(width, 100%);
     }
   }
   //product3
   .product3-img{
     @include pxRem(width, 226);
+    height: 100%;
     .product-img-default1-1 {
       @include pxRem(width, 226);
       @include pxRem(height, 339);

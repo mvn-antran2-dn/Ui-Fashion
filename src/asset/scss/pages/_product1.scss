@@ -9,6 +9,7 @@
   .product1-list{
     @include pxRem(width,100%);
     @include pxRem(height,100%);
+    
   }
 }
 .product1-banner-title{
@@ -26,6 +27,7 @@
   @include pxRem(padding, 60 46);
   top: 0;
   left:0;
+  overflow: hidden;
   .content-title-all{
     @include pxRem(max-width, 60%);
     .subtitle-all{
@@ -286,6 +288,19 @@
       }
       .title-all{
         @include pxRem(font-size, 35);
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px){
+  .product1{
+    .product1-item{
+      @include pxRem(width,100%);
+      img{
+        @include pxRem(width,100%);
+        object-fit: cover;
       }
     }
   }
