@@ -58,12 +58,12 @@
   @if (unitless($value) or unit($value) == em) {
     @return 0em + $value;
   } @else {
-    @return 0em + calc(strip-units($value) / 16);
+    @return 0em + strip-units($value) / 16;
   }
 }
 
 @function convertPxToRem($px) {
-  @return 0rem + calc(strip-units($px) / 16);
+  @return 0rem + strip-units($px) / 16;
 }
 
 @mixin pxRem($property, $values) {
