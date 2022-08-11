@@ -8,7 +8,7 @@ export default function Product2 () {
   <section className="section-product1">
     <div className="container flex product1">
       <div className="product1-banner">
-        <div className="product1-banner-title">
+        <div className="product1-banner-title product2-banner-title">
           <img src={IMAGES.product2_9} alt="product1_3" />
           <div className="product2-img-text content-all">
             <div className="content-title-all">
@@ -48,7 +48,7 @@ export default function Product2 () {
             <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>  
           </div>
         </li>
-        <li className="product1-item ">
+        <li className="product1-item product2-item">
           <div className="product1-img product2-img">
               <CustomProduct
               prd1="https://k4j3j2s7.rocketcdn.me/clotya/wp-content/uploads/2022/04/knotted1-500x750.jpeg"

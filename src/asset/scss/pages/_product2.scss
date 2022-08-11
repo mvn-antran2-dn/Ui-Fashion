@@ -23,6 +23,11 @@
     color: map-get($colors, color-text );
   }
 }
+.product2-banner-title{
+  img{
+    @include pxRem(height, 507);
+  }
+}
 .product1-img{
   .product-img-default1-1 {
     @include pxRem(width, 290);
@@ -52,6 +57,7 @@
 .slick-slider .slick-next {
   right: -60px;
   opacity: 1;
+  z-index: 5;
   &::before{
     content: '>';
     color: map-get($colors, color-text-desc );
@@ -62,10 +68,23 @@
 .slick-slider .slick-prev {
   left: -60px;
   opacity: 1;
+  z-index: 5;
   &::before{
     content: '<';
     color: map-get($colors, color-text-desc );
     font-size: 40px;
+  }
+}
+
+
+@media only screen and (max-width:1240px){
+  .slick-slider .slick-next {
+    right: 0;  
+    visibility: hidden;
+  }
+  .slick-slider .slick-prev {
+    left: 0;
+    visibility: hidden;
   }
 }
 

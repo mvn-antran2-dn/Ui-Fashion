@@ -57,6 +57,17 @@
   }
 }
 
+@media only screen and (max-width: 1240px){
+  .section-bannerbg{
+    @include pxRem(margin-top, 0);
+    .bannerbg-content  img{
+      @include pxRem(width, 50%);
+      @include pxRem(height, 583);
+      object-fit: cover;
+    }
+  }
+}
+
 @media only screen and (max-width: 1023px){
   .section-bannerbg{
     @include pxRem(margin-top, 0);

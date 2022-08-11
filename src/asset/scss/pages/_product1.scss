@@ -17,6 +17,7 @@
   @include pxRem(padding-left, 15);
   img{
     @include pxRem(width, 98%);
+    object-fit: cover;
   }
 }
 .content-all{
