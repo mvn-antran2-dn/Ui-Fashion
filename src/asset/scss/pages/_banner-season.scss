@@ -1,3 +1,7 @@
+.section-banner-season{
+  @include pxRem(margin-top, 5);
+  @include pxRem(margin-bottom, -15);
+}
 .banner-season-list{
   position: relative;
   @include pxRem(width, 100%);
@@ -19,6 +23,7 @@
   height: 100%;
 }
 .content-title-all.season-content{
+  @include pxRem(padding, 25 10);
   @include pxRem(max-width, 100%);
   &:hover{
     color: map-get($colors, color-text );
@@ -27,17 +32,25 @@
     @include pxRem(font-size, 12);
   }
   .title-season{
+    @include pxRem(max-width, 90%);
     font-weight: map-get($font-weight, font-normal );
   }
 }
-
+.content-all.banner-season-content.two{
+  @include pxRem(padding, 30 45);
+  .title-season{
+    @include pxRem(max-width, 100%);
+  }
+}
+.content-all.banner-season-content.tree{
+  @include pxRem(padding, 30 45);
+  .title-season{
+    @include pxRem(max-width, 100%);
+  }
+}
 .content-all.banner-season-content{
   @include pxRem(padding, 30);
 }
-.section-banner-season{
-  @include pxRem(margin-top, 20);
-}
-
 @media only screen and (max-width: 1023px){
   .content-all.banner-season-content{
     @include pxRem(padding, 60 40);

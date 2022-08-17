@@ -1,13 +1,12 @@
 .section-bannerbg{
-  @include pxRem(margin-top, 66);
- 
+  @include pxRem(margin-top, 0);
   .bannerbg-content{
     flex-direction: row-reverse;
     align-items: center;
     background-color: map-get($colors, color-background-gray );
     img{
-      @include pxRem(width, 75%);
-      @include pxRem(height, 583);
+      @include pxRem(width, 74%);
+      @include pxRem(height, 615);
       object-fit: cover;
     }
     &:last-child{
@@ -22,9 +21,14 @@
   text-align: center;
   .content-bg{
     @include pxRem(padding, 30);
+    @include pxRem(height, 615);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   h4{
-    font-weight: map-get($font-weight, font-medium );
+    font-weight: map-get($font-weight, font-bold);
     @include pxRem(letter-spacing, 1);
     @include pxRem(font-size, 12);
     text-transform: uppercase;
@@ -35,7 +39,7 @@
     @include pxRem(line-height, 67.2);
     @include pxRem(font-size, 56);
     @include pxRem(margin, 0 0 30);
-    font-weight: map-get($font-weight, font-regular );
+    font-weight: map-get($font-weight, font-normal );
   }
   p{
     @include pxRem(line-height, 24);
@@ -46,10 +50,16 @@
   }
   a{
     border: 1px solid map-get($colors, color-primary );
-    @include pxRem(padding, 8 30);
+    @include pxRem(padding, 14 29);
     @include pxRem(border-radius,2);
     color: map-get($colors, color-primary);
     @include pxRem(font-size, 15);
+    @include pxRem(max-height, 52);
+    font-weight: map-get($font-weight, font-medium);
+    span{
+      @include pxRem(font-size, 18);
+      @include pxRem(margin-left, 10);
+    }
     &:hover{
       color: map-get($colors, color-background);
       background-color: map-get($colors, color-primary);

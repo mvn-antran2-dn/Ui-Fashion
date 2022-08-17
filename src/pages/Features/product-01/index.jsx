@@ -1,4 +1,6 @@
-import { ArrowRightOutlined, FullscreenOutlined, HeartOutlined, RetweetOutlined, ShoppingOutlined, StarFilled } from "@ant-design/icons";
+import {  FullscreenOutlined, HeartOutlined, RetweetOutlined, ShoppingOutlined, StarFilled } from "@ant-design/icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IMAGES } from "../../../asset/images";
 
 
@@ -14,7 +16,7 @@ export default function Product1 () {
               <h4 className="subtitle-all">WINTER 2022 COLLECTION</h4>
               <h3 className="title-all">Aenean id sapien sit amet urna laoreet</h3>
               <p className="text-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-              <a href="." className="btn-shopnow-all">Shop Collection <ArrowRightOutlined /></a>
+              <a href="/#" className="btn-shopnow-all">Shop Collection <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
             </div>
           </div>
         </div>

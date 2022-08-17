@@ -1,25 +1,26 @@
 .section-banner-countdown{
-  @include pxRem(margin-top, 20);
+  @include pxRem(margin-top, 14);
   .banner-countdown-total{
     @include pxRem(padding, 15);
   }
   .banner-countdown{
     @include pxRem(border, 1 solid map-get($colors, bs-border-white));
-    @include pxRem(padding, 20);
+    @include pxRem(padding, 20 73);
     @include pxRem (width, 100%);
     background-color: map-get($colors, color-background-red);
     align-items: center;
-    justify-content: center;
     color: map-get($colors, color-danger );
     @include pxRem(border-radius, 3);
     p{
       @include pxRem(font-size, 24);
       @include pxRem(margin-right, 15);
+      font-weight: map-get($font-weight, font-regular);
     }
     .bannercountdown-text{
       font-weight: map-get($font-weight, font-bland );
       color: map-get($colors, color-text-desc );
       @include pxRem(margin-left, 15);
+      @include pxRem(font-size, 16);
     }
   }
 }

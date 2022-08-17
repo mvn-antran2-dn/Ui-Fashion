@@ -1,5 +1,6 @@
-import { ArrowRightOutlined } from "@ant-design/icons";
 import { IMAGES } from "../../../asset/images";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function BannerBackground () {
   return (
@@ -11,7 +12,7 @@ export default function BannerBackground () {
           <h4>SUMMER COLLECTION</h4>
           <h2>Risus commodo viverra maecenas accumsan.</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore magna aliqua.</p>
-          <a href="/#">Shop Now <ArrowRightOutlined /></a>
+          <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import { ArrowRightOutlined } from "@ant-design/icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IMAGES } from "../../../asset/images";
 
 
@@ -15,7 +16,7 @@ export default function BannerSeason () {
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
                 <h3 className="title-all title-season">How well do you know street fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
+                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>     
             </div>
           </div>
@@ -23,12 +24,12 @@ export default function BannerSeason () {
         <li>
           <div className="banner-season-item flex">
             <img src={IMAGES.banner2_2} alt="banner-season" />
-            <div className="banner-season-content content-all ">
+            <div className="banner-season-content content-all two">
               <div className="content-title-all season-content two">
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
-                <h3 className="title-all title-season">How has street style influence fashion?</h3>
+                <h3 className="title-all title-season">How has street style influenced fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
+                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@ export default function BannerSeason () {
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
                 <h3 className="title-all title-season">How well do you know street fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all btn-shopnow-season">SHOP NOW <ArrowRightOutlined /></a>
+                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>
             </div>
           </div>

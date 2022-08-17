@@ -1,3 +1,6 @@
+.section-discount{
+  @include pxRem(margin-top, -15);
+}
 .discount{
   flex-direction: row-reverse;
   .discount-list{
@@ -21,7 +24,7 @@
   @include pxRem(border, 2 solid map-get($colors, color-border-discount));
   .discount-img{
     @include pxRem(margin, 20);
-    @include pxRem(width, 100%);
+    @include pxRem(width, 87%);
     img{
       @include pxRem(width, 100%);
       position: relative;
@@ -48,7 +51,7 @@
       align-items: center;
       position: absolute;
       @include pxRem(top, 30);
-      @include pxRem(right, 58%);
+      @include pxRem(right, 62%);
       animation: unhover-action-img 0.3s linear 1 forwards;
     }
     .btn-to-heart{
@@ -148,7 +151,7 @@
 }
 .discount-info{
   @include pxRem(font-size, 15);
-  @include pxRem(padding, 20 10);
+  @include pxRem(padding, 16 13 16 4);
   .discount-name{
     @include pxRem(font-size, 18);
     @include pxRem(margin-bottom,8);
@@ -157,34 +160,38 @@
     }
   }
   .discount-price{
-    font-weight: map-get($font-weight, font-regular );
+    @include pxRem(margin-top, 5);
+    font-weight: map-get($font-weight, font-normal );
+    @include pxRem(font-size, 18);
     span{
       opacity: 0.3;
       @include pxRem(margin-right, 3);
       @include pxRem(font-size, 94%);
-      font-weight: map-get($font-weight, font-normal );
       text-decoration-line: line-through;
     }
     strong{
       color: map-get($colors, color-primary );
-      font-weight: map-get($font-weight, font-medium );
+      font-weight: map-get($font-weight, font-regular );
+    }
+    .discount-price-strong{
+      color: map-get($colors, color-text );
     }
   }
   .discount-review{
     font-weight: map-get($font-weight, font-regular);
-    @include pxRem(font-size, 14);
+    @include pxRem(font-size, 13);
     color: map-get($colors, color-text-desc );
     @include pxRem(margin, 20 0 15 0);
     span{
       color: map-get($colors, color-start );
-      @include pxRem(font-size, 12);  
+      @include pxRem(font-size, 11);  
       &:last-child{
-        @include pxRem(margin-right, 8);
+        @include pxRem(margin-right, 5);
       }
     }
   }
   .discount-text{
-    @include pxRem(font-size, 13);
+    @include pxRem(font-size, 14);
     @include pxRem(margin, 0 0 16);
     color: map-get($colors, color-text-desc);
   }

@@ -21,7 +21,7 @@ export default function Main(){
   const Dealine1 = Now + DayCount1;
   const Dealine2 = Now + DayCount2;
   return(
-  <div className="page-home">
+  <main className="page-main">
     <BannerBackground />
     <Categories />
     <FeaturedProduct />
@@ -38,6 +38,6 @@ export default function Main(){
     <Discount targetDate= {Dealine2}/>
     <BannerLogo />
     <Blog />
-  </div>
+  </main>
   )
 }

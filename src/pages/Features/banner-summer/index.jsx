@@ -1,5 +1,6 @@
-import { ArrowRightOutlined } from "@ant-design/icons";
 import { IMAGES } from "../../../asset/images";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function BannerSummer(){
   return (
@@ -13,7 +14,7 @@ export default function BannerSummer(){
               <h4 className="summer-text-subtitle subtitle-all">SUMMER COLLECTION</h4>
               <h3 className="summer-text-title title-all">Show your best sweatshirt of your life </h3>
               <p className="text-all">Don't miss the opportunity</p>
-              <div className="summer-btn btn-shopnow-all">Shop Collection <ArrowRightOutlined /></div>
+              <a href="/#" className="summer-btn btn-shopnow-all">Shop Collection <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
             </div>    
           </div>
         </div>
@@ -24,9 +25,9 @@ export default function BannerSummer(){
           <div className="sale-img-text content-all">
             <div className="content-title-all">
               <h4 className="sale-text-subtitle subtitle-all">NEW SEASON SALE</h4>
-              <h3 className=" sale-text-title title-all">Up to 70% off </h3>
+              <h3 className=" sale-text-title title-all">Up to 70% Off </h3>
               <p className="text-all sale-text-all">Don't miss the opportunity</p>
-              <a href="/#" className="sale-btn btn-shopnow-all">Shop Collection <ArrowRightOutlined /></a>
+              <a href="/#" className="sale-btn btn-shopnow-all">Shop Collection <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
             </div>        
           </div>
         </div>

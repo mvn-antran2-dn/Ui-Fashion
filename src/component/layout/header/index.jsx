@@ -1,4 +1,6 @@
 import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined, ShopOutlined, } from '@ant-design/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import { Drawer, Menu } from 'antd';
 import { useState } from 'react';
 import { IMAGES } from '../../../asset/images';
@@ -80,48 +82,47 @@ export default function Headers (){
   };
   return (
   <header className="page-header">
-    <div className="header-top flex">
-      <div className="container-elementor flex justify-content-between">
+    <div className=" container-elementor  header-top flex justify-content-between">
         <div className="header-top-left flex ">
-          <div className="dropdown-ins flex">
-            <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3.1M Followers <CaretDownOutlined /></strong> </a>
-            <ul className="menu-top-header-left">
-              <li>
-                <a href="https://www.facebook.com/" className="facebook">
-                  <span className="icon-ins"><FacebookOutlined /></span>
-                  <span className="label">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/" className="facebook">
-                  <span className="icon-ins"><TwitterOutlined /></span>
-                  <span className="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" className="facebook">
-                <span className="icon-ins"><InstagramOutlined /></span>
-                  <span className="label">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/" className="facebook">
-                <span className="icon-ins"><LinkedinOutlined /></span>
-                  <span className="label">Linkedin</span>
-                </a>
-              </li>
-              <li>
-                <p> Follow us on social media, be the first to know about discounts and innovations.</p>
-              </li>
-            </ul>
-          </div>
-          <p className="header-right-title">Free Shipping World wide for all orders over $199.  <strong> Click and Shop Now.</strong></p>
+        <div className="dropdown-ins flex">
+          <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3.1M Followers <CaretDownOutlined /></strong> </a>
+          <ul className="menu-top-header-left">
+            <li>
+              <a href="https://www.facebook.com/" className="facebook">
+                <span className="icon-ins"><FacebookOutlined /></span>
+                <span className="label">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" className="facebook">
+                <span className="icon-ins"><TwitterOutlined /></span>
+                <span className="label">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" className="facebook">
+              <span className="icon-ins"><InstagramOutlined /></span>
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" className="facebook">
+              <span className="icon-ins"><LinkedinOutlined /></span>
+                <span className="label">Linkedin</span>
+              </a>
+            </li>
+            <li>
+              <p> Follow us on social media, be the first to know about discounts and innovations.</p>
+            </li>
+          </ul>
         </div>
-        <div className="header-top-right">
+        <p className="header-right-title">Free Shipping World wide for all orders over $199.<strong> Click and Shop Now.</strong></p>
+      </div>
+      <div className="header-top-right">
           <ul className="menu-top-header-right flex">
             <li><a href="/#">Order Tracking</a></li>
             <li className="menu-top-language-currency item-language">
-              <a href="/#" className="btn-language">English <span><DownOutlined /></span></a>
+              <a href="/#" className="btn-language">English <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
               <ul className="menu-language-currency language">
                 <li>
                   <a href="/#" className="label">English</a>
@@ -135,7 +136,7 @@ export default function Headers (){
               </ul>
             </li>
             <li className="menu-top-language-currency item-currency">
-              <a href="/#" className="btn-currency">USD <span><DownOutlined /></span></a>
+              <a href="/#" className="btn-currency">USD <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
               <ul className="menu-language-currency currency">
                 <li>
                   <a href="/#" className="label">USD</a>
@@ -150,19 +151,18 @@ export default function Headers (){
             </li>
           </ul>
         </div>
-      </div>
     </div>
     <nav className="header-nav flex ">
         <div className="container-elementor header-nav-menu flex justify-content-between align-items-center">        
           <a href="/#" className="header-logo flex ">
             <button className="btn-icon" type="primary" onClick={showDrawer}>
-              <MenuOutlined />
+            <MenuOutlined className="icon-menu"/>
             </button>
               <img src={IMAGES.logo} alt="logo" />
           </a>
           <ul className="header-menu flex justify-content-center align-items-center">
               <li className="menu-header-item  item-home">
-                <a className="header-item" href="/#">HOME <span><DownOutlined /></span></a>
+                <a className="header-item" href="/#">HOME <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
                 <ul className="main-menu-home ">
                   <li>
                     <a href="/#" className="menu-main-item">Home 1</a>
@@ -185,7 +185,7 @@ export default function Headers (){
                 </ul>
               </li>
               <li className="menu-header-item  item-shop">
-                <a className="header-item" href="/#">SHOP <span><DownOutlined /></span></a>
+                <a className="header-item" href="/#">SHOP <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
                 <ul className="main-menu-shop flex container justify-content-around">
                   <li>
                     <a href="/#" className="menu-main-item-shop">Shop List</a>
@@ -303,7 +303,7 @@ export default function Headers (){
                   <a className="header-item" href="/#">OUTERWEAR</a>
               </li>
               <li className="menu-header-item">
-                  <a className="header-item" href="/#">BLOCK</a>
+                  <a className="header-item" href="/#">BLOG</a>
               </li>
               <li className="menu-header-item">
                   <a className="header-item" href="/#">CONTACT</a>

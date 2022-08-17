@@ -1,3 +1,6 @@
+.section-product1{
+  @include pxRem(margin-top, -15);
+}
 .product1{
   flex-direction: row-reverse;
   .product1-banner{
@@ -16,7 +19,7 @@
   @include pxRem(max-width, 100%);
   @include pxRem(padding-left, 15);
   img{
-    @include pxRem(width, 98%);
+    @include pxRem(width, 100%);
     object-fit: cover;
   }
 }
@@ -25,32 +28,41 @@
   @include pxRem(height, 100%);
   position: absolute;
   z-index: 2;
-  @include pxRem(padding, 60 46);
+  @include pxRem(padding, 60 61);
   top: 0;
   left:0;
   overflow: hidden;
   .content-title-all{
-    @include pxRem(max-width, 60%);
+    @include pxRem(max-width, 70%);
+    line-height: 1.2;
     .subtitle-all{
-      @include pxRem(font-size, 10);
+      @include pxRem(font-size, 12);
       font-weight: map-get($font-weight, font-medium );
       text-transform: uppercase;
-      @include pxRem(letter-spacing, 1);
+      @include pxRem(letter-spacing, 1.05);
       @include pxRem(margin-bottom, 10);
     }
     .title-all{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(letter-spacing, -0.01);
       @include pxRem(font-size, 34);
       @include pxRem(margin-bottom, 15);
     }
     .text-all{
+      @include pxRem(max-width, 80%);
       opacity: 0.6;
       @include pxRem(font-size, 16);
-      @include pxRem(margin-bottom, 36);
+      @include pxRem(margin-bottom, 39);
+      line-height: 1.5;
     }
     .btn-shopnow-all{
       @include pxRem(font-size, 16);
-      font-weight: map-get($font-weight, font-medium );
-      
+      font-weight: map-get($font-weight, font-regular );
+      span{
+        @include pxRem(margin-left, 10);
+        font-weight: map-get($font-weight, font-normal );
+        @include pxRem(font-size, 18);
+      }
     }
     &:hover{
       color: map-get($colors, color-text );
@@ -66,23 +78,27 @@
   z-index: 3;
   .product1-img{
     overflow: hidden;
-    @include pxRem(margin-bottom, 20);
+    @include pxRem(margin-bottom, 10);
     .product1-sale{
+      display: flex;
+      align-items: center;
+      @include pxRem(letter-spacing, -0.11);
       position: absolute;
-      @include pxRem(top, 10);
+      @include pxRem(top, 13);
       @include pxRem(left, 10);
       z-index: 3;
       text-align: center;
-      @include pxRem(padding, 6 10);
+      @include pxRem(padding, 6 7);
       background-color: map-get($colors, color-background );
       color: map-get($colors, color-success);
       @include pxRem(border-radius, 2);
-      @include pxRem(height, 21);
+      @include pxRem(height, 22);
       white-space: nowrap;
       vertical-align: baseline;
       font-weight: map-get($font-weight, font-bold);
       @include pxRem(font-size, 12);
       line-height: 1;
+
     }
     .img-total-action{
       flex-direction: column;
@@ -127,9 +143,6 @@
 }
   &:first-child{
     @include pxRem(margin-left, 0);
-  }
-  &:last-child{
-    @include pxRem(margin-right, 0);
   }
 }
 @keyframes hover-action {
@@ -188,25 +201,30 @@
 .product1-info{
   @include pxRem(font-size, 15);
   .product1-name:hover{
-      color: map-get($colors, color-text );
+    color: map-get($colors, color-text );
   }
   .product1-price{
-    font-weight: map-get($font-weight, font-regular );
+    @include pxRem(margin, 7 0 10);
     span{
       opacity: 0.3;
-      @include pxRem(margin-right, 3);
       @include pxRem(font-size, 94%);
       font-weight: map-get($font-weight, font-normal );
       text-decoration-line: line-through;
+      @include pxRem(letter-spacing, -0.2);
+    }
+    strong{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(margin-left,7);
     }
   }
   .product1-review{
-    font-weight: map-get($font-weight, font-medium );
+    font-weight: map-get($font-weight, font-regular );
     @include pxRem(font-size, 13);
     color: map-get($colors, color-text );
     span{
       color: map-get($colors, color-start );
-      @include pxRem(margin-right, 8);
+      @include pxRem(margin-right, 3);
+      @include pxRem(margin-left, 1);
       @include pxRem(font-size, 14)
     }
   }

@@ -1,6 +1,5 @@
 .section-banner-summer{
-  @include pxRem(margin-top, 10);
- 
+  @include pxRem(margin, 41 0 0);
   .banner-summer-img{
     @include pxRem(padding, 15 15 15 0);
     position: relative;
@@ -12,8 +11,12 @@
 }
 .summer-img-text.content-all{
   position: absolute;
+  @include pxRem(padding,99 46);
   .summer-text-subtitle{
     @include pxRem(font-size, 12);
+  }
+  .summer-text-title{
+    @include pxRem(max-width, 90%);
   }
   .btn-shopnow-all.summer-btn:hover{
     color: map-get($colors, color-text);
@@ -23,6 +26,8 @@
   text-align: center;
   @include pxRem(max-width, 100%);
   color: map-get($colors, color-background );
+  @include pxRem(padding,62 0 0 15);
+  text-align: center;
   .sale-text-subtitle{
     @include pxRem(font-size, 12);
     color: map-get($colors, color-background );
@@ -30,12 +35,19 @@
   .sale-text-title{
     color: map-get($colors, color-background );
   }
-  .sale-text-all:hover{
-    color: map-get($colors, color-background);
-    opacity: 0.6;
+  .sale-text-all{
+    max-width: 100%;
+    &:hover{
+      color: map-get($colors, color-background);
+      opacity: 0.6;
+    }
   }
   .sale-btn{
     color: map-get($colors, color-background );
+  }
+  &:hover{
+    color: white;
+   
   }
 }
 

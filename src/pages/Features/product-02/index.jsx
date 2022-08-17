@@ -5,7 +5,7 @@ import CustomProduct from "../custom-product";
 
 export default function Product2 () {
   return (
-  <section className="section-product1">
+  <section className="section-product2">
     <div className="container flex product1">
       <div className="product1-banner">
         <div className="product1-banner-title product2-banner-title">
@@ -40,12 +40,12 @@ export default function Product2 () {
             </div>
           </div>
           <div className="product1-info product2-info">
-            <div className="product1-review">               
+            <div className="product1-review ">               
               <span><StarFilled /> </span> 
               1 review   
             </div> 
-            <a href="/#" className="product1-name">Sleeveless Ribbed Short Dress</a>
-            <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>  
+            <a href="/#" className="product1-name ">Sleeveless Ribbed Short Dress</a>
+            <p className="product1-price "> <span>$19.99</span><strong>$14.99</strong></p>  
           </div>
         </li>
         <li className="product1-item product2-item">

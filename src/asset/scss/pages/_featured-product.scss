@@ -17,6 +17,7 @@
       font-weight: map-get($font-weight, font-bland);
       color: map-get($colors, color-form-placeholder);
       margin-left: auto;
+      @include pxRem(line-height, 26);
     }
   }
 }

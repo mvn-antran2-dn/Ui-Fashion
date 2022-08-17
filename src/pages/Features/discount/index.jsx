@@ -36,10 +36,10 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </div>
           <div className="discount-info">
               <a href="/#" className="discount-name">Short Nylon-Effect Puffer Jacket</a>
-              <p className="discount-price"><span>$39.90</span><strong>$29.90</strong></p>
+              <p className="discount-price"><strong className="discount-price-strong">$29.90 - </strong><strong className="discount-price-strong">$39.90</strong></p>
               <div className="discount-review">
                 <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
-                2 review
+                2 reviews
               </div>
               <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p className="countdown-title">Offer end in: </p>

@@ -1,23 +1,27 @@
 .section-categories{
 @include pxRem(margin-top, 35);
- @include pxRem(height, 293); 
- .categories-title{
+@include pxRem(margin-bottom, 57);
+@include pxRem(height, 293); 
+.categories-title{
   @include pxRem(line-height, 25.6);
   align-items: flex-end;
   @include pxRem(margin, 0 0 40);
+  font-weight: map-get($font-weight, font-normal );
+h4{
+  @include pxRem(margin, 0 15 0 0);
+  @include pxRem(font-size, 22);  
+  @include pxRem(line-height, 26.45);
   font-weight: map-get($font-weight, font-regular );
-  h4{
-    @include pxRem(margin, 0 15 0 0);
-    @include pxRem(font-size, 22);  
-    @include pxRem(line-height, 26.45);
-  }
-  p{
-    @include pxRem(font-size, 14);
-    @include pxRem(line-height, 22.4);
-    color: map-get($colors, bs-secondary);
-  }
-  strong{
-    color: map-get($colors, color-form-placeholder );
+}
+p{
+  @include pxRem(font-size, 14);
+  @include pxRem(line-height, 22.4);
+  color: map-get($colors, bs-secondary);
+  font-weight: map-get($font-weight, font-normal );
+}
+strong{
+  color: map-get($colors, color-form-placeholder );
+  font-weight: map-get($font-weight, font-regular);
   }
  }
 }
@@ -28,7 +32,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @include pxRem(margin-right, 20);
+    @include pxRem(margin-right, 30);
     img{
       @include pxRem(min-width, 185 !important);
       @include pxRem(max-height, 185 !important);
@@ -43,7 +47,10 @@
       @include pxRem(font-size, 16);
       font-weight: map-get($font-weight, font-medium);
       @include pxRem(margin, 0 0 8 );
-      }
+    }
+    &:first-child{
+      margin-right: 0;;
+    }
   }
 }
 @keyframes categories-scale {
@@ -72,9 +79,28 @@
     @include pxRem(margin-bottom, 10);
   }
 }
-
-
-
+@media only screen and (max-width: 1240px){
+  .section-categories{
+    height: auto;
+    .slick-track {
+      .slick-slide {
+        @include pxRem(margin-right, 0); 
+        @include pxRem(min-width, 256 !important);   
+        img{
+          @include pxRem(min-width, 226 !important);
+          @include pxRem(max-height,226 !important);
+          }
+        }
+      }
+    }
+    .categories-item{
+      @include pxRem(height, 263);      
+      .categories-img{
+        @include pxRem(min-width, 226 !important);
+        @include pxRem(max-height, 226 !important);
+      }
+    }
+}
 @media only screen and (max-width: 1023px){
   .section-categories{
     height: auto;
@@ -97,7 +123,28 @@
       }
     }
 }
-
+@media only screen and (max-width: 910px) {
+  .section-categories{
+    height: auto;
+    .slick-track {
+      .slick-slide {
+        @include pxRem(margin-right, 0); 
+        @include pxRem(min-width, 185 !important);   
+        img{
+          @include pxRem(min-width, 162 !important);
+          @include pxRem(max-height,162 !important);
+        }
+      }
+    }
+  }
+  .categories-item{
+    @include pxRem(height, 208);      
+    .categories-img{
+      @include pxRem(min-width, 162 !important);
+      @include pxRem(max-height, 162 !important);
+    }
+  }
+}
 @media only screen and (max-width: 767px) {
   .section-categories{
     height: auto;
@@ -146,4 +193,3 @@
     }
   }
 }
-

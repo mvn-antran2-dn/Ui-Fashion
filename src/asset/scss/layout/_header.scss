@@ -1,7 +1,8 @@
 .page-header{
-  @include pxRem(height, 95);
+  @include pxRem(height, auto);
   .header-top{
     @include pxRem(height, 40);
+    @include pxRem(width, 1319);
     @include pxRem(font-size, 13);
     border-bottom: 1px solid map-get($colors, color-border);
     color: map-get($colors , color-text );  
@@ -10,43 +11,10 @@
       align-items: center;
       display: flex;      
       justify-content: flex-start;
-      @include pxRem(margin-right, 422);
+      @include pxRem(margin-left, 43);
     }
     .header-top-right{
       align-items: center;
-    }
-  }
-  .header-nav{
-    @include pxRem(font-size, 15);
-    color: map-get($colors, color-text);
-    background-color: map-get($colors, color-background );
-    @include pxRem(height, 84);  
-    align-items: center;
-    .social-list{
-      a{
-        @include pxRem(margin-left, 15);
-        color: map-get($colors, color-text);
-        position: relative;
-        @include pxRem(font-size, 21);
-      }
-      .add-product{
-        position: absolute;
-        background-color: map-get($colors, color-primary );
-        color: map-get($colors, color-background);
-        border-radius: 50%;
-        @include pxRem(padding, 0 4);
-        @include pxRem(font-size, 9);
-      }
-      .heart{
-        @include pxRem(margin, -2 -5);
-      }
-      .shopping{
-        @include pxRem(margin, -2 -7);
-      }
-      .item-card{
-        @include pxRem(margin-left, 15);
-        @include pxRem(font-size, 14);
-      }
     }
   }
   .header-bottom{
@@ -59,6 +27,46 @@
       @include pxRem(padding, 10 0);
       font-weight: map-get($font-weight, font-normal );
       text-transform:capitalize;
+      @include pxRem(max-height, 38);
+    }
+  }
+}
+.header-nav{
+  @include pxRem(font-size, 15);
+  color: map-get($colors, color-text);
+  background-color: map-get($colors, color-background );
+  @include pxRem(height, 84);  
+  align-items: center;
+  .social-list{
+    align-items: center;
+    @include pxRem(height, 84);
+    a{
+      @include pxRem(margin-left, 10);
+      color: map-get($colors, color-text);
+      position: relative;
+      @include pxRem(font-size, 21);
+    }
+    .anticon{
+      @include pxRem(min-width, 32);
+      @include pxRem(height, 36);
+    }
+    .add-product{
+      position: absolute;
+      background-color: map-get($colors, color-primary );
+      color: map-get($colors, color-background);
+      border-radius: 50%;
+      @include pxRem(padding, 0 4);
+      @include pxRem(font-size, 9);
+    }
+    .heart{
+      @include pxRem(margin, -2 -5);
+    }
+    .shopping{
+      @include pxRem(margin, -2 -7);
+    }
+    .item-card{
+      @include pxRem(margin-left, 15);
+      @include pxRem(font-size, 14);
     }
   }
 }
@@ -66,11 +74,12 @@
   @include pxRem(width, 121);
   @include pxRem(height, 32);
   align-items: center;
+  @include pxRem(margin-right, 96);
   .btn-icon{
     background-color: map-get($colors, color-background );
     text-align: center;
     border: none;
-    @include pxRem(margin-right, 20%);
+    @include pxRem(margin-right, 21%);
     color: map-get($colors, color-text );
     @include pxRem(font-size, 21);
   }
@@ -78,12 +87,15 @@
 
 .dropdown-ins{
   position: relative;
+  align-items: center;
   a{
     color: map-get($colors, color-text );
+    display: flex;
+    align-items: inherit;
     .dropdown-ins-icon{
       font-weight: 300;
-      @include pxRem(font-size, 16);
-      @include pxRem(margin-right, 6);
+      @include pxRem(font-size, 18);
+      @include pxRem(margin-right, 9);
     }
   }
   &:hover{
@@ -101,14 +113,15 @@
 .menu-top-header-right{
   align-items: center;
   position: relative;
+  @include pxRem(margin-right, 40);
   li{
-    @include pxRem(padding,10 0 10 20);
+    @include pxRem(padding,10 0 10 15);
     a{
       color: map-get($colors, color-text );
     }
     span{
-      @include pxRem(font-size, 9);
-      @include pxRem(padding-left, 2);
+      @include pxRem(font-size, 12);
+      @include pxRem(padding-left, 5);
     }
   }
   .item-language:hover{
@@ -169,7 +182,8 @@
 .header-menu{
   text-transform: uppercase;
   text-align: left;
-  @include pxRem(margin, 0 141);
+  align-items: center;
+  @include pxRem(margin, 0 95);
   @include pxRem(height, 84);
   .item-home:hover{
     .main-menu-home{
@@ -185,15 +199,17 @@
 
   }
   .menu-header-item{
-    @include pxRem(margin, 65 0 0 30);
+    @include pxRem(margin-right,30);
     height: 100%;
-
+    display: flex;
+    align-items: center;
     .header-item{
       color: map-get($colors, color-text);
       font-weight: map-get($font-weight, font-medium);
     }
     span{
-      @include pxRem(font-size, 9);
+      @include pxRem(font-size, 12);
+      @include pxRem(margin-left, 7);
     }
   }
 }
@@ -230,6 +246,7 @@
     @include pxRem(border, 1 solid map-get($colors, color-border));
     @include pxRem(right, -780);
     text-transform: capitalize;
+    @include pxRem(width, 1210);
     li{
       @include pxRem(margin-left, -70);
       align-items: center;

@@ -1,44 +1,14 @@
-.section-product2{
-  @include pxRem(margin-top, -17);
+.section-product3{
+  @include pxRem(margin-top, -15);
 }
-.product2-info{
+.product3-info{
   @include pxRem(height, 81);
   .product1-review{
-    @include pxRem(margin, 13 0 8);
+    @include pxRem(margin, 15 0 8);
   }
   .product1-name{
     @include pxRem(margin-top, 15);
-    @include pxRem(font-size, 16);
-  }
-}
-.product2-img-text{
-  top: 15.7%;
-  .content-title-all{   
-    .subtitle-all{
-      @include pxRem(font-size, 12);
-      color: map-get($colors, color-background );
-    }
-    .title-all{
-      color: map-get($colors, color-background );
-    }
-    .text-all{
-      opacity: 0.6;
-      color: map-get($colors, color-background );
-    }
-    .btn-shopnow-all{
-      color: map-get($colors, color-background );     
-    }
-    &:hover{
-      color: map-get($colors, color-text );
-    }
-  }
-  &:hover{
-    color: map-get($colors, color-text );
-  }
-}
-.product2-banner-title{
-  img{
-    @include pxRem(height, 516);
+    @include pxRem(font-size, 15);
   }
 }
 .product1-img{
@@ -92,7 +62,17 @@
     font-size: 40px;
   }
 }
-
+.product3-item{
+  @include pxRem(margin,0 );
+  .product3-img{
+    overflow: hidden;
+    @include pxRem(margin-bottom, 10);
+    .img-total-action{
+      @include pxRem(top, 10);
+      @include pxRem(right, 11);
+    }
+  }
+}
 
 @media only screen and (max-width:1240px){
   .slick-slider .slick-next {
