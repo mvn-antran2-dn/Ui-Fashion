@@ -1,8 +1,5 @@
 .section-banner-countdown{
   @include pxRem(margin-top, 14);
-  .banner-countdown-total{
-    @include pxRem(padding, 15);
-  }
   .banner-countdown{
     @include pxRem(border, 1 solid map-get($colors, bs-border-white));
     @include pxRem(padding, 20 74);
