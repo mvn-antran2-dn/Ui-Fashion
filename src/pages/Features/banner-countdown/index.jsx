@@ -17,27 +17,29 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
   <section className="section-banner-countdown">
     <div className="container banner-countdown-total">
-      <div className="banner-countdown flex">
-        <p><span>10</span>% discount on your dream clothes:</p>
-        <div className="countdown-banner flex" >
-          <div className="count-item">
-            <DateTimeDisplay value={days}  isDanger={false} />
+      <div className="banner-countdown-total">
+        <div className="banner-countdown flex">
+          <p><span>10</span>% discount on your dream clothes:</p>
+          <div className="countdown-banner flex" >
+            <div className="count-item">
+              <DateTimeDisplay value={days}  isDanger={false} />
+            </div>
+            <span>:</span>
+            <div className="count-item">
+              <DateTimeDisplay value={hours} isDanger={false} />
+            </div>
+            <span>:</span>
+            <div className="count-item">
+              <DateTimeDisplay value={minutes} isDanger={false} />
+            </div>
+            <span>:</span>
+            <div className="count-item">
+              <DateTimeDisplay value={seconds} isDanger={false} />
+            </div>
           </div>
-          <span>:</span>
-          <div className="count-item">
-            <DateTimeDisplay value={hours} isDanger={false} />
-          </div>
-          <span>:</span>
-          <div className="count-item">
-            <DateTimeDisplay value={minutes} isDanger={false} />
-          </div>
-          <span>:</span>
-          <div className="count-item">
-            <DateTimeDisplay value={seconds} isDanger={false} />
-          </div>
+          <span className="bannercountdown-text">Vivamus finibus, est condimentum feugiat aliquet, felis sem euismod risus</span>
         </div>
-        <span className="bannercountdown-text">Vivamus finibus, est condimentum feugiat aliquet, felis sem euismod risus</span>
-      </div>
+      </div>  
     </div>
   </section>
   );
@@ -59,5 +61,4 @@ const BannerCountdown = ({ targetDate }) => {
     );
   }
 };
-
 export default BannerCountdown;

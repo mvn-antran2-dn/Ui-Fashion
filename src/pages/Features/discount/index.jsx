@@ -18,99 +18,101 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
     <section className="section-discount">
-    <div className="container discount">
-      <ul className="discount-list flex">
-        <li className="discount-item flex">
-          <div className="discount-img">
-            <a href="/#" className="discount-img-default">
-                <img src={IMAGES.deal2_1} alt="discount-1" />
-            </a>
-            <div className="discount-img-badge">
-                <span className="discount-sale">-26%</span>
-            </div>
-            <div className="img-total-action flex justify-content-center">
-                <button className="btn-to-action discount-btn btn-to-heart"><HeartOutlined /></button>
-                <button className="btn-to-action discount-btn btn-to-fullscreen"><FullscreenOutlined /></button>
-                <button className="btn-to-action discount-btn btn-to-retweet"><RetweetOutlined /></button>
-            </div>
-          </div>
-          <div className="discount-info">
-              <a href="/#" className="discount-name">Short Nylon-Effect Puffer Jacket</a>
-              <p className="discount-price"><strong className="discount-price-strong strong1">$29.90 </strong><LineOutlined className="icon-line"/><strong className="discount-price-strong">$39.90</strong></p>
-              <div className="discount-review">
-                <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
-                2 reviews
-              </div>
-              <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p className="countdown-title">Offer end in: </p>
-              <div className="countdown-banner flex" >
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={days}  isDanger={false} />
-                </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={hours} isDanger={false} />
-                </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={minutes} isDanger={false} />
-                </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={seconds} isDanger={false} />
-                </div>
-              </div>
-              <div className="discount-amount-sold flex">
-              <p>Available: 32 - Sold: <strong>26</strong></p>
-              </div>     
-          </div>
-        </li>
-        <li className="discount-item flex">
-          <div className="discount-img">
+    <div className="container">
+      <div className="discount">
+        <ul className="discount-list flex">
+          <li className="discount-item flex">
+            <div className="discount-img">
               <a href="/#" className="discount-img-default">
-                  <img src={IMAGES.deal2_2} alt="discount-2" />
+                  <img src={IMAGES.deal2_1} alt="discount-1" />
               </a>
               <div className="discount-img-badge">
-                  <span className="discount-sale">-18%</span>
+                  <span className="discount-sale">-26%</span>
               </div>
               <div className="img-total-action flex justify-content-center">
                   <button className="btn-to-action discount-btn btn-to-heart"><HeartOutlined /></button>
                   <button className="btn-to-action discount-btn btn-to-fullscreen"><FullscreenOutlined /></button>
                   <button className="btn-to-action discount-btn btn-to-retweet"><RetweetOutlined /></button>
               </div>
-          </div>
-          <div className="discount-info">
-              <a href="/#" className="discount-name">Blue Starter Logo T-shirt</a>
-              <p className="discount-price"><span>$22.70</span> <strong>$18.70</strong></p>
-              <div className="discount-review">
-                <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
-                1 review
-              </div>
-              <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p className="countdown-title">Offer end in: </p>
-              <div className="countdown-banner flex" >
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={days}  isDanger={false} />
+            </div>
+            <div className="discount-info">
+                <a href="/#" className="discount-name">Short Nylon-Effect Puffer Jacket</a>
+                <p className="discount-price"><strong className="discount-price-strong strong1">$29.90 </strong><LineOutlined className="icon-line"/><strong className="discount-price-strong">$39.90</strong></p>
+                <div className="discount-review">
+                  <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
+                  2 reviews
                 </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={hours} isDanger={false} />
+                <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="countdown-title">Offer end in: </p>
+                <div className="countdown-banner flex" >
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={days}  isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={hours} isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={minutes} isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={seconds} isDanger={false} />
+                  </div>
                 </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={minutes} isDanger={false} />
+                <div className="discount-amount-sold flex">
+                <p>Available: 32 - Sold: <strong>26</strong></p>
+                </div>     
+            </div>
+          </li>
+          <li className="discount-item flex">
+            <div className="discount-img">
+                <a href="/#" className="discount-img-default">
+                    <img src={IMAGES.deal2_2} alt="discount-2" />
+                </a>
+                <div className="discount-img-badge">
+                    <span className="discount-sale">-18%</span>
                 </div>
-                <span>:</span>
-                <div className="count-item dis-count-item">
-                  <DateTimeDisplay value={seconds} isDanger={false} />
+                <div className="img-total-action flex justify-content-center">
+                    <button className="btn-to-action discount-btn btn-to-heart"><HeartOutlined /></button>
+                    <button className="btn-to-action discount-btn btn-to-fullscreen"><FullscreenOutlined /></button>
+                    <button className="btn-to-action discount-btn btn-to-retweet"><RetweetOutlined /></button>
                 </div>
-              </div>
-              <div className="discount-amount-sold flex">
-                <p>Available: 25 - Sold: <strong>20</strong></p>
-            </div>    
-          </div>
-        </li>
-      </ul>
+            </div>
+            <div className="discount-info">
+                <a href="/#" className="discount-name">Blue Starter Logo T-shirt</a>
+                <p className="discount-price"><span>$22.70</span> <strong>$18.70</strong></p>
+                <div className="discount-review">
+                  <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
+                  1 review
+                </div>
+                <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="countdown-title">Offer end in: </p>
+                <div className="countdown-banner flex" >
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={days}  isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={hours} isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={minutes} isDanger={false} />
+                  </div>
+                  <span>:</span>
+                  <div className="count-item dis-count-item">
+                    <DateTimeDisplay value={seconds} isDanger={false} />
+                  </div>
+                </div>
+                <div className="discount-amount-sold flex">
+                  <p>Available: 25 - Sold: <strong>20</strong></p>
+              </div>    
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
   );

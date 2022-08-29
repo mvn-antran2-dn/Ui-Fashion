@@ -1,5 +1,5 @@
 .section-featured-product{
-  @include pxRem(margin-top, 40);
+  @include pxRem(margin-top, 18);
   @include pxRem(margin-bottom, 30);
   @include pxRem(padding, 15);
   .featured-product{
@@ -8,8 +8,8 @@
       @include pxRem(width, 100%);
       @include pxRem(font-size, 30);
       font-weight: map-get($font-weight, font-regular );
-      @include pxRem(line-height, 36);
       @include pxRem(margin, 0 0 8 );
+      line-height: 1.2;
     }
     p{
       flex-basis: 60%;

@@ -4,22 +4,24 @@ export default function Footer() {
   return (
   <footer className="page-footer ">
     <div className="footer-form">
-      <div className="container  flex  footer-subcrite-address">
-        <div className="form-subscribe">
-          <form className="form-subscribe-content">
-            <h3>Get our emails for info on new items, sales and more.</h3>
-            <p className="title-text">We'll email you a voucher worth £10 off your first order over £50.</p>
-            <input className="form-text" placeholder="Enter your email address" type="text" />
-            <button className="btn-sub" type="submit">Subscribe</button>
-            <span className="text-bottom">By subscribing you agree to our <strong> Terms & Conditions and Privacy & Cookies Policy </strong>.</span>
-          </form>
-        </div>
-        <div className="address">
-          <h2>Need help? <br /> (+800) 1234 5678 90</h2>
-          <p className="title-text">We are available 8:00am – 7:00pm</p>
-          <a href="/#"> <img className="appstore" src={IMAGES.appstore} alt="appstore" /></a>
-          <a href="/#"> <img className="ggplay" src={IMAGES.googleplay} alt="gg play" /></a>
-          <p className="text-bottom"><strong>Shopping App: </strong>Try our View in Your Room feature, manage registries and save payment info.</p>
+      <div className="container">
+        <div className="footer-subcrite-address flex">
+          <div className="form-subscribe">
+            <form className="form-subscribe-content">
+              <h3>Get our emails for info on new items, sales and more.</h3>
+              <p className="title-text">We'll email you a voucher worth £10 off your first order over £50.</p>
+              <input className="form-text" placeholder="Enter your email address" type="text" />
+              <button className="btn-sub" type="submit">Subscribe</button>
+              <span className="text-bottom">By subscribing you agree to our <strong> Terms & Conditions and Privacy & Cookies Policy </strong>.</span>
+            </form>
+          </div>
+          <div className="address">
+            <h2>Need help? <br /> (+800) 1234 5678 90</h2>
+            <p className="title-text">We are available 8:00am – 7:00pm</p>
+            <a href="/#"> <img className="appstore" src={IMAGES.appstore} alt="appstore" /></a>
+            <a href="/#"> <img className="ggplay" src={IMAGES.googleplay} alt="gg play" /></a>
+            <p className="text-bottom"><strong>Shopping App: </strong>Try our View in Your Room feature, manage registries and save payment info.</p>
+          </div>
         </div>
       </div>
     </div>

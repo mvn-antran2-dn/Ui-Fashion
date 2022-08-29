@@ -1,6 +1,6 @@
 .section-banner-season{
   @include pxRem(margin-top, 5);
-  @include pxRem(margin-bottom, -15);
+  @include pxRem(margin-bottom, 25);
 }
 .banner-season-list{
   position: relative;
@@ -30,10 +30,12 @@
   }
   .subtitle-season{
     @include pxRem(font-size, 12);
+    @include pxRem(margin-bottom,11);
   }
   .title-season{
     @include pxRem(max-width, 90%);
     font-weight: map-get($font-weight, font-normal );
+    @include pxRem(margin-bottom,14);
   }
 }
 .content-all.banner-season-content.two{

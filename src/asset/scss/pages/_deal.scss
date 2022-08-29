@@ -1,5 +1,8 @@
 .section-deal{
-  @include pxRem(margin, 36 0 51);
+  @include pxRem(margin, 23 0 36);
+  .deal{
+    @include pxRem(padding,0 10);
+  }
 }
 .deal-total{
   background-image: url('https://klbtheme.com/clotya/wp-content/uploads/2022/04/banner-04.jpg');
@@ -9,6 +12,7 @@
   background-size: cover;
   background-position: 50% 0 ;
   overflow: hidden;
+  
   .deal-content{ 
     @include pxRem(margin, 4.8% 0 0 55.55%);
     @include pxRem(width, 45%);

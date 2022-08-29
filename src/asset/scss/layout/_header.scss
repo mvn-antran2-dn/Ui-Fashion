@@ -193,7 +193,7 @@
     }
     .item-card-price{
       @include pxRem(font-size, 13);
-      @include pxRem(margin, 0 0 5);
+      @include pxRem(margin, 5 -2 5 2);
     }
   }
 }

@@ -10,7 +10,7 @@ export default function Blog(){
           Quis ipsum suspendisse ultrices gravida. Risus commodo viverra vel facilisis.</p>
       </div>
       <ul className="blog-list flex justify-content-between">
-        <li> 
+        <li className="li-blog-item"> 
           <div className="blog-item left">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog1} alt="blog 1" />
@@ -22,7 +22,7 @@ export default function Blog(){
             </div>
           </div>
         </li>
-        <li> 
+        <li className="li-blog-item"> 
           <div className="blog-item mid">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog2} alt="blog 2" />

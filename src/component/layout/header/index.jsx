@@ -82,75 +82,77 @@ export default function Headers (){
   };
   return (
   <header className="page-header">
-    <div className=" container-elementor  header-top flex justify-content-between">
+    <div className=" container-elementor  ">
+      <div className="header-top flex justify-content-between">
         <div className="header-top-left flex ">
-        <div className="dropdown-ins flex">
-          <a href="/#" className="dropdown-instagram"><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3<span>.1M</span> Followers <CaretDownOutlined className="icon-dropdown"/></strong> </a>
-          <ul className="menu-top-header-left">
-            <li>
-              <a href="https://www.facebook.com/" className="facebook">
-                <span className="icon-ins"><FacebookOutlined /></span>
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/" className="facebook">
-                <span className="icon-ins"><TwitterOutlined /></span>
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" className="facebook">
-              <span className="icon-ins"><InstagramOutlined /></span>
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/" className="facebook">
-              <span className="icon-ins"><LinkedinOutlined /></span>
-                <span className="label">Linkedin</span>
-              </a>
-            </li>
-            <li>
-              <p> Follow us on social media, be the first to know about discounts and innovations.</p>
-            </li>
-          </ul>
+          <div className="dropdown-ins flex">
+            <a href="/#" className="dropdown-instagram"><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3<span>.1M</span> Followers <CaretDownOutlined className="icon-dropdown"/></strong> </a>
+            <ul className="menu-top-header-left">
+              <li>
+                <a href="https://www.facebook.com/" className="facebook">
+                  <span className="icon-ins"><FacebookOutlined /></span>
+                  <span className="label">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" className="facebook">
+                  <span className="icon-ins"><TwitterOutlined /></span>
+                  <span className="label">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" className="facebook">
+                <span className="icon-ins"><InstagramOutlined /></span>
+                  <span className="label">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" className="facebook">
+                <span className="icon-ins"><LinkedinOutlined /></span>
+                  <span className="label">Linkedin</span>
+                </a>
+              </li>
+              <li>
+                <p> Follow us on social media, be the first to know about discounts and innovations.</p>
+              </li>
+            </ul>
+          </div>
+          <p className="header-right-title">Free Shipping World wide for all orders over <span>$199</span>.<strong> Click and Shop Now.</strong></p>
         </div>
-        <p className="header-right-title">Free Shipping World wide for all orders over <span>$199</span>.<strong> Click and Shop Now.</strong></p>
-      </div>
-      <div className="header-top-right">
-          <ul className="menu-top-header-right flex">
-            <li><a href="/#">Order Tracking</a></li>
-            <li className="menu-top-language-currency item-language">
-              <a href="/#" className="btn-language">English <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
-              <ul className="menu-language-currency language">
-                <li>
-                  <a href="/#" className="label">English</a>
-                </li>
-                <li>
-                  <a href="/#" className="label">Spanich</a>
-                </li>
-                <li>
-                  <a href="/#" className="label">German</a>
-                </li>
-              </ul>
-            </li>
-            <li className="menu-top-language-currency item-currency">
-              <a href="/#" className="btn-currency">USD <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
-              <ul className="menu-language-currency currency">
-                <li>
-                  <a href="/#" className="label">USD</a>
-                </li>
-                <li>
-                  <a href="/#" className="label">INR</a>
-                </li>
-                <li>
-                  <a href="/#" className="label">GBP</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+        <div className="header-top-right">
+            <ul className="menu-top-header-right flex">
+              <li><a href="/#">Order Tracking</a></li>
+              <li className="menu-top-language-currency item-language">
+                <a href="/#" className="btn-language">English <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
+                <ul className="menu-language-currency language">
+                  <li>
+                    <a href="/#" className="label">English</a>
+                  </li>
+                  <li>
+                    <a href="/#" className="label">Spanich</a>
+                  </li>
+                  <li>
+                    <a href="/#" className="label">German</a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-top-language-currency item-currency">
+                <a href="/#" className="btn-currency">USD <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
+                <ul className="menu-language-currency currency">
+                  <li>
+                    <a href="/#" className="label">USD</a>
+                  </li>
+                  <li>
+                    <a href="/#" className="label">INR</a>
+                  </li>
+                  <li>
+                    <a href="/#" className="label">GBP</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
         </div>
+      </div>    
     </div>
     <nav className="header-nav ">
         <div className="container-elementor ">    
@@ -322,9 +324,13 @@ export default function Headers (){
               <li className="social-item">
                   <a href="/#"><HeartOutlined /><span className="add-product heart">0</span></a>
               </li>
-              <li className="social-item item-card">
-                <span className="item-card-price ">$0.00</span>
-                <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+              <li className="social-item item-card flex">
+                <div className='item-card-price'>
+                  <span >$0.00</span>
+                </div>
+                <div className="item-card-product">
+                  <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+                </div>
                 <div className="card-icon  ">
                   <div className="card-item flex">
                     <img src={IMAGES.card_icon} alt="card-icon" />

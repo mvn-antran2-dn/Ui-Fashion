@@ -1,7 +1,7 @@
 .section-banner-logo{
   @include pxRem(margin-top, -1);
   .slick-list{
-    @include pxRem(padding, 15);
+    @include pxRem(padding, 14);
   }
 }
 .section-banner-logo .slick-track {

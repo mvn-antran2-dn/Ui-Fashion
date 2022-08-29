@@ -2,7 +2,6 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IMAGES } from "../../../asset/images";
 
-
 export default function BannerSeason () {
   return (
   <section className="section-banner-season">

@@ -30,37 +30,39 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
   <section className="section-deal">
     <div className="container">
-      <div className="deal-total flex">
-        <div className="deal-content content-all flex">
-          <div className="content-title-all deal-content-small">
-            <h4 className="deal-subtitle subtitle-all">DEAL OF THE WEEK</h4>
-            <h3 className="deal-title title-all">Roland Grand White short checkered T-shirt</h3>
-            <p className="deal-text text-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-          </div>
-          <div className="countdown-total flex"  >
-            <div className="count-item">
-              <DateTimeDisplay value={days}  isDanger={days <= 365} />
-              <div className="count-label">d</div>
+      <div className="deal">
+        <div className="deal-total flex">
+          <div className="deal-content content-all flex">
+            <div className="content-title-all deal-content-small">
+              <h4 className="deal-subtitle subtitle-all">DEAL OF THE WEEK</h4>
+              <h3 className="deal-title title-all">Roland Grand White short checkered T-shirt</h3>
+              <p className="deal-text text-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
             </div>
-            <span>:</span>
-            <div className="count-item">
-              <DateTimeDisplay value={hours} isDanger={false} />
-              <div className="count-label">h</div>
+            <div className="countdown-total flex"  >
+              <div className="count-item">
+                <DateTimeDisplay value={days}  isDanger={days <= 365} />
+                <div className="count-label">d</div>
+              </div>
+              <span>:</span>
+              <div className="count-item">
+                <DateTimeDisplay value={hours} isDanger={false} />
+                <div className="count-label">h</div>
+              </div>
+              <span>:</span>
+              <div className="count-item">
+                <DateTimeDisplay value={minutes} isDanger={false} />
+                <div className="count-label">m</div>
+              </div>
+              <span>:</span>
+              <div className="count-item">
+                <DateTimeDisplay value={seconds} isDanger={false} />
+                <div className="count-label">s</div>
+              </div>
             </div>
-            <span>:</span>
-            <div className="count-item">
-              <DateTimeDisplay value={minutes} isDanger={false} />
-              <div className="count-label">m</div>
+            <a href="/#" className="btn-shopnow">Shop Now</a>
+            <div className="deal-text">
+              <p>Limited time offer. The deal will expires on <span>July 15, 2022</span> <strong>HURRY UP!</strong></p>
             </div>
-            <span>:</span>
-            <div className="count-item">
-              <DateTimeDisplay value={seconds} isDanger={false} />
-              <div className="count-label">s</div>
-            </div>
-          </div>
-          <a href="/#" className="btn-shopnow">Shop Now</a>
-          <div className="deal-text">
-            <p>Limited time offer. The deal will expires on <span>July 15, 2022</span> <strong>HURRY UP!</strong></p>
           </div>
         </div>
       </div>
