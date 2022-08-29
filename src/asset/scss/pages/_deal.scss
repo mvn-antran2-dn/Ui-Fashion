@@ -111,10 +111,10 @@
     @include pxRem(height, 688.95);
     .deal-content{ 
       margin-left: auto;
-      @include pxRem(width, 45%);
       flex-direction: column;
       align-items: flex-end;
-      @include pxRem(margin, -2.2% 0 0 55.55%);
+      @include pxRem(width, 100%);
+      @include pxRem(margin, -2.2% 0 0 0);
     }
   }
 }
