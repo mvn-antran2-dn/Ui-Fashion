@@ -76,18 +76,21 @@
 @media only screen and (max-width: 1023px){
   .blog-item{
     &.left{
-      @include pxRem(margin, 0 0);
+      @include pxRem(margin, 0 0 0 10);
     }
     &.right{
-      @include pxRem(margin, 0 0 0 20);
+      @include pxRem(margin, 0 0 0 10);
     }
     &.mid{
-      @include pxRem(margin, 0 10 0 20 );
+      @include pxRem(margin, 0 10 0 10 );
     }
   }
   
 }
 @media only screen and (max-width: 910px){
+  .li-blog-item{
+    width: 100%;
+  }
   .blog-list {
     flex-direction: column;
     .blog-item{
