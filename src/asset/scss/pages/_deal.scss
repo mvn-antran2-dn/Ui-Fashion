@@ -123,6 +123,7 @@
     height: auto;
     .deal-content{ 
       @include pxRem(width, 100%);
+      @include pxRem(margin, -2.2% 0 0 0);
     }
   }
 }
