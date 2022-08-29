@@ -1,4 +1,4 @@
-import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, DownOutlined, CaretDownOutlined, ShopOutlined, } from '@ant-design/icons';
+import { InstagramOutlined , FacebookOutlined , TwitterOutlined, LinkedinOutlined, UserOutlined, SearchOutlined, HeartOutlined, ShoppingOutlined, MenuOutlined, CaretDownOutlined, ShopOutlined, } from '@ant-design/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import { Drawer, Menu } from 'antd';
@@ -85,7 +85,7 @@ export default function Headers (){
     <div className=" container-elementor  header-top flex justify-content-between">
         <div className="header-top-left flex ">
         <div className="dropdown-ins flex">
-          <a href="/#" ><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3.1M Followers <CaretDownOutlined /></strong> </a>
+          <a href="/#" className="dropdown-instagram"><span className="dropdown-ins-icon"><InstagramOutlined /></span><strong>3<span>.1M</span> Followers <CaretDownOutlined className="icon-dropdown"/></strong> </a>
           <ul className="menu-top-header-left">
             <li>
               <a href="https://www.facebook.com/" className="facebook">
@@ -116,7 +116,7 @@ export default function Headers (){
             </li>
           </ul>
         </div>
-        <p className="header-right-title">Free Shipping World wide for all orders over $199.<strong> Click and Shop Now.</strong></p>
+        <p className="header-right-title">Free Shipping World wide for all orders over <span>$199</span>.<strong> Click and Shop Now.</strong></p>
       </div>
       <div className="header-top-right">
           <ul className="menu-top-header-right flex">
@@ -152,175 +152,178 @@ export default function Headers (){
           </ul>
         </div>
     </div>
-    <nav className="header-nav flex ">
-        <div className="container-elementor header-nav-menu flex justify-content-between align-items-center">        
-          <a href="/#" className="header-logo flex ">
-            <button className="btn-icon" type="primary" onClick={showDrawer}>
-            <MenuOutlined className="icon-menu"/>
-            </button>
-              <img src={IMAGES.logo} alt="logo" />
-          </a>
-          <ul className="header-menu flex justify-content-center align-items-center">
-              <li className="menu-header-item  item-home">
-                <a className="header-item" href="/#">HOME <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
-                <ul className="main-menu-home ">
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 1</a>
-                  </li>
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 2</a>
-                  </li>
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 3</a>
-                  </li>
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 4</a>
-                  </li>
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 5</a>
-                  </li>
-                  <li>
-                    <a href="/#" className="menu-main-item">Home 6</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-header-item  item-shop">
-                <a className="header-item" href="/#">SHOP <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
-                <ul className="main-menu-shop flex container justify-content-around">
-                  <li>
-                    <a href="/#" className="menu-main-item-shop">Shop List</a>
-                    <ul className="sub-menu-list ">
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Default</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Wide</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Area</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Load More Button</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                  <a href="/#" className="menu-main-item-shop">Product Detail</a>
-                    <ul className="sub-menu-list">
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Default</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Wide</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Area</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Load More Button</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                  <a href="/#" className="menu-main-item-shop">Shop Pages</a>
-                    <ul className="sub-menu-list">
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Default</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Wide</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Area</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Load More Button</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                  <a href="/#" className="menu-main-item-shop">Shop Layouts</a>
-                    <ul className="sub-menu-list">
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Default</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Wide</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Shop Area</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">List Left Sidebar</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Load More Button</a>
-                      </li>
-                      <li>
-                        <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-header-item">
-                  <a className="header-item" href="/#">WOMEN</a>
-              </li>
-              <li className="menu-header-item">
-                  <a className="header-item" href="/#">MEN</a>
-              </li>
-              <li className="menu-header-item">
-                  <a className="header-item" href="/#">OUTERWEAR</a>
-              </li>
-              <li className="menu-header-item">
-                  <a className="header-item" href="/#">BLOG</a>
-              </li>
-              <li className="menu-header-item">
-                  <a className="header-item" href="/#">CONTACT</a>
-              </li>
-          </ul>
-          <ul className="social-list flex justify-content-around">
+    <nav className="header-nav ">
+        <div className="container-elementor ">    
+          <div className="header-nav-menu flex align-items-center justify-content-between">
+            <div className="header-logo flex align-items-center">  
+              <button className="btn-icon" type="primary" onClick={showDrawer}>
+                <MenuOutlined className="icon-menu"/>
+              </button>
+              <a href="/#" className="header-logo flex ">
+                <img className="header-logo-img" src={IMAGES.logo} alt="logo" />
+              </a>
+            </div>
+            <ul className="header-menu flex justify-content-center align-items-center">
+                <li className="menu-header-item  item-home">
+                  <a className="header-item" href="/#">HOME <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
+                  <ul className="main-menu-home ">
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 1</a>
+                    </li>
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 2</a>
+                    </li>
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 3</a>
+                    </li>
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 4</a>
+                    </li>
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 5</a>
+                    </li>
+                    <li>
+                      <a href="/#" className="menu-main-item">Home 6</a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="menu-header-item  item-shop">
+                  <a className="header-item" href="/#">SHOP <span><FontAwesomeIcon icon={faAngleDown} /></span></a>
+                  <ul className="main-menu-shop flex container justify-content-around">
+                    <li>
+                      <a href="/#" className="menu-main-item-shop">Shop List</a>
+                      <ul className="sub-menu-list ">
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Default</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Wide</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Area</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">List Left Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Load More Button</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                    <a href="/#" className="menu-main-item-shop">Product Detail</a>
+                      <ul className="sub-menu-list">
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Default</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Wide</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Area</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">List Left Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Load More Button</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                    <a href="/#" className="menu-main-item-shop">Shop Pages</a>
+                      <ul className="sub-menu-list">
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Default</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Wide</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Area</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">List Left Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Load More Button</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                    <a href="/#" className="menu-main-item-shop">Shop Layouts</a>
+                      <ul className="sub-menu-list">
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Default</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Right Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Wide</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Shop Area</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">List Left Sidebar</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Load More Button</a>
+                        </li>
+                        <li>
+                          <a href="/#" className="sub-menu-item">Infinite Scrolling</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li className="menu-header-item">
+                    <a className="header-item" href="/#">WOMEN</a>
+                </li>
+                <li className="menu-header-item">
+                    <a className="header-item" href="/#">MEN</a>
+                </li>
+                <li className="menu-header-item">
+                    <a className="header-item" href="/#">OUTERWEAR</a>
+                </li>
+                <li className="menu-header-item">
+                    <a className="header-item" href="/#">BLOG</a>
+                </li>
+                <li className="menu-header-item">
+                    <a className="header-item" href="/#">CONTACT</a>
+                </li>
+            </ul>
+            <ul className="social-list flex justify-content-around">
               <li className="social-item">
-                  <a href="/#" className="icon-search"><UserOutlined /></a>
+                  <a href="/#" className="icon-user"><UserOutlined /></a>
               </li>
               <li className="social-item">
-                  <a href="/#" className="icon-user"><SearchOutlined /></a>
+                  <a href="/#" className="icon-search"><SearchOutlined /></a>
               </li>
               <li className="social-item">
                   <a href="/#"><HeartOutlined /><span className="add-product heart">0</span></a>
               </li>
               <li className="social-item item-card">
-                <span className="item-card ">$0.00</span>
+                <span className="item-card-price ">$0.00</span>
                 <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
                 <div className="card-icon  ">
                   <div className="card-item flex">
@@ -329,7 +332,8 @@ export default function Headers (){
                   </div>
                 </div>
               </li>
-          </ul>
+            </ul>
+          </div>       
         </div>
         <Drawer title="Clotya" placement="left" onClose={onClose} visible={visible} >
           <div className="menu-drawwer-top">
@@ -344,7 +348,7 @@ export default function Headers (){
             mode="inline"
             items={items}/>
           </div> 
-          <div className="menu-drawwer-top">
+          <div className="menu-drawwer-top menu-drawwer-top-categories">
             <h3 className="header-menu-drawwer">Categories</h3>
             <Menu
             onClick={onClick}
@@ -371,9 +375,13 @@ export default function Headers (){
           <li className="menu-icon-item ">
               <a href="/#" className="logo-hidden"><img src={IMAGES.logo} alt="logo" /></a>
           </li>
-          <li className="social-item item-card">
-            <span className="item-card ">$0.00</span>
-            <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+          <li className="social-item item-card flex">
+            <div className='item-card-price'>
+              <span >$0.00</span>
+            </div>
+            <div className="item-card-product">
+              <a href="/#"><ShoppingOutlined /> <span className="add-product shopping ">0</span></a>
+            </div>
           </li>
         </ul>
       </div>
@@ -381,23 +389,23 @@ export default function Headers (){
     <nav className="header-menu-icon-hidden ">
       <div className="menu-icon-hidden">
         <ul className="menu-icon-list flex justify-content-around">
-          <li className="menu-icon-item ">
+          <li className="menu-icon-item-bottom">
               <a href="/#" className="icon-search"><ShopOutlined /></a>
               <span className="icon-item-text">Store</span>
           </li>
-          <li className="menu-icon-item ">
+          <li className="menu-icon-item-bottom">
               <a href="/#" className="icon-user"><SearchOutlined /></a>
               <span className="icon-item-text">Search</span>
           </li>
-          <li className="menu-icon-item ">
+          <li className="menu-icon-item-bottom">
               <a href="/#"><HeartOutlined /></a>
               <span className="icon-item-text">Wishlist</span>
           </li>
-          <li className="menu-icon-item">
+          <li className="menu-icon-item-bottom">
             <a href="/#"><UserOutlined /></a>
             <span className="icon-item-text">Account</span>
           </li>
-          <li className="menu-icon-item">
+          <li className="menu-icon-item-bottom">
             <a href="/#" onClick={showDrawer}><MenuOutlined /></a>
             <span className="icon-item-text">Categories</span>
           </li>

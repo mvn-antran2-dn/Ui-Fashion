@@ -1,12 +1,14 @@
 .section-bannerbg{
   @include pxRem(margin-top, 0);
+  @include pxRem(height, 584);
   .bannerbg-content{
     flex-direction: row-reverse;
     align-items: center;
     background-color: map-get($colors, color-background-gray );
+    height: 100%;
     img{
-      @include pxRem(width, 74%);
-      @include pxRem(height, 615);
+      @include pxRem(width, 50%);
+      @include pxRem(height, 100%);
       object-fit: cover;
     }
     &:last-child{
@@ -28,7 +30,7 @@
     justify-content: center;
   }
   h4{
-    font-weight: map-get($font-weight, font-bold);
+    font-weight: map-get($font-weight, font-medium);
     @include pxRem(letter-spacing, 1);
     @include pxRem(font-size, 12);
     text-transform: uppercase;
@@ -43,22 +45,22 @@
   }
   p{
     @include pxRem(line-height, 24);
-    @include pxRem(margin, 0 80 30);
+    @include pxRem(margin, 0 60 30);
     @include pxRem(font-size, 16);
     @include pxRem(max-width, 540);
     opacity: 0.6;
   }
   a{
     border: 1px solid map-get($colors, color-primary );
-    @include pxRem(padding, 14 29);
+    @include pxRem(padding, 12 30 13);
     @include pxRem(border-radius,2);
     color: map-get($colors, color-primary);
     @include pxRem(font-size, 15);
     @include pxRem(max-height, 52);
-    font-weight: map-get($font-weight, font-medium);
+    font-weight: map-get($font-weight, font-regular);
     span{
       @include pxRem(font-size, 18);
-      @include pxRem(margin-left, 10);
+      @include pxRem(margin-left, 13);
     }
     &:hover{
       color: map-get($colors, color-background);
@@ -81,19 +83,29 @@
 @media only screen and (max-width: 1023px){
   .section-bannerbg{
     @include pxRem(margin-top, 0);
+    @include pxRem(height, 414.78);
     .bannerbg-content  img{
       @include pxRem(width, 50%);
-      @include pxRem(height, 583);
+      @include pxRem(height, 100%);
       object-fit: cover;
     }
   }
   .bannerbg-content-text{
+    h4{
+      @include pxRem(margin, -1 0 9);
+    }
     h2{
       @include pxRem(font-size, 40);
+      line-height: 1.2;
+      margin: 0;
     }
     p{
-      @include pxRem(margin, 0 0 30);
+      @include pxRem(margin, 7 0 15);
       @include pxRem(font-size, 14);
+      line-height: 1.5;
+    }
+    a{
+      @include pxRem(padding, 7 15 8);
     }
   }
 }
@@ -101,6 +113,7 @@
 @media only screen and (max-width: 767px){
   .section-bannerbg{
     @include pxRem(margin-top, 0);
+    @include pxRem(height, 909);
     .bannerbg-content{
       flex-direction: column;
       img{
@@ -111,6 +124,9 @@
     }
   }
   .bannerbg-content-text{
+    .content-bg{
+      @include pxRem(height, 100%);
+    }
     h2{
       line-height: 1.2;
     }

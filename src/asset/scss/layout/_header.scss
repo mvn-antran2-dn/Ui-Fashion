@@ -2,16 +2,15 @@
   @include pxRem(height, auto);
   .header-top{
     @include pxRem(height, 40);
-    @include pxRem(width, 1319);
     @include pxRem(font-size, 13);
-    border-bottom: 1px solid map-get($colors, color-border);
     color: map-get($colors , color-text );  
     align-items: center; 
     .header-top-left{ 
       align-items: center;
       display: flex;      
       justify-content: flex-start;
-      @include pxRem(margin-left, 43);
+      @include pxRem(margin, 0 0 0 3);
+      @include pxRem(height, 40);
     }
     .header-top-right{
       align-items: center;
@@ -29,73 +28,36 @@
       text-transform:capitalize;
       @include pxRem(max-height, 38);
     }
-  }
-}
-.header-nav{
-  @include pxRem(font-size, 15);
-  color: map-get($colors, color-text);
-  background-color: map-get($colors, color-background );
-  @include pxRem(height, 84);  
-  align-items: center;
-  .social-list{
-    align-items: center;
-    @include pxRem(height, 84);
-    a{
-      @include pxRem(margin-left, 10);
-      color: map-get($colors, color-text);
-      position: relative;
-      @include pxRem(font-size, 21);
+    strong{
+      font-weight: map-get($font-weight, font-medium );
     }
-    .anticon{
-      @include pxRem(min-width, 32);
-      @include pxRem(height, 36);
-    }
-    .add-product{
-      position: absolute;
-      background-color: map-get($colors, color-primary );
-      color: map-get($colors, color-background);
-      border-radius: 50%;
-      @include pxRem(padding, 0 4);
-      @include pxRem(font-size, 9);
-    }
-    .heart{
-      @include pxRem(margin, -2 -5);
-    }
-    .shopping{
-      @include pxRem(margin, -2 -7);
-    }
-    .item-card{
-      @include pxRem(margin-left, 15);
-      @include pxRem(font-size, 14);
-    }
-  }
-}
-.header-logo{
-  @include pxRem(width, 121);
-  @include pxRem(height, 32);
-  align-items: center;
-  @include pxRem(margin-right, 96);
-  .btn-icon{
-    background-color: map-get($colors, color-background );
-    text-align: center;
-    border: none;
-    @include pxRem(margin-right, 21%);
-    color: map-get($colors, color-text );
-    @include pxRem(font-size, 21);
   }
 }
 
 .dropdown-ins{
   position: relative;
   align-items: center;
-  a{
+  height: 100%;
+  .dropdown-instagram{
     color: map-get($colors, color-text );
     display: flex;
     align-items: inherit;
     .dropdown-ins-icon{
       font-weight: 300;
-      @include pxRem(font-size, 18);
-      @include pxRem(margin-right, 9);
+      @include pxRem(font-size, 17.45);
+      @include pxRem(margin,2 9 0 1);
+    }
+    strong{
+      font-weight: map-get($font-weight, font-regular );
+      @include pxRem(letter-spacing, 0.0016);
+    }
+    span{
+      letter-spacing: -0.99px;
+      @include pxRem(margin-right, 0.5);
+    }
+    .icon-dropdown{
+      @include pxRem(font-size, 10);
+      @include pxRem(margin-left, 4);
     }
   }
   &:hover{
@@ -105,15 +67,19 @@
   }
 }
 .header-right-title{
-  @include pxRem(margin-left, 30);
+  @include pxRem(margin,0 0 0 27.5);
   strong{
     color: map-get( $colors, color-primary );
+    font-weight: map-get($font-weight, font-regular );
+    @include pxRem(margin-left, 1);
+  }
+  span{
+    letter-spacing: -0.99px;
   }
 }
 .menu-top-header-right{
   align-items: center;
   position: relative;
-  @include pxRem(margin-right, 40);
   li{
     @include pxRem(padding,10 0 10 15);
     a{
@@ -139,11 +105,12 @@
   visibility: hidden;
   position: absolute; 
   @include pxRem(font-size, 16);
-  @include pxRem(width, 165%);
+  @include pxRem(width, 179%);
   background-color: map-get($colors, color-background );
   @include pxRem(border, 1 solid map-get($colors, color-border));
-  @include pxRem(top, 34);
+  @include pxRem(top, 42);
   @include pxRem(padding, 15);
+  z-index: 5;
   li{
     @include pxRem(padding, 5 0);
     .icon-ins{
@@ -179,11 +146,77 @@
     @include pxRem(right, -12);
   }
 }
+.header-nav{
+  @include pxRem(font-size, 15);
+  color: map-get($colors, color-text);
+  background-color: map-get($colors, color-background );
+  @include pxRem(height, 85);  
+  align-items: center;
+  border-top: 1px solid map-get($colors, color-border);
+  .social-list{
+    align-items: center;
+    .social-item{
+      @include pxRem(margin, 10 0 0 6);
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+    a{
+      @include pxRem(margin-left, 5);
+      color: map-get($colors, color-text);
+      position: relative;
+      @include pxRem(font-size, 21);
+    }
+    .anticon{
+      @include pxRem(min-width, 32);
+      @include pxRem(height, 36);
+    }
+    .add-product{
+      position: absolute;
+      background-color: map-get($colors, color-primary );
+      color: map-get($colors, color-background);
+      border-radius: 50%;
+      @include pxRem(padding, 0 4);
+      @include pxRem(font-size, 9);
+    }
+    .icon-user{
+      margin-left: 0;
+    }
+    .heart{
+      @include pxRem(margin, 0 -13);
+    }
+    .item-card{
+      @include pxRem(margin,10 -6 0 5);
+    }
+    .shopping{
+      @include pxRem(margin, 0 -15);
+    }
+    .item-card-price{
+      @include pxRem(font-size, 13);
+      @include pxRem(margin, 0 0 5);
+    }
+  }
+}
+.header-logo{
+  img{
+    @include pxRem(width, 121);
+    @include pxRem(height, 26);
+  }
+  align-items: center;
+  .btn-icon{
+    background-color: map-get($colors, color-background );
+    text-align: center;
+    border: none;
+    @include pxRem(margin,0 26 0 5);
+    color: map-get($colors, color-text );
+    @include pxRem(font-size, 21);
+  }
+
+}
 .header-menu{
   text-transform: uppercase;
   text-align: left;
   align-items: center;
-  @include pxRem(margin, 0 95);
   @include pxRem(height, 84);
   .item-home:hover{
     .main-menu-home{
@@ -199,17 +232,20 @@
 
   }
   .menu-header-item{
-    @include pxRem(margin-right,30);
+    @include pxRem(margin, 1 30 0 0);
     height: 100%;
     display: flex;
     align-items: center;
     .header-item{
       color: map-get($colors, color-text);
-      font-weight: map-get($font-weight, font-medium);
+      font-weight: map-get($font-weight, font-regular);
     }
     span{
       @include pxRem(font-size, 12);
-      @include pxRem(margin-left, 7);
+      @include pxRem(margin-left, 5.7);
+    }
+    &:last-child{
+      margin-right: 1px;
     }
   }
 }
@@ -220,7 +256,7 @@
     visibility: hidden;
     @include pxRem(min-width, 240);
     @include pxRem(padding, 18 0);
-    @include pxRem(top, 51);
+    @include pxRem(top, 83);
     @include pxRem(left, -15);
     background-color: map-get($colors, color-background );
     @include pxRem(border, 1 solid map-get($colors, color-border));
@@ -241,7 +277,7 @@
     position: absolute;
     @include pxRem(min-width, 100%);
     @include pxRem(padding, 18 0);
-    @include pxRem(top, 51);
+    @include pxRem(top, 83);
     background-color: map-get($colors, color-background );
     @include pxRem(border, 1 solid map-get($colors, color-border));
     @include pxRem(right, -780);
@@ -277,8 +313,9 @@
     @include pxRem(border, 1 solid map-get($colors, color-border));
     @include pxRem(border-radius, 4);
     @include pxRem(padding, 15);
-    @include pxRem(top, 120%);
+    @include pxRem(top, 110%);
     @include pxRem(right, 0);
+    z-index: 5;
     .card-item{
       @include pxRem(padding, 15 0);
       justify-content: center;
@@ -304,17 +341,35 @@
   @include pxRem(width, 320 !important);
 }
 .menu-drawwer-top{
-  @include pxRem(margin-bottom, 10);
+  @include pxRem(margin,0 25 20 0);
   @include pxRem(font-size, 16);
   h3{
     @include pxRem(font-size, 14);
     font-weight: map-get($font-weight, font-medium);
-    @include pxRem(margin, 8 0 10 22);
+    @include pxRem(margin, 11 0 10 24);
   }
   .header-menu-drawwer{
-    @include pxRem(padding-top, 28);
+    @include pxRem(padding-top, 29);
     @include pxRem(border-top, 1 solid map-get($colors, color-border));
+    @include pxRem(margin-bottom, 8);
   }
+}
+.menu-drawwer-top-categories{
+  .ant-menu-submenu{
+    @include pxRem(margin, 0 0 4 0!important);
+  }
+  .ant-menu-item{
+    @include pxRem(margin, 0 0 4 0!important);
+  }
+}
+.ant-menu-submenu{
+  @include pxRem(margin-top, -4);
+  padding-bottom: 0 !important;
+}
+.ant-menu-item{
+  @include pxRem(margin-top, -4 !important);
+  padding-bottom: 0 !important;
+  margin-bottom: 4px !important;
 }
 .text-drawwer{
   @include pxRem(padding,  12 22);
@@ -326,6 +381,9 @@
 .ant-drawer-body{
   padding: 0 !important;
 }
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+   border-right: unset; 
+}
 .ant-drawer-header-title{
   flex-direction: row-reverse;
   .ant-drawer-close{
@@ -333,13 +391,16 @@
     color: map-get($colors, color-text);
     @include pxRem(padding, 8);
     @include pxRem(font-size, 14);
-    margin-right: 0;
+    margin:4px 0;
     font-weight: map-get($font-weight, font-medium);
   }
   .ant-drawer-title{
     @include pxRem(font-size, 34);
-    font-weight: map-get($font-weight, font-verybold);
+    font-weight: map-get($font-weight, font-medium);
   }
+}
+.ant-drawer-header {
+  border-bottom: unset;
 }
 .header-menu-icon-hidden{
   background-color: map-get($colors, color-background);
@@ -351,12 +412,21 @@
   z-index: 20;
   color: #8a8b8e;
   @include pxRem(border,1 solid map-get($colors, color-border));
-  @include pxRem(padding, 10 20);
-  .menu-icon-item{
+  @include pxRem(padding, 8 20);
+  .menu-icon-hidden{
+    height: 100%;
+    .menu-icon-list{
+      align-items: center;
+      height: 100%;
+    }
+  }
+  .menu-icon-item-bottom{
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    flex: 1;
+    @include pxRem(padding, 0 5);
     a{
       @include pxRem(font-size, 22);
       color: #8a8b8e;
@@ -372,11 +442,15 @@
   top: 0;
   left: 0;
   right: 0;
-  @include pxRem(height, 56);
+  @include pxRem(height, 57);
+  @include pxRem(padding, 0 15 0 20);
   .logo-hidden{
-    @include pxRem(width, 112);
-    @include pxRem(height, 25);
-    margin-left: 68%;
+    @include pxRem(margin-top,7);
+    img{
+      @include pxRem(width, 112);
+      @include pxRem(height, 23);
+      margin-left: 16%;
+    }
   }
   .btn-hidden{
     font-weight: map-get($font-weight, font-regular );
@@ -384,6 +458,14 @@
   .item-card{
     @include pxRem(margin-left, 15);
     @include pxRem(font-size, 14);
+  }
+  .item-card-price{
+    @include pxRem(margin-top, 6);
+    @include pxRem(font-size, 13);
+    color: map-get($colors, color-text );
+  }
+  .item-card-product{
+    @include pxRem(margin-left, -9);
   }
   a{
     @include pxRem(margin-left, 15);
@@ -404,7 +486,6 @@
     left: 13px;
   }
 }
-
 @media only screen and (max-width: 1240px){
   .page-header{
     height: auto;
@@ -420,7 +501,6 @@
   }
   
 }
-
 //////end-basic 
 @media only screen and (max-width: 1023px){
   .container, .container-elementor{
@@ -434,7 +514,7 @@
     }
   }
  .header-bottom{
-  @include pxRem(margin-top, 56);
+  @include pxRem(margin-top, 57);
  }
   .header-menu-icon-hidden{
     visibility: visible;
@@ -455,7 +535,13 @@
     }
   }
 }
-
+@media only screen and (max-width: 605px) {
+  .page-header{
+    .header-bottom h4{
+      @include pxRem(padding, 0);
+     }
+  }
+}
 ///////
 @media only screen and (max-width: 479px) {
   .container, .container-elementor{
@@ -471,6 +557,3 @@
     }
   }
 }
-
-
-

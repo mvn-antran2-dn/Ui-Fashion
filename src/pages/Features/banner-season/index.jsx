@@ -16,7 +16,7 @@ export default function BannerSeason () {
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
                 <h3 className="title-all title-season">How well do you know street fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
+                <a href="/#" className="btn-shopnow-all btn-shopnow-season">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>     
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function BannerSeason () {
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
                 <h3 className="title-all title-season">How has street style influenced fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
+                <a href="/#" className="btn-shopnow-all btn-shopnow-season">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function BannerSeason () {
                 <h4 className="subtitle-all subtitle-season">NEW SEASON</h4>
                 <h3 className="title-all title-season">How well do you know street fashion?</h3>
                 <p className="text-all text-season">Don't miss the opportunity.</p>
-                <a href="/#" className="btn-shopnow-all">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
+                <a href="/#" className="btn-shopnow-all btn-shopnow-season">Shop Now <span><FontAwesomeIcon icon={faArrowRightLong}/></span></a>
               </div>
             </div>
           </div>

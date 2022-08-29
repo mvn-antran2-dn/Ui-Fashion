@@ -1,44 +1,51 @@
 .section-blog{
-  @include pxRem(margin-top, 20px);
+  @include pxRem(margin-top, -1);
   .blog-title{
-    @include pxRem(margin-bottom, 30px);
+    @include pxRem(margin-bottom, 60);
     text-align: center;
     h2{
       @include pxRem(font-size, 30);
       font-weight: map-get($font-weight, font-regular );
+      @include pxRem(margin-bottom, 2);
     }
     p{
       margin: auto;
       @include pxRem(font-size, 17);
       font-weight: map-get($font-weight, font-bland);
       color: map-get($colors, color-text-desc );
-      @include pxRem(width, 80%);
+      @include pxRem(width, 65%);
+      line-height: 1.55;
     }
   }
 }
 .blog-item{
-  max-width: 95%;
+  max-width: 94.3%;
+  height: 100%;
   .blog-item-img{
     @include pxRem(margin-bottom, 24);
   }
-  .left{
-    margin-left: auto;
-  }
-  .right{
-    margin-right: auto;
-  }
+  // &.left{
+  //   margin-left: auto;
+  // }
+  // &.right{
+  //   margin-right: 0;
+  // }
 }
 .blog-item-content{
+  @include pxRem(margin-top, 18);
   .blog-subtitle{
-    @include pxRem(margin-bottom, 10);
+    @include pxRem(margin-bottom, 5);
     @include pxRem(font-size, 12);
     font-weight: map-get($font-weight , font-medium );
     color: map-get($colors, color-text-desc );
-    
+    letter-spacing: 1px;
     span{
       font-weight: map-get($font-weight , font-normal );
+      letter-spacing: 1px;
       position: relative;
-     @include pxRem(margin-left, 20);
+      @include pxRem(font-size, 12);
+      @include pxRem(letter-spacing,-0.014);
+     @include pxRem(margin-left, 19);
       &::before{
         content:"";
         @include pxRem(height, 1);
@@ -47,7 +54,7 @@
         display: inline-block;
         @include pxRem(margin, 0 5);
         position: absolute;
-        @include pxRem(top, 50%);
+        @include pxRem(top, 47%);
         @include pxRem(right, 100%);
       }
     }
@@ -57,24 +64,48 @@
   }
   .blog-title{
     @include pxRem( font-size, 22);
-    @include pxRem(margin-bottom, 10);
+    @include pxRem(margin-bottom, 6);
     text-align: left;
+    font-weight: map-get($font-weight, font-regular );
+    @include pxRem(letter-spacing, 0.0015);
   }
   .blog-text{
     @include pxRem(margin-bottom, 16);
     color: map-get($colors, color-text-desc);
     @include pxRem(font-size, 16);
+    line-height: 1.5;
   }
+}
+@media only screen and (max-width: 1023px){
+  .blog-item{
+    &.left{
+      @include pxRem(margin, 0 0);
+    }
+    &.right{
+      @include pxRem(margin, 0 0 0 20);
+    }
+    &.mid{
+      @include pxRem(margin, 0 10 0 20 );
+    }
+  }
+  
 }
 @media only screen and (max-width: 910px){
   .blog-list {
     flex-direction: column;
     .blog-item{
       max-width: 100%;
+      margin: 0;
       .blog-item-img img{
         @include pxRem(margin-bottom, 24);
       }
+      .blog-item-content{
+        @include pxRem(margin, 0 0 30 0);
+      }
     }
+  }
+  .mid{
+    @include pxRem(margin, 0 10);
   }
 }
 @media only screen and (max-width: 768px){

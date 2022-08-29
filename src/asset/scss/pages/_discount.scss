@@ -9,7 +9,6 @@
     justify-content: space-between;
   }
   .countdown-banner .count-item{
-    @include pxRem(width, 32);
     @include pxRem(width, 36);
     background-color: map-get($colors, color-background-countitem);
     color: map-get($colors, color-text );
@@ -19,12 +18,12 @@
 .discount-item{
   position: relative;
   z-index: 3;
-  @include pxRem(max-width, 48.5%);
+  @include pxRem(max-width, 48.4%);
   box-sizing: border-box;
   @include pxRem(border, 2 solid map-get($colors, color-border-discount));
   .discount-img{
-    @include pxRem(margin, 20);
-    @include pxRem(width, 87%);
+    @include pxRem(margin, 20 20 14);
+    @include pxRem(width, 87.4%);
     img{
       @include pxRem(width, 100%);
       position: relative;
@@ -152,9 +151,11 @@
 .discount-info{
   @include pxRem(font-size, 15);
   @include pxRem(padding, 16 13 16 4);
+  height: 100%;
   .discount-name{
     @include pxRem(font-size, 18);
     @include pxRem(margin-bottom,8);
+    @include pxRem(letter-spacing, 0.0016);
     &:hover{
       color: map-get($colors, color-text );
     }
@@ -168,23 +169,30 @@
       @include pxRem(margin-right, 3);
       @include pxRem(font-size, 94%);
       text-decoration-line: line-through;
+      @include pxRem(letter-spacing, -0.2);
     }
     strong{
       color: map-get($colors, color-primary );
       font-weight: map-get($font-weight, font-regular );
+      @include pxRem(letter-spacing, -1);
     }
     .discount-price-strong{
       color: map-get($colors, color-text );
+      @include pxRem(letter-spacing, -0.2);
+    }
+    .icon-line{
+      font-size: 17px;
     }
   }
   .discount-review{
     font-weight: map-get($font-weight, font-regular);
     @include pxRem(font-size, 13);
     color: map-get($colors, color-text-desc );
-    @include pxRem(margin, 20 0 15 0);
+    @include pxRem(margin, 21 0 14);
     span{
       color: map-get($colors, color-start );
-      @include pxRem(font-size, 11);  
+      @include pxRem(font-size, 12);  
+      @include pxRem(letter-spacing, -1.5);
       &:last-child{
         @include pxRem(margin-right, 5);
       }
@@ -194,10 +202,11 @@
     @include pxRem(font-size, 14);
     @include pxRem(margin, 0 0 16);
     color: map-get($colors, color-text-desc);
+    line-height: 1.5;
   }
   .discount-amount-sold{
     align-items: center;
-    @include pxRem(margin-top, 15);
+    @include pxRem(margin, 16 0 );
     @include pxRem(font-size, 13);
     color: map-get($colors, bs-secondary);
     strong{
@@ -206,17 +215,22 @@
   }
 }
 .countdown-title{
+  @include pxRem(margin, 20 0 9);
   @include pxRem(font-size, 14);
-  @include pxRem(margin-bottom, 8);
   font-weight: map-get($font-weight, font-regular);
 }
+.discount .countdown-banner .dis-count-item{
+  @include pxRem(width, 36);
+  @include pxRem(height, 38);
+}
 
-@media only screen and (max-width: 1023px){
+@media only screen and (max-width: 1240px){
   .discount-item{
     flex-direction: column;
     .discount-img{
       @include pxRem(padding, 20);
       margin: 0;
+      width: 100%;
     }
     .discount-info{
       @include pxRem(padding, 20);
@@ -245,6 +259,9 @@
       max-width: 100%;
       &:last-child{
         @include pxRem(margin, 30 0 0 );
+      }
+      .discount-img{
+        @include pxRem(padding, 15);
       }
     }
   }

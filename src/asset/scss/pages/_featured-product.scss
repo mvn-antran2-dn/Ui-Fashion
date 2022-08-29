@@ -24,19 +24,23 @@
 
 @media only screen and (max-width: 1023px){
   .section-featured-product{
-    @include pxRem(margin-top, 25);
+    @include pxRem(margin-top, 10);
     @include pxRem(margin-bottom, 0);
     @include pxRem(padding, 15 0);
     .featured-product{
       flex-direction: column;
       h3{
         @include pxRem(font-size, 20);
-        font-weight: map-get($font-weight, font-medium);
+        font-weight: map-get($font-weight, font-regular);
+        @include pxRem(line-height, 30);
+        @include pxRem(margin, 0 0 5);
       }
       p{
+        @include pxRem(line-height, 21);
         @include pxRem(font-size, 14);
         @include pxRem(max-width, 832);
         margin-left: 0;
+        font-weight: map-get($font-weight, font-normal);
       }
     }
   }

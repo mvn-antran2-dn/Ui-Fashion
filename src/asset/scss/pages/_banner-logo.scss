@@ -1,5 +1,5 @@
 .section-banner-logo{
-  @include pxRem(margin-top, 20);
+  @include pxRem(margin-top, -1);
   .slick-list{
     @include pxRem(padding, 15);
   }
@@ -65,7 +65,11 @@
     border-top: 1px solid #00000026;
   }
 }
-
+.banner-logo{
+  .banner-logo-img{
+    @include pxRem(margin, 6 -9);
+  }
+}
 @media only screen and (max-width: 1023px){
   .section-banner-logo .slick-track {
     .slick-slide {

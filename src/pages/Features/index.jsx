@@ -15,7 +15,7 @@ import Product3 from "./product-03";
 
 export default function Main(){
   const DayCount1 = 17 * 24 * 60 * 60 * 1000;
-  const DayCount2 = 16 * 24 * 60 * 60 * 1000;
+  const DayCount2 = 53 * 24 * 60 * 60 * 1000;
   const Now = new Date().getTime();
 
   const Dealine1 = Now + DayCount1;

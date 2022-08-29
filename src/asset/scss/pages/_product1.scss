@@ -78,7 +78,7 @@
   z-index: 3;
   .product1-img{
     overflow: hidden;
-    @include pxRem(margin-bottom, 10);
+    @include pxRem(margin-bottom, 12);
     .product1-sale{
       display: flex;
       align-items: center;
@@ -115,13 +115,13 @@
       animation: unhover-action 0.3s linear 1 forwards;
     }
     .btn-to-fullscreen{
-      animation: unhover-action 0.3s linear 0.2s 1 forwards;
+      animation: unhover-action 0.3s linear 0.1s 1 forwards;
     }
     .btn-to-retweet{
-      animation: unhover-action 0.3s linear 0.25s 1 forwards;
+      animation: unhover-action 0.3s linear 0.1s 1 forwards;
     }
     .btn-to-shopping{
-      animation: unhover-action 0.3s linear 0.3s 1 forwards;
+      animation: unhover-action 0.3s linear 0.1s 1 forwards;
     } 
   }
   &:hover{
@@ -131,13 +131,13 @@
       animation: hover-action 0.3s linear 1 forwards;
     }
     .btn-to-fullscreen{
-      animation: hover-action 0.3s linear 0.2s 1 forwards;
+      animation: hover-action 0.3s linear 0.1s 1 forwards;
     }
     .btn-to-retweet{
-      animation: hover-action 0.3s linear 0.2s 1 forwards;
+      animation: hover-action 0.3s linear 0.1s 1 forwards;
     }
     .btn-to-shopping{
-      animation: hover-action 0.3s linear 0.2s 1 forwards;
+      animation: hover-action 0.3s linear 0.1s 1 forwards;
     } 
   }   
 }
@@ -200,17 +200,23 @@
 }
 .product1-info{
   @include pxRem(font-size, 15);
-  .product1-name:hover{
-    color: map-get($colors, color-text );
+  .product1-name{
+    @include pxRem(letter-spacing, 0.0016);
+    &:hover{
+      color: map-get($colors, color-text );
+    }
   }
   .product1-price{
-    @include pxRem(margin, 7 0 10);
+    @include pxRem(margin, 7 0 9);
     span{
       opacity: 0.3;
       @include pxRem(font-size, 94%);
       font-weight: map-get($font-weight, font-normal );
       text-decoration-line: line-through;
       @include pxRem(letter-spacing, -0.2);
+    }
+    .product1-price-1{
+      @include pxRem(letter-spacing, -0.7);
     }
     strong{
       font-weight: map-get($font-weight, font-regular );
@@ -252,7 +258,7 @@
 .product1-amount-sold{
   justify-content: space-between;
   align-items: center;
-  @include pxRem(margin-top, 7);
+  @include pxRem(margin-top, 8);
   @include pxRem(font-size, 12);
   color: map-get($colors, bs-secondary);
   strong{
@@ -270,13 +276,8 @@
     }
     .product1-item{
       @include pxRem(width,50%);
-    }
-    .product1-img{
-      .product1-img-default1-1{
-        @include pxRem(width,482);
-      }
-      .product1-img-default1-2{
-        @include pxRem(width,482);
+      &:last-child{
+        @include pxRem(margin, 0 0 0 15);
       }
     }
   }
@@ -301,12 +302,14 @@
     }
   }
   .content-all{    
+    @include pxRem(padding, 73 60);
     .content-title-all{
       .subtitle-all{
         @include pxRem(font-size, 12);
       }
       .title-all{
-        @include pxRem(font-size, 35);
+        @include pxRem(font-size, 34);
+        max-width: 80%;
       }
     }
   }
@@ -322,6 +325,9 @@
         object-fit: cover;
       }
     }
+  }
+  .product1-banner-title img{
+    width: 100%;
   }
 }
 
@@ -342,6 +348,7 @@
     object-fit: cover;
   }
   .content-all{
+    @include pxRem(padding, 40 60);
     .content-title-all{
       @include pxRem(max-width, 100%);
       .title-all{
@@ -354,6 +361,27 @@
       }
       .btn-shopnow-all{
         @include pxRem(font-size, 16);
+        font-weight: map-get($font-weight, font-medium );
+        
+      }
+    }
+  }
+}
+@media only screen and (max-width: 380px){
+  .content-all{
+    @include pxRem(padding, 40 60);
+    .content-title-all{
+      @include pxRem(max-width, 100%);
+      .title-all{
+        @include pxRem(font-size, 25);
+      }
+      .text-all{
+        opacity: 0.6;
+        @include pxRem(font-size, 10);
+        @include pxRem(margin-bottom, 13);
+      }
+      .btn-shopnow-all{
+        @include pxRem(font-size, 14);
         font-weight: map-get($font-weight, font-medium );
         
       }

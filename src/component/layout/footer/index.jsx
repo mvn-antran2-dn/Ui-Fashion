@@ -4,22 +4,22 @@ export default function Footer() {
   return (
   <footer className="page-footer ">
     <div className="footer-form">
-      <div className="container  flex justify-content-between footer-subcrite-address">
+      <div className="container  flex  footer-subcrite-address">
         <div className="form-subscribe">
           <form className="form-subscribe-content">
             <h3>Get our emails for info on new items, sales and more.</h3>
             <p className="title-text">We'll email you a voucher worth £10 off your first order over £50.</p>
-            <input className="form-text" placeholder="Enter your email address..." type="text" />
-            <button className="btn-sub" type="submit">Subscrite</button>
+            <input className="form-text" placeholder="Enter your email address" type="text" />
+            <button className="btn-sub" type="submit">Subscribe</button>
             <span className="text-bottom">By subscribing you agree to our <strong> Terms & Conditions and Privacy & Cookies Policy </strong>.</span>
           </form>
         </div>
         <div className="address">
           <h2>Need help? <br /> (+800) 1234 5678 90</h2>
           <p className="title-text">We are available 8:00am – 7:00pm</p>
-          <a href="/#"> <img src={IMAGES.appstore} alt="appstore" /></a>
+          <a href="/#"> <img className="appstore" src={IMAGES.appstore} alt="appstore" /></a>
           <a href="/#"> <img className="ggplay" src={IMAGES.googleplay} alt="gg play" /></a>
-          <span className="text-bottom"><strong>Shopping App: </strong>Try our View in Your Room feature, manage registries and save payment info.</span>
+          <p className="text-bottom"><strong>Shopping App: </strong>Try our View in Your Room feature, manage registries and save payment info.</p>
         </div>
       </div>
     </div>
@@ -32,6 +32,7 @@ export default function Footer() {
           <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis in termapol. </p>
           <p>(+800) 1234 5678 90 – info@example.com</p>
         </div>
+        <div className="footer-col flex justify-content-around">
         <div className="footer-middle-col">
           <h3 className="footer-middle-title">Information</h3>
           <ul className="footer-middle-list">
@@ -111,6 +112,7 @@ export default function Footer() {
               <a href="/#">Shoes</a>
             </li>
           </ul>
+        </div>
         </div>
       </div>
       <div className="footer-bottom flex">

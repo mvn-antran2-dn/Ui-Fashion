@@ -4,7 +4,7 @@ import { useCountdown } from '../../../hooks/useCountDown';
 const ExpiredNotice = () => {
   return (
     <section className="section-deal">
-    <div className="container-elementor ">
+    <div className="container ">
       <div className="deal-total flex">
         <div className="deal-content content-all flex">
           <div className="content-title-all deal-content-small">
@@ -29,7 +29,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
   <section className="section-deal">
-    <div className="container-elementor ">
+    <div className="container">
       <div className="deal-total flex">
         <div className="deal-content content-all flex">
           <div className="content-title-all deal-content-small">

@@ -4,11 +4,11 @@
 .product2-info{
   @include pxRem(height, 81);
   .product1-review{
-    @include pxRem(margin, 13 0 8);
+    @include pxRem(margin, 12 0 8);
   }
   .product1-name{
     @include pxRem(margin-top, 15);
-    @include pxRem(font-size, 16);
+    @include pxRem(font-size, 15);
   }
 }
 .product2-img-text{
@@ -17,9 +17,11 @@
     .subtitle-all{
       @include pxRem(font-size, 12);
       color: map-get($colors, color-background );
+      @include pxRem(margin-bottom, 10);
     }
     .title-all{
       color: map-get($colors, color-background );
+      line-height: 1.19;
     }
     .text-all{
       opacity: 0.6;
@@ -41,10 +43,13 @@
     @include pxRem(height, 516);
   }
 }
-.product1-img{
+.product1-item{
+  width: 100%;
+}
+.product1-img.product2-img{
   .product-img-default1-1 {
-    @include pxRem(width, 292.5);
-    @include pxRem(height, 437);
+    @include pxRem(width, 100%);
+    @include pxRem(height, 439);
     display: flex;
     background-size: 100%;
     .product1-img-default1-1,.product1-img-default1-2,.product1-img-default1-3,.product1-img-default1-4{
@@ -53,7 +58,7 @@
   }
   .product-img-default1-2 {
     @include pxRem(margin-top, 2);
-    @include pxRem(width, 292.5);
+    @include pxRem(width, 100%);
     @include pxRem(height, 4);
     display: flex;
     background-size: 100%;
@@ -67,152 +72,39 @@
     background-color: #0000004d !important;
   }
 }
-.slick-slider .slick-next {
-  right: -60px;
-  opacity: 1;
-  z-index: 5;
-  &::before{
-    font-family: "Font Awesome 5 Free"; 
-    content: '\f105';
-    font-weight: map-get($font-weight,font-medium );
-    color: map-get($colors, color-text-desc );
-    font-size: 40px;
-  }
-  
-}
-.slick-slider .slick-prev {
-  left: -60px;
-  opacity: 1;
-  z-index: 5;
-  &::before{
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: map-get($font-weight,font-medium );
-    content: '\f104';
-    color: map-get($colors, color-text-desc );
-    font-size: 40px;
-  }
-}
-
-
-@media only screen and (max-width:1240px){
-  .slick-slider .slick-next {
-    right: 0;  
-    visibility: hidden;
-  }
-  .slick-slider .slick-prev {
-    left: 0;
-    visibility: hidden;
-  }
-}
-
 @media only screen and (max-width: 1023px){
-  .slick-slider .slick-next {
-    right: 0;  
-  }
-  .slick-slider .slick-prev {
-    left: 0;
-  }
   .product1-img{
-    .product-img-default1-1 {
-      @include pxRem(width, 100%);
-    }
-    .product-img-default1-2 {
+    .product-img-default1-1, .product-img-default1-2  {
       @include pxRem(width, 100%);
     }
   }
   .product1 .product2-item{
-    @include pxRem(width,48%);
-  }
-  ////product3
-  .product3-img{
-    @include pxRem(width, 311);
-    .product-img-default1-1 {
-      @include pxRem(width, 311);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 311);
-    }
-  }
-  .product3-list{
-    .slick-track .slick-slide{
-      @include pxRem(margin-right, 25);
-      @include pxRem(width, 311!important);
-    }
+    @include pxRem(width,50%);
   }
 }
-
 @media only screen and (max-width: 767px){
   .product2-img{
     @include pxRem(width, 100%);
-    .product-img-default1-1 {
+  }
+}
+@media only screen and (max-width: 640px){
+  .product2 .product2-list{
+    flex-direction: column;
+    .product2-banner{
       @include pxRem(width, 100%);
     }
-    .product-img-default1-2 {
-      @include pxRem(width, 100%);
+    .product2-item{
+      @include pxRem(width,100%);
+      margin: 0 0;
     }
-  }
-  //product3
-  .product3-img{
-    @include pxRem(width, 226);
-    height: 100%;
-    .product-img-default1-1 {
-      @include pxRem(width, 226);
-      @include pxRem(height, 339);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 226);
-    }
-  }
-  .product3-list{
-    .slick-track .slick-slide{
-      @include pxRem(margin-right, 25);
-      @include pxRem(width, 226!important);
-    }
-  }
-  .product3-info .product1-name{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }
 @media only screen and (max-width: 479px){
   .product2-img-text{
     top: 0;
+    @include pxRem(padding, 70 60);
   } 
-  .product2-img{
-    @include pxRem(width, 100%);
-    .product-img-default1-1 {
-      @include pxRem(width, 100%);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 100%);
-    }
-  }
   .product2-info .product1-name{
     @include pxRem(margin-bottom, 8);
   }
-  //product3
-  .product3-img{
-    @include pxRem(width, 210);
-    .product-img-default1-1 {
-      @include pxRem(width, 210);
-      @include pxRem(height, 315);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 210);
-    }
-  }
-  .product3-list{
-    .slick-track .slick-slide{
-      @include pxRem(margin-right, 25);
-      @include pxRem(width, 210!important);
-    }
-  }
-  .product3-info .product1-name{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    @include pxRem(max-width, 210);
-  }
 }
-

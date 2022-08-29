@@ -1,5 +1,5 @@
 .section-banner-summer{
-  @include pxRem(margin, 41 0 0);
+  @include pxRem(margin, 47 0 0);
   .banner-summer-img{
     @include pxRem(padding, 15 15 15 0);
     position: relative;
@@ -65,19 +65,22 @@
         width: 100%;
       }
     }
-    .season-sale{
-      @include pxRem(padding, 15 0);
-      img{       
-        width: 100%;
-      }
-      .sale-img-text.content-all{
-        @include pxRem(padding, 40% 20%);
-      }
+  }
+  .season-sale{
+    @include pxRem(padding, 15 0);
+    img{       
+      width: 100%;
     }
+    .sale-img-text.content-all{
+      @include pxRem(padding, 20% 20%);
+      .content-title-all .sale-text-title{
+        max-width: 100%;
+      }
+    }  
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .section-banner-summer {
     .banner-summer-img{
       padding: 0;
@@ -88,24 +91,18 @@
       @include pxRem(margin-top, 25);
     }
   }
+  .summer-img-text.content-all{
+    @include pxRem(padding, 70 46);
+  }
+}
+@media only screen and (max-width: 667px) {
+  .summer-img-text.content-all{
+    @include pxRem(padding, 20 46);
+  }
 }
 @media only screen and (max-width: 479px) {
-  .summer-img{
-    @include pxRem(height,327);
-    
-    img{
-      height: 100%;
-      object-fit: cover;
-    }
-    .summer-img-text.content-all{
-      width: 70%;
-      line-height: 1.2;
-    }
-  }
   .section-banner-summer{
-    @include pxRem(margin-bottom, 128);
     .season-sale{
-      @include pxRem(height,256);
       padding: 0;
       img{
         height: 100%;

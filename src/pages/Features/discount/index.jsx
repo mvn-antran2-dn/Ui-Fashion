@@ -1,4 +1,4 @@
-import { FullscreenOutlined, HeartOutlined, RetweetOutlined, StarFilled  } from "@ant-design/icons";
+import { FullscreenOutlined, HeartOutlined, RetweetOutlined, StarFilled, LineOutlined  } from "@ant-design/icons";
 import { IMAGES } from "../../../asset/images";
 import DateTimeDisplay from '../countdown/DateTimeDisplay';
 import { useCountdown } from '../../../hooks/useCountDown';
@@ -36,7 +36,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           </div>
           <div className="discount-info">
               <a href="/#" className="discount-name">Short Nylon-Effect Puffer Jacket</a>
-              <p className="discount-price"><strong className="discount-price-strong">$29.90 - </strong><strong className="discount-price-strong">$39.90</strong></p>
+              <p className="discount-price"><strong className="discount-price-strong strong1">$29.90 </strong><LineOutlined className="icon-line"/><strong className="discount-price-strong">$39.90</strong></p>
               <div className="discount-review">
                 <span><StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  />  <StarFilled  /></span> 
                 2 reviews
@@ -44,25 +44,24 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p className="countdown-title">Offer end in: </p>
               <div className="countdown-banner flex" >
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={days}  isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={hours} isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={minutes} isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={seconds} isDanger={false} />
                 </div>
               </div>
               <div className="discount-amount-sold flex">
-                <p>Available: 32 - </p>
-                <p> Sold: <strong>26</strong></p>
+              <p>Available: 32 - Sold: <strong>26</strong></p>
               </div>     
           </div>
         </li>
@@ -90,19 +89,19 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
               <p className="discount-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <p className="countdown-title">Offer end in: </p>
               <div className="countdown-banner flex" >
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={days}  isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={hours} isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={minutes} isDanger={false} />
                 </div>
                 <span>:</span>
-                <div className="count-item">
+                <div className="count-item dis-count-item">
                   <DateTimeDisplay value={seconds} isDanger={false} />
                 </div>
               </div>

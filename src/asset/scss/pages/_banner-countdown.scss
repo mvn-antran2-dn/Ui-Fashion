@@ -5,7 +5,7 @@
   }
   .banner-countdown{
     @include pxRem(border, 1 solid map-get($colors, bs-border-white));
-    @include pxRem(padding, 20 73);
+    @include pxRem(padding, 20 74);
     @include pxRem (width, 100%);
     background-color: map-get($colors, color-background-red);
     align-items: center;
@@ -15,6 +15,10 @@
       @include pxRem(font-size, 24);
       @include pxRem(margin-right, 15);
       font-weight: map-get($font-weight, font-regular);
+      span{
+        @include pxRem(letter-spacing, -2.001);
+        @include pxRem(margin-right, 2);
+      }
     }
     .bannercountdown-text{
       font-weight: map-get($font-weight, font-bland );
@@ -39,9 +43,9 @@
     @include pxRem(border-radius, 2);
   }
   span{
-    @include pxRem(margin, 0 4);
+    @include pxRem(margin, 0 4.2);
     color: map-get($colors, color-text-desc );
-    font-weight: map-get($font-weight, font-regular );
+    font-weight: map-get($font-weight, font-medium);
   }
 }
 
@@ -71,3 +75,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 767px){
+  .section-banner-countdown{
+    .banner-countdown{
+      flex-direction: column;
+      @include pxRem(padding, 20 10);
+    }
+  }
+}
+

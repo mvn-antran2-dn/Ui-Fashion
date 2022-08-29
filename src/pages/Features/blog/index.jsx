@@ -23,7 +23,7 @@ export default function Blog(){
           </div>
         </li>
         <li> 
-          <div className="blog-item ">
+          <div className="blog-item mid">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog2} alt="blog 2" />
             </a>
@@ -34,7 +34,7 @@ export default function Blog(){
             </div>
           </div>
         </li>
-        <li>
+        <li className="li-blog-item">
           <div className="blog-item right">
             <a href="/#" className="blog-item-img">
               <img src={IMAGES.blog3} alt="blog 3" />

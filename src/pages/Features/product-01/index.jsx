@@ -24,7 +24,7 @@ export default function Product1 () {
       <ul className="product1-list flex">
         <li className="product1-item ">
           <div className="product1-img">
-            <a href="." className="product1-img-default">
+            <a href="/#" className="product1-img-default">
                 <img src={IMAGES.product1_1} alt="product1-1" />
             </a>
             <div className="product1-img-badge">
@@ -38,8 +38,8 @@ export default function Product1 () {
             </div>
           </div>
           <div className="product1-info">
-              <a href="." className="product1-name">Sleeveless Ribbed Short Dress</a>
-              <p className="product1-price"> <span>$19.99</span><strong>$14.99</strong></p>
+              <a href="/#" className="product1-name">Sleeveless Ribbed Short Dress</a>
+              <p className="product1-price"> <span className="product1-price-1">$19.99</span><strong>$14.99</strong></p>
               <div className="product1-review">               
                 <span><StarFilled /> </span> 
                 1 review   
@@ -57,7 +57,7 @@ export default function Product1 () {
         </li>
         <li className="product1-item ">
           <div className="product1-img">
-              <a href="." className="product1-img-default">
+              <a href="/#" className="product1-img-default">
                   <img src={IMAGES.product1_2} alt="product1-2" />
               </a>
               <div className="product1-img-badge">
@@ -71,7 +71,7 @@ export default function Product1 () {
               </div>
           </div>
           <div className="product1-info">
-              <a href="." className="product1-name">Basic Relax Fit Leggings</a>
+              <a href="/#" className="product1-name">Basic Relax Fit Leggings</a>
               <p className="product1-price"> <span>$29.90</span><strong>$24.90</strong></p>
               <div className="product1-review">
                 <span><StarFilled /> </span>

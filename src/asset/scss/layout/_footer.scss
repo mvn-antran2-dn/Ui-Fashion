@@ -3,11 +3,11 @@
   .footer-form{
     background-color: map-get($colors, color-text );
     color: map-get($colors, color-background );
-    @include pxRem(padding, 80 0);
+    @include pxRem(padding, 59 0 76);
   }
   .footer-top{
     flex-wrap: wrap; 
-    @include pxRem(padding, 60 0);
+    @include pxRem(padding, 43 0 58);
     @include pxRem(border-bottom, 1 solid map-get($colors, color-border));
   }
 }
@@ -18,16 +18,17 @@
     font-weight: map-get($font-weight, font-regular );
     color: map-get($colors, color-background );
     @include pxRem(max-width, 75%);
-    @include pxRem(margin-bottom, 8);
+    @include pxRem(margin,6 0 8);
+    line-height: 1.2;
   }
   .title-text{
     @include pxRem(font-size, 16);
-    font-weight: map-get($font-weight, font-regular );
+    font-weight: map-get($font-weight, font-normal );
     opacity: 0.6;
-    @include pxRem(margin-bottom, 30);
+    @include pxRem(margin-bottom, 31);
   }
   .form-text{
-    @include pxRem(max-width, 73%);
+    @include pxRem(max-width, 74.8%);
     @include pxRem(height, 48);
     display: inline-block;
     @include pxRem(padding, 8 15);
@@ -40,7 +41,7 @@
   .btn-sub{
     @include pxRem(font-size, 15);
     font-weight: map-get($font-weight, font-regular);
-    @include pxRem(padding, 11 30);
+    @include pxRem(padding, 12 30 10);
     @include pxRem(border-radius, 2);
     @include pxRem(margin-left, -1);
     background-color: map-get($colors, color-text );
@@ -54,64 +55,86 @@
     color: map-get($colors, color-text-desc);
     @include pxRem(margin-top, 10);
     display: block;
+    font-weight: map-get($font-weight, font-normal);
+    strong{
+      font-weight: map-get($font-weight, font-regular);
+    }
   }
 }
 .address{
   @include pxRem(max-width, 40%);
+  @include pxRem(margin-left, 20%);
   h2{
     @include pxRem(font-size, 30);
     font-weight: map-get($font-weight, font-regular );
     color: map-get($colors, color-background );
     @include pxRem(max-width, 75%);
-    @include pxRem(margin-bottom, 8);
+    @include pxRem(margin,16 0 8 );
+    line-height: 1.2;
   }
   .title-text{
     @include pxRem(font-size, 16);
-    font-weight: map-get($font-weight, font-regular );
+    font-weight: map-get($font-weight, font-normal );
     opacity: 0.6;
-    @include pxRem(margin-bottom, 39);
+    @include pxRem(margin,0 0 30 );
   }
   .text-bottom{
     @include pxRem(font-size, 12);
     color: map-get($colors, color-text-desc);
-    @include pxRem(margin-top, 10);
+    @include pxRem(margin,5 0 0 );
     display: block;
+    strong{
+      font-weight: map-get($font-weight, font-bold);
+    }
   }
   a{
     @include pxRem(margin-bottom, 9);
   }
+  .appstore{
+    @include pxRem(margin,0 0 4 );
+  }
   .ggplay{
-    @include pxRem(margin-bottom, 4);
+    @include pxRem(margin,4 0 7 1);
   }
 }
 .footer-logo{
   flex-basis: 30%;
   @include pxRem(margin-left, 0);
   img{
-    @include pxRem(max-width, 40%);
-    height: auto;    
+    max-width: 39.2%;
+    height: 19.5%;
+    @include pxRem(margin-top, 2); 
   }
   p{
-    @include pxRem(margin-bottom, 16);
+    @include pxRem(margin,10 0 16);
     @include pxRem(font-size, 14);
     @include pxRem(max-width, 85%);
+    line-height: 1.5;
   }
 }
+.footer-col{
+  @include pxRem(margin-top,-2);
+}
 .footer-middle-col{
+  @include pxRem(width, 214);
+  line-height: 1.81;
   .footer-middle-title{
-    @include pxRem(margin-bottom, 15);
+    @include pxRem(margin-bottom, 9);
     @include pxRem(font-size, 16);
     font-weight: map-get($font-weight, font-medium);
+    @include pxRem(padding, 0 24);
   }
   a{
     @include pxRem(font-size, 15);
+    @include pxRem(padding, 0 24);
   } 
 }
 .footer-bottom{
-  @include pxRem(padding, 40 0 50);
+  @include pxRem(padding, 43 0 25);
   p{
     @include pxRem(margin-right, 15);
     @include pxRem(margin-bottom, 13);
+    @include pxRem(font-size, 13);
   }
   .footer-bot-list{
     margin-left: auto;
@@ -121,13 +144,15 @@
       @include pxRem(font-size, 13);
       @include pxRem(border-left, 1 solid map-get($colors, color-border));
     }
+    .bot-item{
+      @include pxRem(margin, -2 0 0 4);
+    }
     .bot-item1{
       border: none;
     }
   }
 }
-
-@media only screen and (max-width: 1023px)   {
+@media only screen and (max-width: 1240px)   {
   .page-footer{
     @include pxRem(margin-top, 60);
     .footer-form{
@@ -137,12 +162,7 @@
       @include pxRem(padding, 40 0);
     }
   }
-  .footer-subcrite-address{
-    flex-direction: column;
-    @include pxRem(padding, 0 150);
-  }
   .form-subscribe{
-    @include pxRem(max-width, 100%);
     h3{
       @include pxRem(font-size, 24);
       @include pxRem(max-width, 100%);
@@ -151,19 +171,14 @@
       @include pxRem(font-size, 14);
     }
     .form-text{
-      @include pxRem(max-width, 23%);
+      @include pxRem(max-width, 66%);
     }
     .btn-sub{
-      @include pxRem(padding, 11 30);
-    }
-    .text-bottom{
-      display: inline;
+      @include pxRem(padding, 12 30 10);
     }
   }
   .address{
-    @include pxRem(margin-top, 30);
-    @include pxRem(padding, 0 115);
-    max-width: 100%;
+    @include pxRem(margin-top, -14);
     h2{
     @include pxRem(font-size, 24);
     @include pxRem(max-width, 100%);
@@ -186,15 +201,20 @@
     flex-direction: column;
     text-align: center;
   }
-}
-
-@media only screen and (max-width: 767px)   {
-  .page-footer{
-    @include pxRem(margin-top, 30);
+  .footer-middle-col{
+    @include pxRem(width,169.5);
   }
-  .footer-subcrite-address{
-    flex-direction: column;
-    @include pxRem(padding, 0 35);
+}
+@media only screen and (max-width: 1023px)   {
+  .page-footer{
+    @include pxRem(margin-top, 50);
+  }
+}
+@media only screen and (max-width: 1000px)   {
+  .form-subscribe{
+    .form-text{
+      @include pxRem(max-width, 52%);
+    }
   }
   .footer-top{
     flex-direction: column;
@@ -202,34 +222,57 @@
       width: 45%;
     }
   }
-  .footer-bottom{
-    @include pxRem(padding, 30 0);
-    flex-direction: column;
-    text-align: center;
+  .footer-col{
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer-middle-col{
+    .footer-middle-title{
+      @include pxRem(padding, 0);
+    }
+    a{
+      @include pxRem(padding, 0 );
+    } 
   }
 }
-
-
-@media only screen and (max-width: 479px)   {
+@media only screen and (max-width: 767px)   {
+  .page-footer{
+    @include pxRem(margin-top, 30);
+  }
   .footer-subcrite-address{
-    @include pxRem(padding, 0 24);
+    flex-direction: column;
   }
   .form-subscribe{
+    max-width: 100%;
     h3{
-      font-weight: map-get($font-weight, font-medium );
+      @include pxRem(font-size, 24);
+      @include pxRem(max-width, 100%);
+    }
+    .title-text{
+      @include pxRem(font-size, 14);
     }
     .form-text{
-      @include pxRem(max-width, 70%);
+      @include pxRem(max-width, 60%);
     }
     .btn-sub{
-      @include pxRem(padding, 11 30);
-    }
-    .text-bottom{
-      display: inline;
+      @include pxRem(padding, 12 30 10);
     }
   }
   .address{
-    @include pxRem(padding, 0 0);
+    @include pxRem(margin,25 0 0);
     max-width: 100%;
+    h2{
+    @include pxRem(font-size, 24);
+    @include pxRem(max-width, 100%);
+    }
+    .title-text{
+      @include pxRem(font-size, 14);
+    }
+  }
+  .footer-top{
+    flex-direction: column;
+    .footer-logo{
+      width: 45%;
+    }
   }
 }

@@ -15,11 +15,11 @@ $grid-columns: 12;
 }
 // End mixins for build grid
 $grid-gutter: 15px;
-$container-elementor-width: 1319px;
+$container-elementor-width: 1240px;
 $container-width: 1290px;
 .container-elementor {
-  margin: 0 auto;
-  max-width: $container-elementor-width;
+  max-width: 100%;
+  padding: 0 100px;
 }
 .container{
   margin: 0 auto;

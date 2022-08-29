@@ -1,6 +1,6 @@
 .section-categories{
 @include pxRem(margin-top, 35);
-@include pxRem(margin-bottom, 57);
+@include pxRem(margin-bottom, 53);
 @include pxRem(height, 293); 
 .categories-title{
   @include pxRem(line-height, 25.6);
@@ -104,6 +104,7 @@ strong{
 @media only screen and (max-width: 1023px){
   .section-categories{
     height: auto;
+    margin-bottom: 0;
     .slick-track {
       .slick-slide {
         @include pxRem(margin-right, 0); 

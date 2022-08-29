@@ -4,17 +4,23 @@
 .product3-info{
   @include pxRem(height, 81);
   .product1-review{
-    @include pxRem(margin, 15 0 8);
+    @include pxRem(margin, 12 0 9);
+    span{
+      @include pxRem(margin, 4 3 0 1);
+    }
   }
   .product1-name{
     @include pxRem(margin-top, 15);
     @include pxRem(font-size, 15);
   }
+  .product1-price{
+    @include pxRem(margin, 6 0 9);
+  }
 }
-.product1-img{
+.product1-img.product3-img{
   .product-img-default1-1 {
     @include pxRem(width, 292.5);
-    @include pxRem(height, 437);
+    @include pxRem(height, 439);
     display: flex;
     background-size: 100%;
     .product1-img-default1-1,.product1-img-default1-2,.product1-img-default1-3,.product1-img-default1-4{
@@ -38,7 +44,8 @@
   }
 }
 .slick-slider .slick-next {
-  right: -60px;
+  @include pxRem(right, -48);
+  top: 45%;
   opacity: 1;
   z-index: 5;
   &::before{
@@ -51,7 +58,8 @@
   
 }
 .slick-slider .slick-prev {
-  left: -60px;
+  @include pxRem(left, -48);
+  top: 45%;
   opacity: 1;
   z-index: 5;
   &::before{
@@ -61,6 +69,14 @@
     color: map-get($colors, color-text-desc );
     font-size: 40px;
   }
+}
+.slick-slider:hover > .slick-arrow {
+  @include pxRem(margin,-20 0 0 0);
+  @include pxRem(margin,-20 0 0 0);
+  transition: margin 1s; 
+}
+.slick-dots{
+  @include pxRem(bottom, -58);
 }
 .product3-item{
   @include pxRem(margin,0 );
@@ -74,7 +90,7 @@
   }
 }
 
-@media only screen and (max-width:1240px){
+@media only screen and (max-width:1350px){
   .slick-slider .slick-next {
     right: 0;  
     visibility: hidden;
@@ -84,27 +100,8 @@
     visibility: hidden;
   }
 }
-
-@media only screen and (max-width: 1023px){
-  .slick-slider .slick-next {
-    right: 0;  
-  }
-  .slick-slider .slick-prev {
-    left: 0;
-  }
-  .product1-img{
-    .product-img-default1-1 {
-      @include pxRem(width, 100%);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 100%);
-    }
-  }
-  .product1 .product2-item{
-    @include pxRem(width,48%);
-  }
-  ////product3
-  .product3-img{
+@media only screen and (max-width: 1100px){
+  .product1-img.product3-img{
     @include pxRem(width, 311);
     .product-img-default1-1 {
       @include pxRem(width, 311);
@@ -113,26 +110,45 @@
       @include pxRem(width, 311);
     }
   }
+  .product1 .product3-item:last-child{
+    margin: 0;
+  }
   .product3-list{
     .slick-track .slick-slide{
-      @include pxRem(margin-right, 25);
+      @include pxRem(width, 311!important);
+    }
+  }
+}
+@media only screen and (max-width: 1023px){
+  .slick-slider .slick-next {
+    visibility: visible;
+    right: 0;  
+  }
+  .slick-slider .slick-prev {
+    visibility: visible;
+    left: 0;
+  }  
+  .product1-img.product3-img{
+    @include pxRem(width, 311);
+    .product-img-default1-1 {
+      @include pxRem(width, 311);
+    }
+    .product-img-default1-2 {
+      @include pxRem(width, 311);
+    }
+  }
+  .product1 .product3-item:last-child{
+    margin: 0;
+  }
+  .product3-list{
+    .slick-track .slick-slide{
       @include pxRem(width, 311!important);
     }
   }
 }
 
 @media only screen and (max-width: 767px){
-  .product2-img{
-    @include pxRem(width, 100%);
-    .product-img-default1-1 {
-      @include pxRem(width, 100%);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 100%);
-    }
-  }
-  //product3
-  .product3-img{
+  .product1-img.product3-img{
     @include pxRem(width, 226);
     height: 100%;
     .product-img-default1-1 {
@@ -156,22 +172,6 @@
   }
 }
 @media only screen and (max-width: 479px){
-  .product2-img-text{
-    top: 0;
-  } 
-  .product2-img{
-    @include pxRem(width, 100%);
-    .product-img-default1-1 {
-      @include pxRem(width, 100%);
-    }
-    .product-img-default1-2 {
-      @include pxRem(width, 100%);
-    }
-  }
-  .product2-info .product1-name{
-    @include pxRem(margin-bottom, 8);
-  }
-  //product3
   .product3-img{
     @include pxRem(width, 210);
     .product-img-default1-1 {
