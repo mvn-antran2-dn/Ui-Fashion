@@ -16,7 +16,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }) => {
   return (
   <section className="section-banner-countdown">
-    <div className="container banner-countdown-total">
+    <div className="container">
       <div className="banner-countdown-total">
         <div className="banner-countdown flex">
           <p><span>10</span>% discount on your dream clothes:</p>
